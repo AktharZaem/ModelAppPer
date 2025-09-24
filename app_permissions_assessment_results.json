@@ -8,7 +8,7 @@
     "Which app genuinely needs location permission?": "Maps or delivery apps",
     "You gave location access to a shopping app. What might happen?": "App stops working",
     "What is \u201cpermission creep\u201d in mobile apps?": "Apps using small icons",
-    "Which permission is most sensitive for privacy and identity theft?": "Font size access",
+    "Which permission is most sensitive for privacy and identity theft?": "Contacts and call logs",
     "What is the best habit for managing app permissions on your phone?": "Restart your phone weekly"
   },
   "scores": {
@@ -53,9 +53,9 @@
       "level": "Intermediate"
     },
     "Which permission is most sensitive for privacy and identity theft?": {
-      "answer": "Font size access",
-      "score": 5,
-      "level": "Intermediate"
+      "answer": "Contacts and call logs",
+      "score": 10,
+      "level": "Advanced"
     },
     "What is the best habit for managing app permissions on your phone?": {
       "answer": "Restart your phone weekly",
@@ -63,7 +63,7 @@
       "level": "Intermediate"
     }
   },
-  "total_score": 41,
-  "percentage": 41.0,
+  "total_score": 46,
+  "percentage": 46.0,
   "overall_level": "Basic"
 }
