@@ -1,0 +1,69 @@
+{
+  "responses": {
+    "What does an app permission allow?": "An app to access specific parts of your phone",
+    "When installing a new app, what should you do first?": "Use it immediately",
+    "Why should a flashlight app not need access to your contacts?": "It drains battery",
+    "Which app should be allowed microphone access?": "Voice recorder or call app",
+    "Why is it risky to allow camera and microphone permissions unnecessarily?": "Apps might take selfies",
+    "Which app genuinely needs location permission?": "Maps or delivery apps",
+    "You gave location access to a shopping app. What might happen?": "You get more accurate delivery estimates",
+    "What is \u201cpermission creep\u201d in mobile apps?": "App gradually requesting more access over time",
+    "Which permission is most sensitive for privacy and identity theft?": "Flashlight",
+    "What is the best habit for managing app permissions on your phone?": "Give all apps full access"
+  },
+  "scores": {
+    "What does an app permission allow?": {
+      "answer": "An app to access specific parts of your phone",
+      "score": 10,
+      "level": "Advanced"
+    },
+    "When installing a new app, what should you do first?": {
+      "answer": "Use it immediately",
+      "score": 0,
+      "level": "Wrong"
+    },
+    "Why should a flashlight app not need access to your contacts?": {
+      "answer": "It drains battery",
+      "score": 3,
+      "level": "Beginner"
+    },
+    "Which app should be allowed microphone access?": {
+      "answer": "Voice recorder or call app",
+      "score": 10,
+      "level": "Advanced"
+    },
+    "Why is it risky to allow camera and microphone permissions unnecessarily?": {
+      "answer": "Apps might take selfies",
+      "score": 3,
+      "level": "Beginner"
+    },
+    "Which app genuinely needs location permission?": {
+      "answer": "Maps or delivery apps",
+      "score": 10,
+      "level": "Advanced"
+    },
+    "You gave location access to a shopping app. What might happen?": {
+      "answer": "You get more accurate delivery estimates",
+      "score": 5,
+      "level": "Intermediate"
+    },
+    "What is \u201cpermission creep\u201d in mobile apps?": {
+      "answer": "App gradually requesting more access over time",
+      "score": 10,
+      "level": "Advanced"
+    },
+    "Which permission is most sensitive for privacy and identity theft?": {
+      "answer": "Flashlight",
+      "score": 3,
+      "level": "Beginner"
+    },
+    "What is the best habit for managing app permissions on your phone?": {
+      "answer": "Give all apps full access",
+      "score": 0,
+      "level": "Wrong"
+    }
+  },
+  "total_score": 54,
+  "percentage": 54.0,
+  "overall_level": "Intermediate"
+}

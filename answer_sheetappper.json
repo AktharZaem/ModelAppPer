@@ -1,0 +1,255 @@
+{
+    "subcategory": "Mobile App Permissions",
+    "questions": [
+        {
+            "question": "What does an app permission allow?",
+            "options": [
+                {
+                    "text": "An app to access specific parts of your phone",
+                    "level": "Advanced",
+                    "marks": 10
+                },
+                {
+                    "text": "Change your wallpaper",
+                    "level": "Beginner",
+                    "marks": 3
+                },
+                {
+                    "text": "Send you emails",
+                    "level": "Wrong",
+                    "marks": 0
+                },
+                {
+                    "text": "Speed up your phone",
+                    "level": "Intermediate",
+                    "marks": 5
+                }
+            ]
+        },
+        {
+            "question": "When installing a new app, what should you do first?",
+            "options": [
+                {
+                    "text": "Give all permissions",
+                    "level": "Beginner",
+                    "marks": 3
+                },
+                {
+                    "text": "Use it immediately",
+                    "level": "Wrong",
+                    "marks": 0
+                },
+                {
+                    "text": "Check what permissions it asks for",
+                    "level": "Advanced",
+                    "marks": 10
+                },
+                {
+                    "text": "Restart your phone",
+                    "level": "Intermediate",
+                    "marks": 5
+                }
+            ]
+        },
+        {
+            "question": "Why should a flashlight app not need access to your contacts?",
+            "options": [
+                {
+                    "text": "It drains battery",
+                    "level": "Beginner",
+                    "marks": 3
+                },
+                {
+                    "text": "It’s unrelated and may misuse your data",
+                    "level": "Advanced",
+                    "marks": 10
+                },
+                {
+                    "text": "It makes the light too bright",
+                    "level": "Wrong",
+                    "marks": 0
+                },
+                {
+                    "text": "It lowers phone speed",
+                    "level": "Intermediate",
+                    "marks": 5
+                }
+            ]
+        },
+        {
+            "question": "Which app should be allowed microphone access?",
+            "options": [
+                {
+                    "text": "Notes app",
+                    "level": "Wrong",
+                    "marks": 0
+                },
+                {
+                    "text": "Voice recorder or call app",
+                    "level": "Advanced",
+                    "marks": 10
+                },
+                {
+                    "text": "Weather app",
+                    "level": "Intermediate",
+                    "marks": 5
+                },
+                {
+                    "text": "Calculator",
+                    "level": "Beginner",
+                    "marks": 3
+                }
+            ]
+        },
+        {
+            "question": "Why is it risky to allow camera and microphone permissions unnecessarily?",
+            "options": [
+                {
+                    "text": "Apps might take selfies",
+                    "level": "Beginner",
+                    "marks": 3
+                },
+                {
+                    "text": "Apps can record or watch without consent",
+                    "level": "Advanced",
+                    "marks": 10
+                },
+                {
+                    "text": "It improves the phone’s performance",
+                    "level": "Wrong",
+                    "marks": 0
+                },
+                {
+                    "text": "It slows down the app",
+                    "level": "Intermediate",
+                    "marks": 5
+                }
+            ]
+        },
+        {
+            "question": "Which app genuinely needs location permission?",
+            "options": [
+                {
+                    "text": "Gallery",
+                    "level": "Wrong",
+                    "marks": 0
+                },
+                {
+                    "text": "Maps or delivery apps",
+                    "level": "Advanced",
+                    "marks": 10
+                },
+                {
+                    "text": "Clock",
+                    "level": "Beginner",
+                    "marks": 3
+                },
+                {
+                    "text": "Video player",
+                    "level": "Intermediate",
+                    "marks": 5
+                }
+            ]
+        },
+        {
+            "question": "You gave location access to a shopping app. What might happen?",
+            "options": [
+                {
+                    "text": "You get more accurate delivery estimates",
+                    "level": "Intermediate",
+                    "marks": 5
+                },
+                {
+                    "text": "It starts tracking your movement for targeted ads",
+                    "level": "Advanced",
+                    "marks": 10
+                },
+                {
+                    "text": "App stops working",
+                    "level": "Wrong",
+                    "marks": 0
+                },
+                {
+                    "text": "You lose phone signal",
+                    "level": "Beginner",
+                    "marks": 3
+                }
+            ]
+        },
+        {
+            "question": "What is “permission creep” in mobile apps?",
+            "options": [
+                {
+                    "text": "An app using too much battery",
+                    "level": "Beginner",
+                    "marks": 3
+                },
+                {
+                    "text": "App gradually requesting more access over time",
+                    "level": "Advanced",
+                    "marks": 10
+                },
+                {
+                    "text": "Apps freezing frequently",
+                    "level": "Wrong",
+                    "marks": 0
+                },
+                {
+                    "text": "Apps using small icons",
+                    "level": "Intermediate",
+                    "marks": 5
+                }
+            ]
+        },
+        {
+            "question": "Which permission is most sensitive for privacy and identity theft?",
+            "options": [
+                {
+                    "text": "Flashlight",
+                    "level": "Beginner",
+                    "marks": 3
+                },
+                {
+                    "text": "Contacts and call logs",
+                    "level": "Advanced",
+                    "marks": 10
+                },
+                {
+                    "text": "Vibration control",
+                    "level": "Wrong",
+                    "marks": 0
+                },
+                {
+                    "text": "Font size access",
+                    "level": "Intermediate",
+                    "marks": 5
+                }
+            ]
+        },
+        {
+            "question": "What is the best habit for managing app permissions on your phone?",
+            "options": [
+                {
+                    "text": "Review and revoke unused permissions regularly",
+                    "level": "Advanced",
+                    "marks": 10
+                },
+                {
+                    "text": "Give all apps full access",
+                    "level": "Wrong",
+                    "marks": 0
+                },
+                {
+                    "text": "Restart your phone weekly",
+                    "level": "Intermediate",
+                    "marks": 5
+                },
+                {
+                    "text": "Turn off notifications",
+                    "level": "Beginner",
+                    "marks": 3
+                }
+            ]
+        }
+    ]
+}
