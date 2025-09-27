@@ -7,10 +7,12 @@ BASE = Path(__file__).parent
 ANSWER_PATH = BASE / "answer_sheetappper.json"
 EXPL_PATH = BASE / "ExplanationBankappper.json"
 
+
 def normalize_qid(qid: str) -> str:
     # Convert Q01 -> Q1, Q1 stays Q1, Q10 stays Q10
     m = re.match(r"Q0*(\d+)$", qid)
     return f"Q{m.group(1)}" if m else qid
+
 
 def load_json(p: Path):
     try:
@@ -19,13 +21,14 @@ def load_json(p: Path):
         print(f"ERROR: failed to load {p}: {e}", file=sys.stderr)
         sys.exit(2)
 
+
 def main():
     answer = load_json(ANSWER_PATH)
     expl = load_json(EXPL_PATH)
 
     required = set()
     for q in answer.get("questions", []):
-        qid = normalize_qid(q.get("questionId",""))
+        qid = normalize_qid(q.get("questionId", ""))
         for opt in q.get("options", []):
             level = (opt.get("level") or "").strip()
             label = (opt.get("label") or "").strip()
@@ -37,7 +40,7 @@ def main():
 
     available = set()
     for entry in expl:
-        qid = normalize_qid(entry.get("questionId",""))
+        qid = normalize_qid(entry.get("questionId", ""))
         label = (entry.get("option") or "").strip()
         if label:
             available.add((qid, label))
@@ -60,6 +63,7 @@ def main():
     print()
     print("Please add explanation entries for the missing (questionId, option) pairs into ExplanationBankappper.json.")
     return 1
+
 
 if __name__ == "__main__":
     sys.exit(main())
