@@ -1,0 +1,4802 @@
+[
+    {
+        "questionId": "Q1",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, thinking a short password is fine because you remember it easily is risky. It’s like using a tiny lock on your school bag — anyone can break it. Use at least 8+ characters with mix of letters and numbers to keep accounts safe."
+    },
+    {
+        "questionId": "Q1",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, short passwords are like keeping all your tuition books in a bag with a weak zip — anyone can open. Strong passwords need length and mix of characters. Use a passphrase you can remember, like a Sinhala sentence with numbers."
+    },
+    {
+        "questionId": "Q1",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, short passwords may feel easy, but hackers crack them in seconds with tools. It’s like using a one-digit PIN for your ATM — faster, but useless. Use longer, complex ones or a manager app to handle them."
+    },
+    {
+        "questionId": "Q1",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, at degree level you should know short passwords are weakest. Think of research data locked with a small key — easily stolen. Best is 12+ characters, with special symbols, to prevent brute-force attacks."
+    },
+    {
+        "questionId": "Q1",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, you know tech a bit, so short password = danger. Imagine your WiFi key being 1234 — whole boarding school will connect. Always set long, mixed passwords to stop guessing."
+    },
+    {
+        "questionId": "Q1",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, with your skill level, you know attackers run brute-force in seconds on short ones. It’s like leaving exam papers in an unlocked classroom. Best practice: long, random string or passphrase."
+    },
+    {
+        "questionId": "Q1",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, you understand how systems work. Short passwords reduce entropy drastically. It’s like writing one weak if-statement that crashes a program. Strong length + complexity improves resilience."
+    },
+    {
+        "questionId": "Q1",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, as a graduate you know security = layered. Short password is like deploying production without firewall — trivial attack. Length and randomness are essential to stop dictionary and rainbow-table attacks."
+    },
+    {
+        "questionId": "Q1",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, using a short password may look easy, but like using a tiny padlock on your bicycle — anyone can open. Better to make it long, with letters and numbers, to protect your online accounts."
+    },
+    {
+        "questionId": "Q1",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, don’t think short means safe. It’s like keeping exam notes with a small clip instead of a strong folder — it will spill. Use long passphrases, maybe Sinhala song lines with numbers, easy but strong."
+    },
+    {
+        "questionId": "Q1",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, short passwords = big trouble. Hackers can guess in seconds. Like leaving a hostel room door half-closed — anyone can enter. Instead, build strong, long keys or use a manager to remember."
+    },
+    {
+        "questionId": "Q1",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, at degree level, think critically: short passwords mean less entropy. It’s like storing thesis files in a folder without lock. A 12+ character passphrase with symbols protects far better."
+    },
+    {
+        "questionId": "Q1",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, short and easy = unsafe. Like leaving your phone with no screen lock at tuition class. Long and mixed password = real safety."
+    },
+    {
+        "questionId": "Q1",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, with your skill you know attackers use brute-force quickly. It’s like hackers trying thousands of keys on a hostel lock. Long, unique passwords stop this."
+    },
+    {
+        "questionId": "Q1",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, as an HND student you must know — shorter means low entropy. Like using one weak formula in programming — crashes whole project. Stronger passwords = stronger systems."
+    },
+    {
+        "questionId": "Q1",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, degree level means you should think of security in layers. Short password is no barrier. Like a server without firewall, attackers pass easily. Build long, complex credentials to withstand attacks."
+    },
+    {
+        "questionId": "Q1",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, thinking birthdays make strong passwords is wrong. Everyone in class knows your birthday — easy guess. It’s like writing your exam index number as your ATM PIN. Use random letters and numbers instead."
+    },
+    {
+        "questionId": "Q1",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, birthdays are public info. Even Facebook shows them. It’s like keeping a key under your doormat — friends and strangers can find. Better to mix random words and digits, not personal data."
+    },
+    {
+        "questionId": "Q1",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, using birthdays is predictable. Hackers try DOB first. Like WiFi password being your phone number — neighbours crack easily. Use a manager app to store complex keys safely."
+    },
+    {
+        "questionId": "Q1",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, at degree level you must know birthdays are low entropy. Anyone who sees your ID card or social media can guess. Like locking a lab with code '1999' — trivial. Stronger, random strings are needed."
+    },
+    {
+        "questionId": "Q1",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, you know basics — birthdays are first thing hackers try. It’s like leaving your phone with pattern lock shaped 'L' — friends guess fast. Use long mixes, not personal data."
+    },
+    {
+        "questionId": "Q1",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, with your skill you know attackers scrape social media. DOB-based passwords are weak. Like open-source code with hardcoded keys — easily broken. Better: use passphrases unrelated to you."
+    },
+    {
+        "questionId": "Q1",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, birthdays reduce entropy drastically. Hackers use wordlists with names + DOB. It’s like SQL injection on a poorly sanitized input — obvious and avoidable. Stronger randomization is key."
+    },
+    {
+        "questionId": "Q1",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, as a graduate, think critically — personal info = weakest keys. Birthdays are predictable, like default admin passwords in IoT devices. Replace with unique, non-personal, long passphrases."
+    },
+    {
+        "questionId": "Q1",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, birthdays are not safe. Even friends know your date, so easy guess. Like using your name as a diary lock — no use. Better make something long and mixed, not linked to you."
+    },
+    {
+        "questionId": "Q1",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, your birthday is everywhere — ID card, socials, friends. Hackers guess quickly. It’s like hiding key under flower pot — too obvious. Choose a creative passphrase instead."
+    },
+    {
+        "questionId": "Q1",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, birthdays look personal but weak. Like hostel locker with key '2002' — everyone knows. Safer is long, mixed string or use manager app to store safely."
+    },
+    {
+        "questionId": "Q1",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, at degree stage, you must know — birthdays are guessable data. It’s like securing thesis with password '1998' — trivial crack. Unique, strong strings protect better."
+    },
+    {
+        "questionId": "Q1",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, you know tech basics — birthdays = first guess for hackers. It’s like leaving your phone lock as '0000'. Safer to mix numbers, words, and signs."
+    },
+    {
+        "questionId": "Q1",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, with your skill, you know socials leak info. DOB-based keys are unsafe, like project code with default password. Change to random, longer passphrases."
+    },
+    {
+        "questionId": "Q1",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, birthdays reduce entropy — predictable pattern. Like using 'password123'. Safer is 12+ chars, mixed symbols, or manager tools to store them."
+    },
+    {
+        "questionId": "Q1",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, as a graduate you know personal info is weakest secret. Birthdays are public, like default WiFi password printed on router. Replace with unique, long passphrases."
+    },
+    {
+        "questionId": "Q1",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, thinking passwords speed up your phone is wrong. Phone speed depends on memory and apps, not passwords. It’s like saying wearing shoes makes your bus go faster. Passwords only protect, not speed up."
+    },
+    {
+        "questionId": "Q1",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, believing passwords make phones faster is a mistake. Speed comes from processor, not security. Like saying more padlocks make your bicycle faster — no, they just protect it."
+    },
+    {
+        "questionId": "Q1",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, password strength has zero impact on performance. It’s like saying long WiFi key gives faster internet. No — it only stops outsiders from stealing your connection. Same with passwords."
+    },
+    {
+        "questionId": "Q1",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, as a degree student you know — performance is hardware/software bound. Passwords secure, not optimize. Like encrypting data doesn’t make code run faster, but it prevents leaks."
+    },
+    {
+        "questionId": "Q1",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, you know basics — phone lag is from RAM or apps. Passwords don’t boost speed. Like helmet doesn’t make bike faster, it just protects you."
+    },
+    {
+        "questionId": "Q1",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, at your level you know security ≠ performance. Passwords prevent misuse, but lag is due to system resources. Like firewall doesn’t make internet faster, it blocks attacks."
+    },
+    {
+        "questionId": "Q1",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, conflating speed with security is a misconception. Passwords handle authentication, not optimization. Like antivirus doesn’t improve CPU speed, it just prevents infection."
+    },
+    {
+        "questionId": "Q1",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, you know performance is unrelated. Passwords = security controls. Like implementing TLS — it ensures confidentiality, but processing overhead may slow, never speed."
+    },
+    {
+        "questionId": "Q1",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, don’t mix things. Phone speed comes from apps and memory, not passwords. It’s like thinking wearing earrings makes you run faster — not true. Passwords only keep you safe."
+    },
+    {
+        "questionId": "Q1",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, believing passwords speed up a phone is wrong. Speed is from hardware, not lock. Like putting two locks on your almirah doesn’t make you open it faster — it only protects things inside."
+    },
+    {
+        "questionId": "Q1",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, password complexity never improves performance. Like making your diary lock stronger doesn’t make pages turn faster. It’s only about protection, not speed."
+    },
+    {
+        "questionId": "Q1",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, as a degree student you know — security ≠ optimization. Passwords defend against attackers, but phone speed is technical. Like encrypting a file protects it but doesn’t make opening faster."
+    },
+    {
+        "questionId": "Q1",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, you know basics — lagging is due to apps, not passwords. Like umbrella doesn’t stop rain faster, it only keeps you dry. Passwords just protect data."
+    },
+    {
+        "questionId": "Q1",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, mixing speed and safety is a myth. Passwords secure data, not boost performance. Like airbags don’t make cars faster, they protect in accidents."
+    },
+    {
+        "questionId": "Q1",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, passwords authenticate users, not optimize systems. Like database constraints protect integrity but don’t increase query speed. Protection and speed are separate."
+    },
+    {
+        "questionId": "Q1",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, at graduate stage you know passwords are only security controls. It’s like SSL certificates — they secure comms but don’t improve bandwidth. Security ≠ performance boost."
+    },
+    {
+        "questionId": "Q2",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, giving all permissions immediately is risky. Imagine lending your house keys to everyone you meet — they could misuse it. Check which permissions are really needed first."
+    },
+    {
+        "questionId": "Q2",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, allowing all app permissions blindly is like giving all your neighbours your diary to read. Only allow what’s necessary, like location for maps, not everything."
+    },
+    {
+        "questionId": "Q2",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, apps ask for permissions. Giving all is unsafe — like giving one key to your hostel, shop, and room. Only approve what app genuinely needs."
+    },
+    {
+        "questionId": "Q2",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, blindly accepting all permissions is a poor habit. Think of it as leaving your lab doors unlocked for everyone. Check each request: camera for scanner app, not for game."
+    },
+    {
+        "questionId": "Q2",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, giving every permission is careless. Imagine if your mobile banking app shared info with a game — disaster. Approve only what’s needed."
+    },
+    {
+        "questionId": "Q2",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, high IT skill means you know permission creep is real. Giving all access = risk. Like installing software on university computer with admin rights — only allow required access."
+    },
+    {
+        "questionId": "Q2",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, granting all permissions is unsafe — think of it as opening all doors in IT lab for strangers. Approve location or camera only when necessary."
+    },
+    {
+        "questionId": "Q2",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, advanced users must be cautious. Allowing all permissions = huge security risk. Like giving admin password to everyone in research lab. Only approve necessary permissions."
+    },
+    {
+        "questionId": "Q2",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, granting all permissions is unsafe. Imagine letting every stranger into your bedroom — they may misuse things. Only allow what’s needed for the app."
+    },
+    {
+        "questionId": "Q2",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, giving all permissions blindly is like leaving your diary open to everyone — not safe. Check which features the app really requires."
+    },
+    {
+        "questionId": "Q2",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, apps request permissions — approving all = risk. Like giving keys to your house to anyone passing by. Only allow what’s necessary, e.g., location for map app."
+    },
+    {
+        "questionId": "Q2",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, giving all permissions is careless. Like leaving all lab doors unlocked. Only allow what’s needed: camera for video calls, not for unrelated apps."
+    },
+    {
+        "questionId": "Q2",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, blindly approving permissions is risky. Imagine giving your mobile banking info to a game — disaster. Only approve necessary permissions."
+    },
+    {
+        "questionId": "Q2",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, permission creep is real. High IT skill users must check requests. Only approve what app genuinely needs — like location for maps, camera for scanner."
+    },
+    {
+        "questionId": "Q2",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, giving all permissions is unsafe. Like leaving all doors in a hostel open for strangers. Only approve app requests that are truly necessary."
+    },
+    {
+        "questionId": "Q2",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, advanced users should know — granting all permissions = serious risk. Like giving admin rights to everyone in IT lab. Approve only required permissions for each app."
+    },
+    {
+        "questionId": "Q2",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, using the app immediately without checking permissions is risky. Like lending your bicycle without knowing who’s riding — someone could misuse it. Always review what the app asks for first."
+    },
+    {
+        "questionId": "Q2",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, opening an app right away without checking is like letting strangers enter your room — dangerous. Check permissions first: does the calculator need camera or location? No!"
+    },
+    {
+        "questionId": "Q2",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, apps may ask for sensitive access. Using immediately without review = like giving keys to your hostel room to anyone. Only approve what’s necessary."
+    },
+    {
+        "questionId": "Q2",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, jumping straight in is unsafe. Like opening a lab without checking security. Always verify app permissions: camera, location, microphone — only allow required ones."
+    },
+    {
+        "questionId": "Q2",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, using apps immediately without permission check is careless. Imagine letting a game access your contacts — risk. Review requests carefully first."
+    },
+    {
+        "questionId": "Q2",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, as a skilled user you know permission creep exists. Using the app blindly = like installing software with admin rights — unsafe. Approve only needed access."
+    },
+    {
+        "questionId": "Q2",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, using an app immediately without review = potential data breach. Like giving hostel admin password to anyone. Always check which permissions are requested."
+    },
+    {
+        "questionId": "Q2",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, advanced users must check permissions first. Blind use = risk of leaks. Like leaving research lab doors unlocked — verify each permission before allowing."
+    },
+    {
+        "questionId": "Q2",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, opening apps immediately without checking permissions is dangerous. Like letting anyone enter your room — they may misuse items. Always check what the app asks for."
+    },
+    {
+        "questionId": "Q2",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, using an app right away = careless. Imagine a stranger taking your notebook. Check permissions: only allow what is truly needed."
+    },
+    {
+        "questionId": "Q2",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, apps may request sensitive access. Using immediately without review = like giving keys to strangers. Only approve essential permissions."
+    },
+    {
+        "questionId": "Q2",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, jumping straight in = risky. Like opening lab without checking security. Check permissions: camera, mic, location — approve only what’s required."
+    },
+    {
+        "questionId": "Q2",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, using apps immediately without reviewing permissions is careless. Like letting a game access your contacts — bad idea. Approve necessary requests only."
+    },
+    {
+        "questionId": "Q2",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, permission creep is real. Using app blindly = like installing software with admin rights — unsafe. Only approve what app genuinely needs."
+    },
+    {
+        "questionId": "Q2",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, opening an app immediately = potential risk. Like giving hostel admin password to strangers. Always check requested permissions first."
+    },
+    {
+        "questionId": "Q2",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, advanced users should check permissions before using app. Blind use = data leak risk. Like leaving lab unlocked — verify before allowing."
+    },
+    {
+        "questionId": "Q2",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, restarting your phone doesn’t help with permissions. It’s like shaking a locked box hoping it opens — pointless. Always check what permissions apps request first."
+    },
+    {
+        "questionId": "Q2",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, rebooting your phone won’t make an app safer. Like restarting school without checking security — doesn’t protect your things. Review permissions first."
+    },
+    {
+        "questionId": "Q2",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, restarting doesn’t solve security issues. Like shaking a locked diary — it stays closed but still locked. Check which permissions the app actually needs."
+    },
+    {
+        "questionId": "Q2",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, rebooting your phone doesn’t improve app security. Like refreshing a lab without checking access — useless. Always review permissions before using the app."
+    },
+    {
+        "questionId": "Q2",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, restarting your phone doesn’t fix permission risks. Like shaking a safe — it’s still locked. Always check app permissions carefully."
+    },
+    {
+        "questionId": "Q2",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, rebooting doesn’t solve permission issues. Like reinstalling software without checking rights — danger remains. Always review what access apps request."
+    },
+    {
+        "questionId": "Q2",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, restarting the phone doesn’t secure permissions. Like rebooting a server without checking firewall rules — risks persist. Always approve only necessary permissions."
+    },
+    {
+        "questionId": "Q2",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, advanced users know rebooting doesn’t help with permissions. Like restarting a lab without checking security — pointless. Approve only what the app truly needs."
+    },
+    {
+        "questionId": "Q2",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, restarting your phone won’t improve app safety. Like shaking a locked box — it stays locked. Always check which permissions the app requests."
+    },
+    {
+        "questionId": "Q2",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, rebooting won’t protect you from risky permissions. Like restarting school without checking security — unsafe. Always review app permissions first."
+    },
+    {
+        "questionId": "Q2",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, restarting doesn’t solve permission issues. Like shaking a locked diary — it stays closed but risky access remains. Always check app requests."
+    },
+    {
+        "questionId": "Q2",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, rebooting doesn’t make apps safer. Like refreshing a lab without checking access — danger remains. Always approve only necessary permissions."
+    },
+    {
+        "questionId": "Q2",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, restarting your phone doesn’t fix permission risks. Like shaking a safe — it’s still locked. Always review app permissions first."
+    },
+    {
+        "questionId": "Q2",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, rebooting won’t solve permission issues. Like reinstalling software without checking access — risk remains. Approve only necessary permissions."
+    },
+    {
+        "questionId": "Q2",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, restarting the phone doesn’t secure app permissions. Like rebooting a server without firewall rules — danger persists. Check each request carefully."
+    },
+    {
+        "questionId": "Q2",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, advanced users know rebooting doesn’t help. Like restarting a lab without checking security — pointless. Approve only what the app genuinely needs."
+    },
+    {
+        "questionId": "Q3",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, it’s wrong to think a flashlight app needs contacts. Imagine a torch asking for your friend list — doesn’t make sense. Only allow permissions the app truly needs."
+    },
+    {
+        "questionId": "Q3",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, giving a flashlight app access to contacts is like letting a torch read your diary — unnecessary and unsafe. Always check if permission is related to app function."
+    },
+    {
+        "questionId": "Q3",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, flashlight apps don’t need your contacts. Like giving your phone book to a torch — useless and risky. Only approve permissions needed for app’s main function."
+    },
+    {
+        "questionId": "Q3",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, a flashlight app requesting contacts is unnecessary. Like giving a light bulb access to your emails — illogical. Always review if permissions match app purpose."
+    },
+    {
+        "questionId": "Q3",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, flashlight doesn’t need contacts. Like asking a torch to call your friends — makes no sense. Only approve permissions necessary for app’s job."
+    },
+    {
+        "questionId": "Q3",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, giving a torch app contact access = risk. Like giving a pen access to your bank account — useless and unsafe. Approve only what the app truly needs."
+    },
+    {
+        "questionId": "Q3",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, a flashlight app asking contacts is suspicious. Like letting a calculator read your diary — unnecessary. Approve permissions carefully."
+    },
+    {
+        "questionId": "Q3",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, advanced users should notice: flashlight doesn’t need contacts. Like giving a light bulb your email password — irrelevant and risky. Only allow required access."
+    },
+    {
+        "questionId": "Q3",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, flashlight app asking for contacts is wrong. Like letting torch read your friend list — unsafe. Only approve permissions necessary for the app’s function."
+    },
+    {
+        "questionId": "Q3",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, giving contacts to a torch app is silly. Like letting a pen see your diary — unnecessary and risky. Approve only needed permissions."
+    },
+    {
+        "questionId": "Q3",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, flashlight apps don’t need contacts. Like giving a diary to a torch — pointless and unsafe. Always check if permissions match app purpose."
+    },
+    {
+        "questionId": "Q3",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, flashlight requesting contacts is unnecessary. Like giving a lamp your emails — makes no sense. Only approve permissions that are needed."
+    },
+    {
+        "questionId": "Q3",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, a torch app asking for contacts is risky. Like letting your notebook be read by a lamp — unnecessary. Approve only permissions needed for app’s job."
+    },
+    {
+        "questionId": "Q3",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, flashlight doesn’t need contacts. Like giving a pen your emails — useless and unsafe. Check permissions carefully."
+    },
+    {
+        "questionId": "Q3",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, flashlight app requesting contacts = unnecessary and risky. Like giving a light bulb your diary — never approve irrelevant permissions."
+    },
+    {
+        "questionId": "Q3",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, advanced users know: flashlight doesn’t need contacts. Like giving a lamp access to your email — pointless. Only approve required permissions."
+    },
+    {
+        "questionId": "Q3",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, weather apps don’t need your microphone. Like asking the rain to listen to your voice — makes no sense. Only allow permissions that match the app’s function."
+    },
+    {
+        "questionId": "Q3",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, giving mic access to a weather app is unnecessary. Like letting clouds hear your thoughts — silly and risky. Only approve permissions that are essential."
+    },
+    {
+        "questionId": "Q3",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, weather apps don’t need microphone access. Like giving a torch permission to call your friends — pointless. Approve only what’s needed."
+    },
+    {
+        "questionId": "Q3",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, microphone for a weather app is irrelevant. Like giving a lamp your diary — unnecessary and unsafe. Only allow permissions that make sense."
+    },
+    {
+        "questionId": "Q3",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, weather apps don’t require mic access. Like asking a tree to listen to your voice — irrelevant. Approve only necessary permissions."
+    },
+    {
+        "questionId": "Q3",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, granting microphone to a weather app is unnecessary. Like giving a fridge your diary — makes no sense. Only approve permissions that are required."
+    },
+    {
+        "questionId": "Q3",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, weather apps requesting mic = irrelevant. Like letting a calculator listen to you — pointless. Approve only permissions needed for app function."
+    },
+    {
+        "questionId": "Q3",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, advanced users notice: microphone for weather apps is unnecessary. Like giving a lamp your emails — irrelevant and risky. Only allow essential permissions."
+    },
+    {
+        "questionId": "Q3",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, weather apps don’t need microphone. Like letting the rain hear your voice — pointless. Only approve what’s necessary."
+    },
+    {
+        "questionId": "Q3",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, giving mic access to a weather app is silly. Like letting a cloud read your diary — unnecessary and unsafe. Approve only essential permissions."
+    },
+    {
+        "questionId": "Q3",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, weather apps don’t need mic access. Like giving a torch permission to call friends — pointless. Only approve permissions needed for app’s job."
+    },
+    {
+        "questionId": "Q3",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, microphone permission for weather apps is irrelevant. Like giving a lamp your diary — unnecessary. Only approve permissions that make sense."
+    },
+    {
+        "questionId": "Q3",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, weather apps don’t require mic. Like asking a tree to listen — irrelevant. Approve only what’s necessary."
+    },
+    {
+        "questionId": "Q3",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, microphone for weather apps is unnecessary. Like giving a fridge your diary — makes no sense. Only approve required permissions."
+    },
+    {
+        "questionId": "Q3",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, weather app requesting mic = irrelevant. Like letting a calculator listen — pointless. Only approve permissions needed for app function."
+    },
+    {
+        "questionId": "Q3",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, advanced users know microphone for weather apps is unnecessary. Like giving a lamp your emails — irrelevant and risky. Only allow essential access."
+    },
+    {
+        "questionId": "Q3",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, calculator apps don’t need microphone access. Like asking your math book to listen — it doesn’t make sense. Only give permissions that are needed for the app."
+    },
+    {
+        "questionId": "Q3",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, giving mic access to a calculator is unnecessary. Like letting your pencil record what you write — pointless and unsafe. Always approve only relevant permissions."
+    },
+    {
+        "questionId": "Q3",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, calculator apps requesting microphone = wrong. Like giving a notebook permission to speak — irrelevant. Only allow permissions matching the app function."
+    },
+    {
+        "questionId": "Q3",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, microphone for calculator app is unnecessary. Like letting a lamp read your diary — makes no sense. Approve only needed permissions."
+    },
+    {
+        "questionId": "Q3",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, calculators don’t require microphone access. Like asking a book to listen — pointless. Only approve permissions necessary for app’s core function."
+    },
+    {
+        "questionId": "Q3",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, giving mic to calculator app = unnecessary. Like letting a fridge listen to your conversation — irrelevant. Only allow essential permissions."
+    },
+    {
+        "questionId": "Q3",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, microphone access for calculator app is wrong. Like giving a torch your diary — pointless. Always approve only what the app needs."
+    },
+    {
+        "questionId": "Q3",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, advanced users know calculators don’t need mic access. Like giving a lamp your emails — irrelevant and unsafe. Only approve required permissions."
+    },
+    {
+        "questionId": "Q3",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, calculator apps don’t need microphone. Like letting your notebook listen — pointless. Only approve what’s necessary."
+    },
+    {
+        "questionId": "Q3",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, giving mic to a calculator app is silly. Like letting a pencil record what you write — unnecessary and risky. Approve only essential permissions."
+    },
+    {
+        "questionId": "Q3",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, calculator requesting microphone = irrelevant. Like giving a notebook permission to speak — pointless. Only approve permissions needed."
+    },
+    {
+        "questionId": "Q3",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, microphone for calculator app is unnecessary. Like letting a lamp read your diary — makes no sense. Only approve permissions matching app’s function."
+    },
+    {
+        "questionId": "Q3",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, calculators don’t require mic access. Like asking a book to listen — pointless. Approve only permissions needed for core functionality."
+    },
+    {
+        "questionId": "Q3",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, giving mic access to a calculator is unnecessary. Like letting a fridge hear your conversation — irrelevant. Approve only essential permissions."
+    },
+    {
+        "questionId": "Q3",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, microphone for calculator app is irrelevant. Like letting a torch read your diary — pointless. Only approve what’s necessary."
+    },
+    {
+        "questionId": "Q3",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, advanced users know calculators don’t need mic access. Like giving a lamp your emails — irrelevant and unsafe. Only allow required permissions."
+    },
+    {
+        "questionId": "Q4",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, Notes app doesn’t need microphone access. Like giving your diary a mic — silly and unnecessary. Only apps that need to record sound should have mic permission."
+    },
+    {
+        "questionId": "Q4",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, allowing mic for a Notes app is unnecessary. Like letting a pen listen to your voice — pointless. Only approve permissions for apps’ core functions."
+    },
+    {
+        "questionId": "Q4",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, Notes app doesn’t require mic access. Like giving a notebook a microphone — makes no sense. Only give permissions that match app purpose."
+    },
+    {
+        "questionId": "Q4",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, microphone for Notes app is unnecessary. Like letting a diary record sound — irrelevant. Only approve permissions that are truly needed."
+    },
+    {
+        "questionId": "Q4",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, Notes apps don’t need mic access. Like asking a notebook to listen to your conversation — pointless. Only give permissions necessary for the app’s function."
+    },
+    {
+        "questionId": "Q4",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, granting microphone access to Notes app = unnecessary. Like letting a pen record your diary — unsafe. Approve only what’s essential."
+    },
+    {
+        "questionId": "Q4",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, Notes app requesting mic is irrelevant. Like giving a notebook the ability to speak — pointless. Only approve permissions needed for functionality."
+    },
+    {
+        "questionId": "Q4",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, advanced users know Notes app doesn’t need microphone. Like giving a diary the ability to record sound — irrelevant and risky. Only allow necessary permissions."
+    },
+    {
+        "questionId": "Q4",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, Notes app doesn’t need microphone. Like letting your diary listen — unnecessary. Only approve permissions relevant to app function."
+    },
+    {
+        "questionId": "Q4",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, giving mic access to Notes app is silly. Like letting a pen hear your voice — unnecessary and risky. Approve only essential permissions."
+    },
+    {
+        "questionId": "Q4",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, Notes app requesting mic is pointless. Like giving a notebook the ability to record — irrelevant. Only approve needed permissions."
+    },
+    {
+        "questionId": "Q4",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, microphone for Notes app is unnecessary. Like letting a diary record sound — irrelevant. Only approve permissions that match app purpose."
+    },
+    {
+        "questionId": "Q4",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, Notes apps don’t require mic. Like asking a notebook to listen — pointless. Only approve permissions necessary for core function."
+    },
+    {
+        "questionId": "Q4",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, granting mic access to Notes app is unnecessary. Like letting a pen record your diary — irrelevant. Approve only essential permissions."
+    },
+    {
+        "questionId": "Q4",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, microphone for Notes app is irrelevant. Like giving a notebook ability to record — pointless. Only approve permissions needed for functionality."
+    },
+    {
+        "questionId": "Q4",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, advanced users know Notes app doesn’t need mic. Like giving a diary ability to record sound — unnecessary and risky. Only allow required permissions."
+    },
+    {
+        "questionId": "Q4",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, Weather apps don’t need microphone access. Like asking the sun to listen to your voice — silly and unnecessary. Only give permissions that match the app’s purpose."
+    },
+    {
+        "questionId": "Q4",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, giving mic to a weather app is pointless. Like letting clouds hear your conversation — irrelevant and unsafe. Approve only essential permissions."
+    },
+    {
+        "questionId": "Q4",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, weather apps requesting microphone is wrong. Like giving a torch permission to listen — unnecessary. Only allow what’s needed for app function."
+    },
+    {
+        "questionId": "Q4",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, microphone for weather app is irrelevant. Like letting a lamp record your diary — unnecessary. Only approve permissions that make sense."
+    },
+    {
+        "questionId": "Q4",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, weather apps don’t need mic access. Like asking a tree to listen — pointless. Approve only necessary permissions."
+    },
+    {
+        "questionId": "Q4",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, granting mic access to a weather app is unnecessary. Like letting a fridge hear your conversation — irrelevant. Only approve essential permissions."
+    },
+    {
+        "questionId": "Q4",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, microphone request from a weather app is irrelevant. Like giving a calculator permission to speak — pointless. Only approve permissions needed for functionality."
+    },
+    {
+        "questionId": "Q4",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, advanced users know microphone for weather apps is unnecessary. Like letting a lamp read your emails — irrelevant and risky. Only allow essential permissions."
+    },
+    {
+        "questionId": "Q4",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, weather apps don’t need microphone. Like letting clouds hear your voice — pointless. Only approve permissions relevant to app function."
+    },
+    {
+        "questionId": "Q4",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, microphone for weather apps is unnecessary. Like letting clouds record your conversation — unsafe. Approve only essential permissions."
+    },
+    {
+        "questionId": "Q4",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, weather apps requesting microphone = irrelevant. Like giving a torch ability to listen — pointless. Only approve needed permissions."
+    },
+    {
+        "questionId": "Q4",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, microphone for weather apps is unnecessary. Like letting a lamp read your diary — irrelevant. Only approve permissions that make sense."
+    },
+    {
+        "questionId": "Q4",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, weather apps don’t require mic. Like asking a tree to listen — pointless. Approve only necessary permissions."
+    },
+    {
+        "questionId": "Q4",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, granting mic access to a weather app is unnecessary. Like letting a fridge hear your conversation — irrelevant. Only approve essential permissions."
+    },
+    {
+        "questionId": "Q4",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, microphone for weather app is irrelevant. Like giving a calculator ability to listen — pointless. Only approve permissions needed for function."
+    },
+    {
+        "questionId": "Q4",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, advanced users know weather apps don’t need mic. Like giving a lamp your emails — irrelevant and unsafe. Only allow required permissions."
+    },
+    {
+        "questionId": "Q4",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, Calculator apps don’t need microphone access. Like asking your math notebook to listen to your voice — silly and unnecessary. Only allow permissions that match the app’s purpose."
+    },
+    {
+        "questionId": "Q4",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, giving mic to a Calculator app is pointless. Like letting a pencil record your voice — irrelevant. Only approve essential permissions."
+    },
+    {
+        "questionId": "Q4",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, Calculator requesting microphone is wrong. Like giving a notebook permission to speak — unnecessary. Only allow permissions needed for core functionality."
+    },
+    {
+        "questionId": "Q4",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, microphone for Calculator app is irrelevant. Like letting a diary record sound — unnecessary. Only approve permissions that make sense."
+    },
+    {
+        "questionId": "Q4",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, Calculator apps don’t need mic access. Like asking a book to listen — pointless. Approve only permissions needed for the app’s function."
+    },
+    {
+        "questionId": "Q4",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, granting mic access to Calculator app is unnecessary. Like letting a fridge hear your conversation — irrelevant. Only approve essential permissions."
+    },
+    {
+        "questionId": "Q4",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, microphone request from Calculator app is irrelevant. Like giving a torch permission to speak — pointless. Only approve what’s needed for functionality."
+    },
+    {
+        "questionId": "Q4",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, advanced users know microphone for Calculator apps is unnecessary. Like letting a lamp read your emails — irrelevant and risky. Only allow required permissions."
+    },
+    {
+        "questionId": "Q4",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, Calculator apps don’t need microphone. Like letting your notebook listen — pointless. Only approve permissions relevant to app function."
+    },
+    {
+        "questionId": "Q4",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, microphone for Calculator apps is unnecessary. Like letting a pencil record your voice — unsafe. Approve only essential permissions."
+    },
+    {
+        "questionId": "Q4",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, Calculator app requesting mic = irrelevant. Like giving a notebook the ability to record — pointless. Only approve needed permissions."
+    },
+    {
+        "questionId": "Q4",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, microphone for Calculator app is unnecessary. Like letting a lamp read your diary — irrelevant. Only approve permissions that make sense."
+    },
+    {
+        "questionId": "Q4",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, Calculator apps don’t require mic. Like asking a book to listen — pointless. Approve only permissions necessary for core function."
+    },
+    {
+        "questionId": "Q4",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, granting mic access to Calculator app is unnecessary. Like letting a fridge hear your conversation — irrelevant. Only approve essential permissions."
+    },
+    {
+        "questionId": "Q4",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, microphone for Calculator app is irrelevant. Like giving a calculator ability to listen — pointless. Only approve permissions needed for function."
+    },
+    {
+        "questionId": "Q4",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, advanced users know Calculator apps don’t need mic. Like giving a lamp your emails — irrelevant and unsafe. Only allow required permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, allowing camera/mic for random apps just so they can take selfies is risky. Like letting strangers peek into your diary — fun maybe, but unsafe. Only give permissions needed for app function."
+    },
+    {
+        "questionId": "Q5",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, giving camera/mic access unnecessarily is dangerous. Like letting anyone take photos in your house — risky. Approve only for apps that truly need it."
+    },
+    {
+        "questionId": "Q5",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, camera/mic permissions for unnecessary apps can lead to misuse. Like handing a stranger your camera — only approve what’s necessary."
+    },
+    {
+        "questionId": "Q5",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, allowing apps to use camera/mic unnecessarily is risky. Like letting strangers access your lab experiments — fun but unsafe. Only approve relevant permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, random apps shouldn’t get camera/mic. Like giving your phone’s mic to a stranger — unnecessary risk. Only approve required permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, only apps that need mic/camera should get it. Like lab equipment only for experiments — unnecessary access = risk."
+    },
+    {
+        "questionId": "Q5",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, giving camera/mic to irrelevant apps is unsafe. Like sharing your diary with random people — only approve needed permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, advanced users know unnecessary camera/mic access is risky. Like letting strangers handle sensitive lab equipment — approve only required permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, random apps shouldn’t use camera/mic. Like letting strangers peek into your diary — unsafe. Only allow essential permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, giving unnecessary camera/mic access is risky. Like sharing your personal notebook — approve only essential permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, unnecessary camera/mic access can lead to misuse. Like giving a stranger your diary — only approve what’s needed."
+    },
+    {
+        "questionId": "Q5",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, camera/mic for unnecessary apps is risky. Like letting strangers handle your lab experiments — approve only relevant permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, only apps that need camera/mic should get access. Like using a class mic — unnecessary access = risk."
+    },
+    {
+        "questionId": "Q5",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, unnecessary camera/mic permissions are unsafe. Like sharing lab equipment with strangers — only approve required access."
+    },
+    {
+        "questionId": "Q5",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, giving irrelevant apps camera/mic is unsafe. Like handing your diary to strangers — approve only necessary permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, advanced users know unnecessary camera/mic access is risky. Like letting strangers handle sensitive experiments — approve only required permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, thinking unnecessary permissions improve phone performance is wrong. Like giving a stranger a broom thinking your house will clean faster — it doesn’t work and is unsafe. Only give permissions needed for the app."
+    },
+    {
+        "questionId": "Q5",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, saying it improves phone performance is a misconception. Like letting random people handle your house chores — not helpful and risky. Only allow relevant permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, unnecessary camera/mic access does not improve performance. Like giving strangers tools hoping your work will finish faster — pointless and unsafe. Approve only needed permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, giving camera/mic access for better performance is incorrect. Like letting strangers use your lab to speed experiments — it won’t help and is risky. Only approve relevant permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, unnecessary camera/mic doesn’t boost performance. Like letting a stranger handle your bike to go faster — pointless. Only give essential permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, wrong idea. Camera/mic access doesn’t improve phone performance. Like letting a stranger do your homework to finish faster — unsafe. Approve only needed access."
+    },
+    {
+        "questionId": "Q5",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, unnecessary permissions won’t help performance. Like giving strangers keys to your lab — pointless and risky. Only approve required permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, advanced users know extra camera/mic permissions don’t boost phone speed. Like letting untrained people handle experiments — risky. Only approve essential permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, unnecessary permissions don’t make your phone faster. Like giving strangers your broom thinking it cleans better — unsafe. Only approve needed permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, it’s wrong to think extra permissions improve performance. Like letting random people handle chores — pointless and risky. Only allow relevant permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, unnecessary camera/mic won’t improve phone speed. Like giving strangers your tools hoping work will finish faster — unsafe. Only approve needed permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, giving extra permissions won’t help performance. Like letting strangers handle lab work — risky. Only approve relevant permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, unnecessary camera/mic doesn’t improve performance. Like letting strangers use your bike to go faster — unsafe. Approve only essential access."
+    },
+    {
+        "questionId": "Q5",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, wrong idea. Extra permissions don’t make your phone faster. Like letting strangers do your tasks — risky. Only approve necessary access."
+    },
+    {
+        "questionId": "Q5",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, unnecessary permissions won’t help performance. Like giving strangers keys to lab equipment — unsafe. Only approve required permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, advanced users know extra camera/mic permissions don’t improve speed. Like letting untrained people handle experiments — risky. Only allow essential permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, thinking unnecessary permissions slow down the app is partially true but not the main risk. Like saying your school bag is heavy because of extra papers — correct, but bigger risk is losing them. Focus on giving only needed permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, yes, extra permissions may slow apps slightly, but the main danger is misuse of camera/mic. Like carrying too many books — weight is minor, but losing notes is worse. Only approve essential permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, extra permissions can slow apps, but the bigger issue is security. Like carrying extra tools in a bag — slows down but bigger risk is theft. Only give needed access."
+    },
+    {
+        "questionId": "Q5",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, unnecessary permissions might slightly affect speed, but the key risk is data misuse. Like carrying extra files — small delay, bigger problem if lost. Approve only required permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, slowing down app is minor compared to risk of camera/mic misuse. Like carrying extra tools — slight delay, bigger problem if stolen. Only approve necessary permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, correct idea on speed, but main concern is security. Like having extra keys — heavier, yes, but bigger risk if stolen. Approve only essential permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, unnecessary permissions may slightly slow the app but security is more important. Like carrying extra books — weight minor, risk higher if lost. Only give needed access."
+    },
+    {
+        "questionId": "Q5",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, advanced users know small slowdown is negligible compared to risk. Like extra lab tools — minor inconvenience, major risk if stolen. Only approve required permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, extra permissions may slow apps slightly, but bigger danger is misuse. Like carrying extra papers — slows a bit, bigger problem if lost. Only allow essential permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, yes, apps may slow down, but the key risk is camera/mic misuse. Like carrying extra notebooks — minor delay, bigger problem if lost. Approve only essential permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, extra permissions can slow apps slightly but main concern is security. Like extra tools in bag — weight minor, risk higher if stolen. Only give needed access."
+    },
+    {
+        "questionId": "Q5",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, slight slowdown is not the main issue. The real problem is unnecessary access. Like extra lab files — minor inconvenience, major risk if misused. Approve only required permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, small slowdown is minor. Main risk is camera/mic misuse. Like extra items in bag — minor, bigger issue if stolen. Approve only necessary permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, slowdown is minor compared to security risks. Like extra keys — weight minor, bigger risk if lost. Approve only essential access."
+    },
+    {
+        "questionId": "Q5",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, slight slowdown doesn’t matter much; main concern is misuse. Like extra lab tools — minor inconvenience, major risk if stolen. Only approve needed permissions."
+    },
+    {
+        "questionId": "Q5",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, advanced users know minor slowdown is negligible vs risk. Like extra lab files — minor inconvenience, big risk if misused. Only allow essential permissions."
+    },
+    {
+        "questionId": "Q6",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, giving location access to Gallery is wrong. Like telling strangers where your house is just to see your photos — totally unnecessary and risky. Only apps that truly need your location should get it."
+    },
+    {
+        "questionId": "Q6",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, Gallery doesn’t need your location. Like showing strangers your classroom location for viewing pictures — pointless and unsafe. Only allow apps that need location."
+    },
+    {
+        "questionId": "Q6",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, giving Gallery location permission is unnecessary. Like giving someone your house GPS to see photos — risky. Only approve location for apps that truly need it."
+    },
+    {
+        "questionId": "Q6",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, Gallery does not require location. Like telling strangers your lab location for looking at files — unsafe. Only apps like Maps or delivery apps need location."
+    },
+    {
+        "questionId": "Q6",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, Gallery doesn’t need location. Like giving a stranger your house coordinates to see photos — unnecessary. Only essential apps get location access."
+    },
+    {
+        "questionId": "Q6",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, giving location to Gallery is wrong. Like sharing your GPS with strangers to view pictures — risky. Only apps that truly need location should have it."
+    },
+    {
+        "questionId": "Q6",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, Gallery doesn’t require location. Like handing your house location to a stranger to see images — unnecessary and unsafe. Only Maps or delivery apps need location."
+    },
+    {
+        "questionId": "Q6",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, advanced users know Gallery doesn’t need location. Like giving lab GPS for photo viewing — risky. Only apps that need location should have permission."
+    },
+    {
+        "questionId": "Q6",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, giving Gallery location access is unnecessary. Like telling strangers where your house is to see photos — unsafe. Only apps that truly need location should get it."
+    },
+    {
+        "questionId": "Q6",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, Gallery doesn’t need location. Like giving someone GPS just to look at pictures — pointless and risky. Only allow apps that need location."
+    },
+    {
+        "questionId": "Q6",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, unnecessary to give Gallery location access. Like giving strangers house coordinates for viewing photos — unsafe. Only essential apps get location permission."
+    },
+    {
+        "questionId": "Q6",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, Gallery doesn’t need location. Like telling strangers lab coordinates for images — unsafe. Only Maps or delivery apps should get location access."
+    },
+    {
+        "questionId": "Q6",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, Gallery doesn’t require location. Like giving strangers your house GPS to view photos — risky. Only essential apps get location access."
+    },
+    {
+        "questionId": "Q6",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, giving Gallery location is wrong. Like sharing GPS to view photos — unnecessary and unsafe. Only apps that need location should get it."
+    },
+    {
+        "questionId": "Q6",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, Gallery doesn’t require location. Like handing GPS to strangers for viewing images — risky. Only necessary apps should have permission."
+    },
+    {
+        "questionId": "Q6",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, advanced users know Gallery doesn’t need location. Like giving lab GPS to strangers for photos — unsafe. Only essential apps like Maps or delivery apps get permission."
+    },
+    {
+        "questionId": "Q6",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, Clock doesn’t need your location. Like setting an alarm at home — it works anywhere. Giving it location is unnecessary and risky. Only apps that really need it should get location access."
+    },
+    {
+        "questionId": "Q6",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, Clock app doesn’t require location. Like using your watch to wake up — it doesn’t need your house GPS. Only apps like Maps or delivery apps need location."
+    },
+    {
+        "questionId": "Q6",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, Clock doesn’t need location. Like setting an alarm anywhere — GPS isn’t needed. Only apps that truly need location, like Maps, should get access."
+    },
+    {
+        "questionId": "Q6",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, Clock app does not require location. Like an alarm clock at your room — works without GPS. Only apps like Maps or delivery apps need location."
+    },
+    {
+        "questionId": "Q6",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, Clock doesn’t need location. Like setting an alarm at home — it works everywhere. Only apps that need location, like Maps, should get access."
+    },
+    {
+        "questionId": "Q6",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, Clock app doesn’t need GPS. Like your alarm clock at home — it works anywhere. Only apps requiring location should be given access."
+    },
+    {
+        "questionId": "Q6",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, Clock doesn’t need location. Like setting alarm in your room — GPS not needed. Only Maps or delivery apps require location."
+    },
+    {
+        "questionId": "Q6",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, advanced users know Clock doesn’t need location. Like alarm clocks — works without GPS. Only apps like Maps/delivery need location."
+    },
+    {
+        "questionId": "Q6",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, Clock doesn’t need location. Like setting an alarm at home — works fine. Only apps that truly need location should get it."
+    },
+    {
+        "questionId": "Q6",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, Clock app doesn’t need location. Like using your watch to wake up — GPS isn’t needed. Only apps like Maps or delivery apps need location."
+    },
+    {
+        "questionId": "Q6",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, Clock doesn’t require location. Like setting an alarm anywhere — it works. Only apps that really need location should get access."
+    },
+    {
+        "questionId": "Q6",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, Clock app does not need GPS. Like alarm clocks — works without location. Only Maps or delivery apps need it."
+    },
+    {
+        "questionId": "Q6",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, Clock doesn’t need location. Like setting an alarm at home — works everywhere. Only trusted apps requiring location should get access."
+    },
+    {
+        "questionId": "Q6",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, Clock app doesn’t need GPS. Like your alarm clock — works without location. Only apps like Maps or delivery apps require location."
+    },
+    {
+        "questionId": "Q6",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, Clock doesn’t require location. Like setting alarm anywhere — works fine. Only apps that need location should be allowed."
+    },
+    {
+        "questionId": "Q6",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, advanced users know Clock doesn’t need location. Like alarm clocks — works without GPS. Only essential apps like Maps or delivery apps need location."
+    },
+    {
+        "questionId": "Q6",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, Video Player doesn’t need location. Like watching a movie at home — GPS isn’t required. Only apps like Maps or delivery apps truly need location."
+    },
+    {
+        "questionId": "Q6",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, Video Player app doesn’t need your location. Like watching a YouTube video — it works anywhere. Only apps that need location, like Maps, should get it."
+    },
+    {
+        "questionId": "Q6",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, Video Player doesn’t require location. Like playing movies on your laptop — GPS isn’t needed. Only give location to apps that truly need it."
+    },
+    {
+        "questionId": "Q6",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, Video Player doesn’t need location. Like watching a film at home — no GPS required. Only apps like Maps or delivery apps need location."
+    },
+    {
+        "questionId": "Q6",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, Video Player doesn’t need location. Like watching a movie at home — works without GPS. Only essential apps like Maps should get location."
+    },
+    {
+        "questionId": "Q6",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, Video Player app doesn’t require location. Like watching videos on your phone — GPS isn’t needed. Only Maps/delivery apps need it."
+    },
+    {
+        "questionId": "Q6",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, Video Player doesn’t need location. Like playing movies on your laptop — no GPS required. Only apps that truly need location, like Maps, should get access."
+    },
+    {
+        "questionId": "Q6",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, advanced users know Video Player doesn’t need location. Like watching films at home — works without GPS. Only essential apps like Maps need permission."
+    },
+    {
+        "questionId": "Q6",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, Video Player doesn’t need location. Like watching movies at home — GPS isn’t required. Only apps that truly need location should get it."
+    },
+    {
+        "questionId": "Q6",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, Video Player app doesn’t require location. Like watching videos — works anywhere. Only apps like Maps or delivery apps need location."
+    },
+    {
+        "questionId": "Q6",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, Video Player doesn’t require location. Like playing movies on laptop — GPS not needed. Only essential apps should get location access."
+    },
+    {
+        "questionId": "Q6",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, Video Player doesn’t need location. Like watching films at home — GPS unnecessary. Only Maps/delivery apps need location access."
+    },
+    {
+        "questionId": "Q6",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, Video Player doesn’t need location. Like watching a movie at home — works fine. Only apps that truly need location should get access."
+    },
+    {
+        "questionId": "Q6",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, Video Player app doesn’t need GPS. Like watching videos at home — works everywhere. Only Maps or delivery apps need location."
+    },
+    {
+        "questionId": "Q6",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, Video Player doesn’t require location. Like playing movies at home — GPS unnecessary. Only essential apps should get location access."
+    },
+    {
+        "questionId": "Q6",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, advanced users know Video Player doesn’t need location. Like watching films at home — works without GPS. Only essential apps like Maps need permission."
+    },
+    {
+        "questionId": "Q7",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, while accurate delivery estimates are good, just giving location can also let apps track you for ads. Like telling a salesman your every move — helps them, but can be risky. Only allow location to trusted apps."
+    },
+    {
+        "questionId": "Q7",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, getting correct delivery info is okay, but location access can let apps track you for ads. Like giving a shopkeeper your path — convenient but risky. Only allow trusted apps."
+    },
+    {
+        "questionId": "Q7",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, accurate delivery is good, but apps may track movements for ads. Like telling a salesman where you go daily — convenient but risky. Only allow trusted apps to access location."
+    },
+    {
+        "questionId": "Q7",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, accurate delivery is helpful, but location access may be used for targeted ads. Like giving GPS to a shopkeeper to know your route — useful but risky. Only trusted apps should get it."
+    },
+    {
+        "questionId": "Q7",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, yes, you get better delivery, but giving location can let apps track you for ads. Like letting someone follow your path — convenient but privacy risk. Only allow trusted apps."
+    },
+    {
+        "questionId": "Q7",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, accurate delivery is helpful, but location sharing can let apps track you. Like a shopkeeper following your route — useful but risky. Only trusted apps get access."
+    },
+    {
+        "questionId": "Q7",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, delivery estimates improve, but location can track movements for targeted ads. Like giving GPS to a salesman — convenient but risky. Only apps that need it should get location."
+    },
+    {
+        "questionId": "Q7",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, accurate delivery info is good, but location can be used for ads. Like letting someone track your route — helps them, but privacy risk. Only trusted apps should have access."
+    },
+    {
+        "questionId": "Q7",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, accurate delivery is helpful, but apps may track your movements for ads. Like a salesman knowing your daily path — convenient but risky. Only allow trusted apps."
+    },
+    {
+        "questionId": "Q7",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, better delivery info is okay, but giving location may let apps track you for ads. Like telling a shopkeeper your route — useful but risky. Only trusted apps should get it."
+    },
+    {
+        "questionId": "Q7",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, accurate delivery is convenient, but apps can track you for ads. Like a salesman following your path — useful but risky. Only give location to trusted apps."
+    },
+    {
+        "questionId": "Q7",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, accurate delivery info is good, but location can be misused for targeted ads. Like letting a shopkeeper track your route — convenient but risky. Only trusted apps get access."
+    },
+    {
+        "questionId": "Q7",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, accurate delivery is helpful, but giving location can let apps track you for ads. Like letting someone know your path — convenient but privacy risk. Only trusted apps get location."
+    },
+    {
+        "questionId": "Q7",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, better delivery info is fine, but apps may track movements for ads. Like a shopkeeper knowing your daily route — useful but risky. Only trusted apps should have access."
+    },
+    {
+        "questionId": "Q7",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, delivery estimates are good, but apps can track you for targeted ads. Like a salesman following your path — convenient but risky. Only apps that need location should get access."
+    },
+    {
+        "questionId": "Q7",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, accurate delivery is helpful, but location may be misused for ads. Like letting someone follow your route — convenient but privacy risk. Only trusted apps should have access."
+    },
+    {
+        "questionId": "Q7",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, saying you lose phone signal is wrong. Like your TV doesn’t stop receiving channels if you move house — GPS doesn’t affect phone signal. Only some apps really need location."
+    },
+    {
+        "questionId": "Q7",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, losing phone signal because of a shopping app is a misconception. Like your alarm clock won’t stop working if you change streets. Only apps needing location require it."
+    },
+    {
+        "questionId": "Q7",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, phone signal doesn’t disappear if location is given. Like your movie continues playing even if you move house. Only apps truly needing location should get it."
+    },
+    {
+        "questionId": "Q7",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, your phone signal is unaffected by location permissions. Like a university class continues even if you move. Only essential apps like Maps need location."
+    },
+    {
+        "questionId": "Q7",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, phone signal stays the same even if location is given. Like home lights work without GPS. Only apps truly needing location require permission."
+    },
+    {
+        "questionId": "Q7",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, giving location doesn’t affect phone signal. Like your watch keeps ticking without GPS. Only apps that need it like Maps should get location."
+    },
+    {
+        "questionId": "Q7",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, phone signal isn’t lost because of location access. Like computer programs continue running without GPS. Only trusted apps like Maps need location."
+    },
+    {
+        "questionId": "Q7",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, phone signal won’t disappear just because you allow location. Like a research lab continues even if GPS isn’t shared. Only essential apps requiring location need it."
+    },
+    {
+        "questionId": "Q7",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, phone signal is unaffected by location permissions. Like your TV works fine without GPS. Only apps truly needing location like Maps should get it."
+    },
+    {
+        "questionId": "Q7",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, your phone won’t lose signal because of a shopping app. Like alarm clocks work anywhere. Only apps that need location should get permission."
+    },
+    {
+        "questionId": "Q7",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, phone signal is fine even without giving location. Like a movie plays on your laptop without GPS. Only trusted apps requiring location should get it."
+    },
+    {
+        "questionId": "Q7",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, phone signal isn’t affected by location permissions. Like classes continue at university even if you don’t give GPS. Only essential apps like Maps need access."
+    },
+    {
+        "questionId": "Q7",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, phone signal stays fine even if you give location. Like home lights don’t stop working without GPS. Only apps truly needing location require permission."
+    },
+    {
+        "questionId": "Q7",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, giving location won’t stop your phone signal. Like watches keep ticking without GPS. Only apps needing location like Maps should get permission."
+    },
+    {
+        "questionId": "Q7",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, phone signal is not lost because of location access. Like computer programs continue without GPS. Only trusted apps requiring location need permission."
+    },
+    {
+        "questionId": "Q7",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, phone signal won’t disappear just because you allow location. Like research labs continue even if GPS isn’t shared. Only essential apps need location."
+    },
+    {
+        "questionId": "Q7",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, losing phone signal because of a shopping app is not true. Like your lamp won’t stop lighting if you move house — GPS doesn’t affect signal. Only apps really needing location, like Maps, should get it."
+    },
+    {
+        "questionId": "Q7",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, saying location access makes you lose signal is a mistake. Like school bells won’t stop ringing if you move home. Only trusted apps truly needing location should get permission."
+    },
+    {
+        "questionId": "Q7",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, your phone signal is fine even if you give location. Like movies continue playing on your TV without GPS. Only apps needing location like delivery or Maps should get it."
+    },
+    {
+        "questionId": "Q7",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, phone signal won’t disappear due to location access. Like a university lab continues even if you don’t share GPS. Only essential apps like Maps or delivery need location."
+    },
+    {
+        "questionId": "Q7",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, your phone signal won’t drop just because you allow location. Like lights stay on without GPS. Only apps truly needing location should get access."
+    },
+    {
+        "questionId": "Q7",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, giving location does not affect phone signal. Like your watch continues to tick without GPS. Only apps like Maps or delivery need location."
+    },
+    {
+        "questionId": "Q7",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, phone signal is unaffected by location permissions. Like computer programs continue running without GPS. Only trusted apps needing location should get access."
+    },
+    {
+        "questionId": "Q7",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, phone signal won’t disappear just because you allow location. Like a research lab continues even if GPS isn’t shared. Only essential apps requiring location need it."
+    },
+    {
+        "questionId": "Q7",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, your phone signal is fine even if you give location. Like TV works without GPS. Only trusted apps truly needing location like Maps should get access."
+    },
+    {
+        "questionId": "Q7",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, location access does not affect phone signal. Like alarm clocks continue ringing anywhere. Only apps needing GPS like Maps should get access."
+    },
+    {
+        "questionId": "Q7",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, phone signal stays fine even with location access. Like your movie continues playing on TV. Only trusted apps like Maps or delivery need location permission."
+    },
+    {
+        "questionId": "Q7",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, phone signal is unaffected by location. Like classes continue at university even without GPS. Only essential apps requiring location should get it."
+    },
+    {
+        "questionId": "Q7",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, phone signal won’t drop due to location permission. Like home lights work fine without GPS. Only apps that truly need location should get access."
+    },
+    {
+        "questionId": "Q7",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, location access does not break phone signal. Like your watch keeps ticking without GPS. Only apps like Maps or delivery need location."
+    },
+    {
+        "questionId": "Q7",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, phone signal is unaffected by location permissions. Like computer programs continue without GPS. Only trusted apps needing location should get access."
+    },
+    {
+        "questionId": "Q7",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, your phone signal won’t disappear because of location access. Like a research lab continues even if GPS isn’t shared. Only essential apps need location."
+    },
+    {
+        "questionId": "Q8",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, saying permission creep is just about battery is wrong. Imagine your school bag slowly filling with books you never asked for — that’s how apps slowly ask for more access than needed."
+    },
+    {
+        "questionId": "Q8",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, permission creep isn’t battery-related. Like adding extra files to your tuition folder without permission, apps gradually request more access over time — which can be risky."
+    },
+    {
+        "questionId": "Q8",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, it’s wrong to say permission creep is about battery. Think of a university library giving extra keys over time — apps can slowly gain more access than needed, which is unsafe."
+    },
+    {
+        "questionId": "Q8",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, permission creep isn’t battery drain. Imagine your research lab gradually giving access to new files over time — apps doing this can misuse data, which is why you must monitor permissions."
+    },
+    {
+        "questionId": "Q8",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, permission creep isn’t just battery usage. Like your phone slowly adding contacts you never gave permission, apps can ask for more access over time."
+    },
+    {
+        "questionId": "Q8",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, saying permission creep is battery-related is wrong. Think of a library slowly giving access to extra rooms — apps gradually request more permissions than needed."
+    },
+    {
+        "questionId": "Q8",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, wrong understanding. Permission creep is gradual over-access. Like a software giving more admin rights slowly, apps can gain more permissions than required."
+    },
+    {
+        "questionId": "Q8",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, it’s not about battery. Imagine a project giving extra access to colleagues over time — apps requesting more permissions gradually is risky."
+    },
+    {
+        "questionId": "Q8",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, permission creep isn’t just battery usage. Like your school bag slowly filling with extra books, apps may gradually ask for more access than needed."
+    },
+    {
+        "questionId": "Q8",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, permission creep is wrong if you think it’s battery drain. Like tuition files adding extra sheets over time, apps can slowly request more permissions."
+    },
+    {
+        "questionId": "Q8",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, wrong understanding. Think of a library gradually giving keys to extra rooms — permission creep is apps requesting more than needed over time."
+    },
+    {
+        "questionId": "Q8",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, it’s not about battery. Like giving lab access to more colleagues gradually, permission creep is apps slowly asking for more permissions than required."
+    },
+    {
+        "questionId": "Q8",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, permission creep isn’t battery-related. Like your phone slowly adding contacts without permission, apps can gradually ask for more access."
+    },
+    {
+        "questionId": "Q8",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, it’s wrong to link permission creep with battery. Like a library slowly giving extra access, apps can request permissions over time."
+    },
+    {
+        "questionId": "Q8",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, permission creep is gradual over-access. Like a software slowly giving admin rights, apps can gain more permissions than required."
+    },
+    {
+        "questionId": "Q8",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, not about battery. Like giving lab access to more colleagues gradually, apps requesting more permissions over time is risky."
+    },
+    {
+        "questionId": "Q8",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, freezing apps has nothing to do with permission creep. Imagine your school laptop crashing randomly — that’s different. Permission creep is about apps asking for more access over time, which can risk your data."
+    },
+    {
+        "questionId": "Q8",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, wrong idea! Apps freezing doesn’t mean permission creep. Like tuition software crashing occasionally — separate issue. Permission creep is gradual over-access by apps."
+    },
+    {
+        "questionId": "Q8",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, freezing apps is unrelated. Like your university portal lagging sometimes. Permission creep is when apps slowly request more permissions than needed."
+    },
+    {
+        "questionId": "Q8",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, wrong understanding! Freezing apps is not permission creep. Like research software crashing randomly. Permission creep is gradual over-access by apps, which can misuse data."
+    },
+    {
+        "questionId": "Q8",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, freezing is unrelated. Like your phone occasionally lagging. Permission creep is apps gradually asking for more permissions than required."
+    },
+    {
+        "questionId": "Q8",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, wrong. Apps freezing ≠ permission creep. Like software occasionally hanging. Permission creep is gradual increase of app access over time."
+    },
+    {
+        "questionId": "Q8",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, freezing apps has nothing to do with permission creep. Like programs lagging occasionally. Permission creep is apps gradually requesting more permissions than needed."
+    },
+    {
+        "questionId": "Q8",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, wrong assumption! Permission creep isn’t about app crashes. Like research tools freezing randomly. It’s about apps slowly gaining more permissions over time."
+    },
+    {
+        "questionId": "Q8",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, freezing apps has nothing to do with permission creep. Like your school tablet freezing sometimes. Permission creep is about apps asking for more access over time."
+    },
+    {
+        "questionId": "Q8",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, wrong! App freezes ≠ permission creep. Like tuition software crashing occasionally. Permission creep is gradual over-access by apps."
+    },
+    {
+        "questionId": "Q8",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, app freezing is unrelated. Like library software lagging sometimes. Permission creep is apps gradually asking for more permissions than needed."
+    },
+    {
+        "questionId": "Q8",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, wrong understanding! Freezing apps is not permission creep. Like research software crashing randomly. Permission creep is gradual over-access by apps."
+    },
+    {
+        "questionId": "Q8",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, freezing has nothing to do with permission creep. Like your phone occasionally lagging. Permission creep is apps gradually asking for more permissions than required."
+    },
+    {
+        "questionId": "Q8",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, wrong. App freezes ≠ permission creep. Like software occasionally hanging. Permission creep is gradual increase of app access over time."
+    },
+    {
+        "questionId": "Q8",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, freezing apps has nothing to do with permission creep. Like programs lagging occasionally. Permission creep is apps gradually requesting more permissions than needed."
+    },
+    {
+        "questionId": "Q8",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, wrong assumption! Permission creep isn’t about app crashes. Like research tools freezing randomly. It’s about apps slowly gaining more permissions over time."
+    },
+    {
+        "questionId": "Q8",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, using small icons has nothing to do with permission creep. Like changing your school notebook cover, it doesn’t affect what apps can access. Permission creep is apps gradually asking for more permissions."
+    },
+    {
+        "questionId": "Q8",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, wrong idea! Icon size does not represent permission creep. Like adjusting your tuition book’s font size — unrelated. Permission creep is about apps gradually requesting more access over time."
+    },
+    {
+        "questionId": "Q8",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, small icons have nothing to do with permission creep. Like making your library cards smaller — irrelevant. Permission creep is apps slowly requesting more permissions than needed."
+    },
+    {
+        "questionId": "Q8",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, wrong understanding! Icon size ≠ permission creep. Like shrinking research documents — unrelated. Permission creep is gradual over-access by apps, which can misuse data."
+    },
+    {
+        "questionId": "Q8",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, using small icons does not relate to permission creep. Like shrinking your phone keyboard — unrelated. Permission creep is apps gradually asking for more permissions than necessary."
+    },
+    {
+        "questionId": "Q8",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, wrong. Small icons have nothing to do with permission creep. Like adjusting notes font size — unrelated. Permission creep is gradual increase of app access over time."
+    },
+    {
+        "questionId": "Q8",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, using small icons is unrelated. Like reducing software toolbar size — unrelated. Permission creep is apps gradually requesting more permissions than needed."
+    },
+    {
+        "questionId": "Q8",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, wrong idea! Icon size does not affect permissions. Like shrinking research figures — irrelevant. Permission creep is apps gradually gaining more permissions over time."
+    },
+    {
+        "questionId": "Q8",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, using small icons has nothing to do with permission creep. Like making your school notebook cover smaller — unrelated. Permission creep is apps gradually asking for more access."
+    },
+    {
+        "questionId": "Q8",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, wrong! Icon size does not indicate permission creep. Like adjusting your tuition book size — unrelated. Permission creep is apps gradually requesting more permissions."
+    },
+    {
+        "questionId": "Q8",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, small icons are unrelated to permission creep. Like making library cards smaller — irrelevant. Permission creep is apps slowly requesting more permissions than necessary."
+    },
+    {
+        "questionId": "Q8",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, wrong understanding! Icon size does not relate to permission creep. Like shrinking research documents — irrelevant. Permission creep is gradual over-access by apps."
+    },
+    {
+        "questionId": "Q8",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, small icons have nothing to do with permission creep. Like shrinking your phone keyboard — irrelevant. Permission creep is apps gradually asking for more permissions than needed."
+    },
+    {
+        "questionId": "Q8",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, wrong. Small icons ≠ permission creep. Like adjusting notes font size — irrelevant. Permission creep is gradual increase of app access over time."
+    },
+    {
+        "questionId": "Q8",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, using small icons is unrelated. Like reducing software toolbar size — irrelevant. Permission creep is apps gradually requesting more permissions than needed."
+    },
+    {
+        "questionId": "Q8",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, wrong idea! Icon size does not affect permissions. Like shrinking research figures — irrelevant. Permission creep is apps gradually gaining more permissions over time."
+    },
+    {
+        "questionId": "Q9",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, flashlight access is harmless for privacy. Saying it’s sensitive is wrong. Imagine turning on a torch in your room — it doesn’t reveal your contacts or secrets."
+    },
+    {
+        "questionId": "Q9",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, wrong idea! Flashlight permission isn’t risky. Like switching on a lamp at home — it won’t reveal your personal info. Sensitive permissions involve contacts or messages."
+    },
+    {
+        "questionId": "Q9",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, flashlight access is not sensitive. Like lighting a torch in a room — harmless. Privacy risk comes from contacts, camera, or microphone access."
+    },
+    {
+        "questionId": "Q9",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, wrong understanding! Flashlight permission is safe. Imagine turning on a desk lamp — it won’t leak private info. Sensitive permissions include contacts and call logs."
+    },
+    {
+        "questionId": "Q9",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, flashlight permission isn’t sensitive. Like using a torch to see in the dark — harmless. Privacy concerns arise with contacts, location, or camera access."
+    },
+    {
+        "questionId": "Q9",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, incorrect! Flashlight access is safe. Think of switching on a light — no private info is revealed. Real sensitive permissions include contacts or call logs."
+    },
+    {
+        "questionId": "Q9",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, wrong! Flashlight permission isn’t sensitive. Like turning on a torch in a room — it doesn’t leak personal data. Sensitive permissions are those accessing contacts or camera."
+    },
+    {
+        "questionId": "Q9",
+        "option": "A",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, wrong understanding! Flashlight access is safe. Imagine turning on a lamp in your office — no privacy is compromised. Sensitive permissions include contacts and call logs."
+    },
+    {
+        "questionId": "Q9",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, flashlight access is harmless. Saying it’s sensitive is wrong. Like turning on a torch at home — it won’t reveal your contacts or secrets."
+    },
+    {
+        "questionId": "Q9",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, wrong idea! Flashlight permission is safe. Like switching on a lamp — it won’t reveal personal info. Sensitive permissions include contacts or camera."
+    },
+    {
+        "questionId": "Q9",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, flashlight access is not sensitive. Like lighting a torch in a room — harmless. Privacy risk comes from contacts, location, or microphone access."
+    },
+    {
+        "questionId": "Q9",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, wrong understanding! Flashlight permission is safe. Imagine turning on a desk lamp — it won’t leak private info. Sensitive permissions include contacts and call logs."
+    },
+    {
+        "questionId": "Q9",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, flashlight permission isn’t sensitive. Like using a torch — harmless. Privacy concerns arise with contacts, location, or camera access."
+    },
+    {
+        "questionId": "Q9",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, incorrect! Flashlight access is safe. Think of switching on a light — no private info is revealed. Real sensitive permissions include contacts or call logs."
+    },
+    {
+        "questionId": "Q9",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, wrong! Flashlight permission isn’t sensitive. Like turning on a torch — it doesn’t leak personal data. Sensitive permissions are those accessing contacts or camera."
+    },
+    {
+        "questionId": "Q9",
+        "option": "A",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, wrong understanding! Flashlight access is safe. Imagine turning on a lamp — no privacy is compromised. Sensitive permissions include contacts and call logs."
+    },
+    {
+        "questionId": "Q9",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, vibration control is harmless for privacy. Saying it’s sensitive is wrong. Like your phone shaking when you get a message — it doesn’t reveal personal info. Sensitive permissions involve contacts or call logs."
+    },
+    {
+        "questionId": "Q9",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, wrong idea! Vibration access isn’t risky. Like when your phone buzzes — no private info is leaked. Sensitive permissions are contacts, camera, or microphone."
+    },
+    {
+        "questionId": "Q9",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, vibration control is safe. Like your phone gently shaking for notifications — harmless. Privacy risk comes from contacts, camera, or location."
+    },
+    {
+        "questionId": "Q9",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, wrong understanding! Vibration permission is safe. Like phone buzzing for calls — it doesn’t reveal your contacts. Sensitive permissions are contacts and call logs."
+    },
+    {
+        "questionId": "Q9",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, vibration control is harmless. Like phone buzzing — no sensitive info is shared. Privacy concerns come from contacts, camera, or location permissions."
+    },
+    {
+        "questionId": "Q9",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, incorrect! Vibration access is safe. Think of your phone buzzing — it doesn’t leak private info. Sensitive permissions include contacts or call logs."
+    },
+    {
+        "questionId": "Q9",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, vibration control is not sensitive. Like phone vibrating for notifications — harmless. Privacy risk comes from apps accessing contacts, camera, or microphone."
+    },
+    {
+        "questionId": "Q9",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, wrong! Vibration access is safe. Like phone buzzing — no private data is exposed. Sensitive permissions include contacts and call logs."
+    },
+    {
+        "questionId": "Q9",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, vibration control is harmless. Saying it’s sensitive is wrong. Like your phone shaking for messages — it doesn’t reveal personal info."
+    },
+    {
+        "questionId": "Q9",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, wrong idea! Vibration access isn’t risky. Like phone buzzing for notifications — no private info is leaked. Sensitive permissions are contacts or camera."
+    },
+    {
+        "questionId": "Q9",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, vibration control is safe. Like phone vibrating — harmless. Privacy risk comes from contacts, camera, or microphone access."
+    },
+    {
+        "questionId": "Q9",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, wrong understanding! Vibration permission is safe. Like phone buzzing — it doesn’t reveal contacts. Sensitive permissions are contacts and call logs."
+    },
+    {
+        "questionId": "Q9",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, vibration control is harmless. Like phone buzzing — no sensitive info is shared. Privacy concerns come from contacts, camera, or location permissions."
+    },
+    {
+        "questionId": "Q9",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, incorrect! Vibration access is safe. Phone buzzing doesn’t leak private info. Sensitive permissions include contacts or call logs."
+    },
+    {
+        "questionId": "Q9",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, vibration control is safe. Like phone buzzing for notifications — harmless. Privacy risk comes from apps accessing contacts, camera, or microphone."
+    },
+    {
+        "questionId": "Q9",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, wrong! Vibration access is safe. Phone buzzing doesn’t expose private data. Sensitive permissions include contacts and call logs."
+    },
+    {
+        "questionId": "Q9",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, font size access is harmless for privacy. Saying it’s sensitive is wrong. Like changing text size in your phone — it doesn’t reveal personal info. Sensitive permissions involve contacts, call logs, or camera."
+    },
+    {
+        "questionId": "Q9",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, wrong idea! Font size permission isn’t risky. Like adjusting text in an app — it doesn’t leak private data. Sensitive permissions are contacts, camera, or microphone."
+    },
+    {
+        "questionId": "Q9",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, font size access is safe. Adjusting text size doesn’t harm privacy. Real risks come from permissions accessing contacts, camera, or location."
+    },
+    {
+        "questionId": "Q9",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, wrong understanding! Font size permission is safe. Like increasing text in a document — no private info is exposed. Sensitive permissions include contacts and call logs."
+    },
+    {
+        "questionId": "Q9",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, font size permission is harmless. Like changing text size on your phone — no sensitive info is shared. Privacy concerns come from contacts, camera, or microphone."
+    },
+    {
+        "questionId": "Q9",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Machan, incorrect! Font size access is safe. Adjusting text doesn’t leak private info. Sensitive permissions include contacts, camera, or call logs."
+    },
+    {
+        "questionId": "Q9",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Putha, font size control is not sensitive. Like changing text in an app — harmless. Privacy risk comes from permissions accessing contacts, camera, or microphone."
+    },
+    {
+        "questionId": "Q9",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Malli, wrong! Font size access is safe. Adjusting text doesn’t expose private data. Sensitive permissions include contacts and call logs."
+    },
+    {
+        "questionId": "Q9",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, font size access is harmless. Saying it’s sensitive is wrong. Like changing text size on your phone — it doesn’t reveal personal info."
+    },
+    {
+        "questionId": "Q9",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, wrong idea! Font size permission isn’t risky. Like adjusting text in an app — no private info is leaked. Sensitive permissions include contacts or camera."
+    },
+    {
+        "questionId": "Q9",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, font size access is safe. Changing text size doesn’t harm privacy. Risks come from permissions accessing contacts, camera, or location."
+    },
+    {
+        "questionId": "Q9",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, wrong understanding! Font size permission is safe. Adjusting text doesn’t reveal private info. Sensitive permissions include contacts and call logs."
+    },
+    {
+        "questionId": "Q9",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, font size permission is harmless. Adjusting text doesn’t expose sensitive info. Privacy concerns come from contacts, camera, or microphone."
+    },
+    {
+        "questionId": "Q9",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, incorrect! Font size access is safe. Changing text doesn’t leak private info. Sensitive permissions include contacts, camera, or call logs."
+    },
+    {
+        "questionId": "Q9",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, font size control is safe. Adjusting text is harmless. Privacy risk comes from apps accessing contacts, camera, or microphone."
+    },
+    {
+        "questionId": "Q9",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, wrong! Font size access is safe. Changing text doesn’t reveal private data. Sensitive permissions include contacts and call logs."
+    },
+    {
+        "questionId": "Q10",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, giving all apps full access is dangerous. Imagine giving every stranger in your class the keys to your house — risky, right? Only allow what’s necessary."
+    },
+    {
+        "questionId": "Q10",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, wrong idea! Giving all apps full permissions is like giving everyone your diary to read — your personal info can be misused. Always restrict access."
+    },
+    {
+        "questionId": "Q10",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, allowing all apps full access is risky. Think of it like leaving every door unlocked in your college hostel — anyone can enter. Only trusted apps should get permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, wrong understanding! Giving all apps full permissions is like sharing all your research files with strangers — it exposes private data. Restrict access wisely."
+    },
+    {
+        "questionId": "Q10",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, Machan, giving all apps full access is unsafe. Like giving keys to everyone in school — risky. Only allow necessary permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Putha, allowing all apps unrestricted access is dangerous. Like sharing your notes with everyone — privacy risk is high. Only grant essential permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Malli, giving all apps full access is not safe. Think of your phone as a lab — giving keys to everyone can lead to leaks. Only trusted apps should get permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "B",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Putha, wrong! Full access for all apps is like sharing all your research data publicly — your private info can be misused. Restrict permissions carefully."
+    },
+    {
+        "questionId": "Q10",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, giving all apps full permissions is dangerous. Like letting everyone enter your home — risky! Only allow what’s necessary."
+    },
+    {
+        "questionId": "Q10",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, wrong idea! Giving all apps full access is like sharing your diary with everyone — your personal info can be misused. Restrict permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, allowing all apps full access is risky. Like leaving every door unlocked in your hostel — anyone can enter. Only trusted apps should have access."
+    },
+    {
+        "questionId": "Q10",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, wrong understanding! Giving all apps full permissions is like sharing research files with strangers — it exposes private info. Restrict wisely."
+    },
+    {
+        "questionId": "Q10",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, giving all apps full access is unsafe. Like giving keys to everyone — risky. Only grant necessary permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, allowing all apps unrestricted access is dangerous. Like sharing notes with everyone — high privacy risk. Only allow essential permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, giving all apps full access is unsafe. Think of your phone like a lab — giving keys to everyone leads to leaks. Only trusted apps should get permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "B",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, wrong! Full access for all apps is like sharing research data publicly — private info can be misused. Restrict permissions carefully."
+    },
+    {
+        "questionId": "Q10",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, restarting your phone weekly is not the main solution. It’s like thinking cleaning your bag fixes security — it doesn’t protect private info. Focus on reviewing app permissions instead."
+    },
+    {
+        "questionId": "Q10",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, restarting phone weekly is not enough. Like tidying your desk without locking your diary — your private info can still be accessed. Prioritize checking app permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, restarting your phone is not the solution to privacy. It’s like turning off lights but leaving doors open — doesn’t stop leaks. Focus on controlling app permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, weekly restarting your phone won’t secure your data. Like organizing files but sharing them publicly — risk remains. Reviewing app permissions is the key."
+    },
+    {
+        "questionId": "Q10",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, Machan, restarting phone weekly isn’t enough. Like rebooting a lab computer without updating security — private info can still leak. Review permissions instead."
+    },
+    {
+        "questionId": "Q10",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Putha, just restarting phone weekly won’t protect your privacy. Like closing the door but leaving windows open — hackers can still access data. Control app permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Malli, restarting your phone is not a substitute for permission management. Like rebooting servers but ignoring security rules — risks remain. Focus on app permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "C",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Putha, restarting weekly won’t secure your data. Like organizing lab data but sharing access publicly — risk still exists. Reviewing app permissions is essential."
+    },
+    {
+        "questionId": "Q10",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, restarting your phone weekly doesn’t protect your privacy. Like tidying your school bag but leaving it unlocked — data can still be accessed. Focus on app permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, weekly phone restart is not the solution. Like cleaning your desk but leaving diaries open — private info is still at risk. Check app permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, restarting phone is not enough for privacy. Like turning off lights but leaving doors open — it doesn’t stop leaks. Manage permissions instead."
+    },
+    {
+        "questionId": "Q10",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, weekly restart won’t secure data. Like organizing research files but sharing publicly — risk persists. Focus on reviewing app permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, restarting phone weekly isn’t enough. Like rebooting a lab computer without updates — personal info can still leak. Review permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, just restarting phone won’t protect privacy. Like closing a door but leaving windows open — hackers can still access data. Manage app permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, restarting phone is not a substitute for reviewing permissions. Like rebooting servers but ignoring security rules — risks remain."
+    },
+    {
+        "questionId": "Q10",
+        "option": "C",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, restarting weekly won’t secure data. Like organizing lab data but sharing access publicly — risk still exists. Focus on reviewing app permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Machan, turning off notifications doesn’t manage app permissions. It’s like muting someone but still letting them read your diary — your info is not protected. Focus on reviewing permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Putha, turning off notifications only hides alerts, it doesn’t secure data. Like covering a notebook — anyone can still peek. Check app permissions regularly."
+    },
+    {
+        "questionId": "Q10",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Machan, turning off notifications won’t protect your privacy. Like putting a lid on a jar but leaving it open — data can leak. Focus on permission management."
+    },
+    {
+        "questionId": "Q10",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Malli, turning off notifications doesn’t secure your data. Like silencing messages but sharing diary entries publicly — privacy is still at risk. Review permissions instead."
+    },
+    {
+        "questionId": "Q10",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Aiyaa, Machan, silencing notifications is not enough for privacy. Like muting alerts but leaving doors open — personal info can still leak. Manage permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Putha, turning off notifications hides alerts but doesn’t control access. Like covering notes with paper — others can still read. Focus on permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Malli, silencing notifications won’t secure data. Like putting a cover on files but leaving folders unlocked — info is still at risk. Review app permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "D",
+        "profile": {
+            "gender": "Male",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Putha, turning off notifications doesn’t protect your data. Like muting alerts but leaving files shared — risk remains. Regular permission review is essential."
+    },
+    {
+        "questionId": "Q10",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "O/L"
+        },
+        "explanation": "Duwa, turning off notifications won’t secure your privacy. Like muting someone but still letting them peek — info is unprotected. Focus on checking permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, silencing notifications only hides alerts, it doesn’t secure data. Like covering a notebook — anyone can still read. Check app permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "HND"
+        },
+        "explanation": "Nangi, turning off notifications doesn’t protect your privacy. Like putting a lid on a jar but leaving it open — data can leak. Manage permissions instead."
+    },
+    {
+        "questionId": "Q10",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "School",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, silencing notifications won’t secure your data. Like muting messages but sharing diary entries publicly — privacy is still at risk. Focus on permission management."
+    },
+    {
+        "questionId": "Q10",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "O/L"
+        },
+        "explanation": "Nangi, turning off notifications is not enough for privacy. Like muting alerts but leaving doors open — personal info can still leak. Review permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "A/L"
+        },
+        "explanation": "Mage duwa, hiding notifications only covers alerts — it doesn’t control access. Like covering notes with paper — others can still read. Focus on app permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "HND"
+        },
+        "explanation": "Duwa, silencing notifications won’t secure data. Like putting a cover on files but leaving folders unlocked — info is still at risk. Review permissions."
+    },
+    {
+        "questionId": "Q10",
+        "option": "D",
+        "profile": {
+            "gender": "Female",
+            "proficiency": "High",
+            "education": "Degree"
+        },
+        "explanation": "Duwa, turning off notifications doesn’t protect your data. Like muting alerts but leaving files shared — risk remains. Regular permission review is essential."
+    }
+]
