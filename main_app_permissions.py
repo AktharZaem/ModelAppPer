@@ -88,6 +88,65 @@ def check_files():
             print(f"❌ {file} not found")
 
 
+def view_assessment_database():
+    """View and analyze the assessment database"""
+    database_file = 'app_permissions_assessment_database.json'
+
+    try:
+        with open(database_file, 'r', encoding='utf-8') as f:
+            database = json.load(f)
+
+        assessments = database.get('assessments', [])
+
+        if not assessments:
+            print("📊 No assessments found in database.")
+            return
+
+        print(f"\n📊 ASSESSMENT DATABASE SUMMARY")
+        print("=" * 60)
+        print(f"Total Assessments: {len(assessments)}")
+        print(
+            f"Database Created: {database.get('metadata', {}).get('created', 'Unknown')}")
+
+        # Statistics
+        scores = [a['percentage'] for a in assessments]
+        levels = [a['overall_knowledge_level'] for a in assessments]
+
+        print(f"\nSCORE STATISTICS:")
+        print(f"Average Score: {sum(scores)/len(scores):.1f}%")
+        print(f"Highest Score: {max(scores):.1f}%")
+        print(f"Lowest Score: {min(scores):.1f}%")
+
+        print(f"\nKNOWLEDGE LEVEL DISTRIBUTION:")
+        level_counts = {}
+        for level in levels:
+            level_counts[level] = level_counts.get(level, 0) + 1
+
+        for level, count in sorted(level_counts.items()):
+            print(f"  {level}: {count} users")
+
+        print(f"\nRECENT ASSESSMENTS:")
+        print("-" * 40)
+
+        # Show last 5 assessments
+        recent_assessments = sorted(
+            assessments, key=lambda x: x['timestamp'], reverse=True)[:5]
+
+        for i, assessment in enumerate(recent_assessments, 1):
+            print(f"{i}. {assessment['name']} ({assessment['timestamp']})")
+            print(
+                f"   Score: {assessment['total_score']}/100 ({assessment['percentage']:.1f}%)")
+            print(f"   Level: {assessment['overall_knowledge_level']}")
+            print(
+                f"   Profile: {assessment['gender']}, {assessment['education_level']}, {assessment['proficiency']}")
+            print()
+
+    except FileNotFoundError:
+        print("📊 No assessment database found. Take an assessment first!")
+    except Exception as e:
+        print(f"❌ Error reading database: {e}")
+
+
 def main():
     print("Mobile App Permissions Security Awareness Assessment System")
     print("=" * 60)
@@ -124,9 +183,10 @@ def main():
         print("4. Check System Status")
         print("5. Check JSON Structure")
         print("6. Check Explanation Bank Coverage")
-        print("7. Exit")
+        print("7. View Assessment Database")
+        print("8. Exit")
 
-        choice = input("\nEnter your choice (1-7): ").strip()
+        choice = input("\nEnter your choice (1-8): ").strip()
 
         if choice == '1':
             print("\n--- Training ML Model for App Permissions ---")
@@ -266,13 +326,86 @@ def main():
                     print(f"❌ Could not load ExplanationBank: {inner_e}")
 
         elif choice == '7':
+            print("\n--- Assessment Database Viewer ---")
+            view_assessment_database()
+
+            print("\nDatabase Options:")
+            print("A. Export database to CSV")
+            print("B. Clear database")
+            print("C. Return to main menu")
+
+            sub_choice = input("\nEnter your choice (A/B/C): ").strip().upper()
+
+            if sub_choice == 'A':
+                try:
+                    export_database_to_csv()
+                except Exception as e:
+                    print(f"❌ Error exporting: {e}")
+            elif sub_choice == 'B':
+                confirm = input(
+                    "⚠️ Are you sure you want to clear all assessment data? (yes/no): ")
+                if confirm.lower() == 'yes':
+                    try:
+                        os.remove('app_permissions_assessment_database.json')
+                        print("✅ Database cleared successfully!")
+                    except FileNotFoundError:
+                        print("ℹ️ Database was already empty.")
+                    except Exception as e:
+                        print(f"❌ Error clearing database: {e}")
+
+        elif choice == '8':
             print(
                 "\nThank you for using the Mobile App Permissions Security Assessment System!")
             print("Keep learning and stay secure! 🔒📱")
             break
 
         else:
-            print("Invalid choice! Please enter 1, 2, 3, 4, 5, 6, or 7.")
+            print("Invalid choice! Please enter 1, 2, 3, 4, 5, 6, 7, or 8.")
+
+
+def export_database_to_csv():
+    """Export assessment database to CSV format"""
+    import csv
+    import datetime
+
+    try:
+        with open('app_permissions_assessment_database.json', 'r', encoding='utf-8') as f:
+            database = json.load(f)
+
+        assessments = database.get('assessments', [])
+
+        if not assessments:
+            print("📊 No data to export.")
+            return
+
+        csv_filename = f"app_permissions_assessments_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+
+        with open(csv_filename, 'w', newline='', encoding='utf-8') as csvfile:
+            fieldnames = [
+                'Timestamp', 'Name', 'Gender', 'Education_Level', 'Proficiency',
+                'Total_Score', 'Percentage', 'Overall_Knowledge_Level', 'Category'
+            ]
+
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+
+            for assessment in assessments:
+                writer.writerow({
+                    'Timestamp': assessment['timestamp'],
+                    'Name': assessment['name'],
+                    'Gender': assessment['gender'],
+                    'Education_Level': assessment['education_level'],
+                    'Proficiency': assessment['proficiency'],
+                    'Total_Score': assessment['total_score'],
+                    'Percentage': assessment['percentage'],
+                    'Overall_Knowledge_Level': assessment['overall_knowledge_level'],
+                    'Category': assessment['category']
+                })
+
+        print(f"✅ Database exported to: {csv_filename}")
+
+    except Exception as e:
+        print(f"❌ Error exporting database: {e}")
 
 
 if __name__ == "__main__":

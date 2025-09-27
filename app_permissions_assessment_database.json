@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "created": "2025-09-27 20:41:22",
+    "category": "Mobile App Permissions Security Assessment",
+    "description": "Assessment results database for app permissions security awareness"
+  },
+  "assessments": [
+    {
+      "timestamp": "2025-09-27 20:41:22",
+      "name": "Akthar",
+      "gender": "Male",
+      "education_level": "A/L",
+      "proficiency": "High Education",
+      "total_score": 44,
+      "percentage": 44.0,
+      "overall_knowledge_level": "Basic",
+      "category": "App Permissions"
+    },
+    {
+      "timestamp": "2025-09-27 20:45:40",
+      "name": "Akthar",
+      "gender": "Male",
+      "education_level": "HND",
+      "proficiency": "High Education",
+      "total_score": 49,
+      "percentage": 49.0,
+      "overall_knowledge_level": "Basic",
+      "category": "App Permissions"
+    }
+  ]
+}

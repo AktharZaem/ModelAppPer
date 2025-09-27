@@ -81,8 +81,17 @@ class AppPermissionsTester:
         print("\n=== User Profile Setup ===")
         print("Please provide some basic information to get personalized feedback.\n")
 
+        # Collect Name
+        print("1. Enter Your Name:")
+        while True:
+            name = input("Full Name: ").strip()
+            if name and len(name) >= 2:
+                break
+            else:
+                print("Please enter a valid name (at least 2 characters)!")
+
         # Collect Gender
-        print("1. Select Your Gender:")
+        print("\n2. Select Your Gender:")
         print("   1. Male")
         print("   2. Female")
 
@@ -94,25 +103,6 @@ class AppPermissionsTester:
                     break
                 elif gender_choice == 2:
                     gender = "Female"
-                    break
-                else:
-                    print("Please enter 1 or 2!")
-            except ValueError:
-                print("Please enter a valid number!")
-
-        # Collect Proficiency Level
-        print("\n2. Select Your IT/Technology Proficiency:")
-        print("   1. School Level (Basic computer/smartphone use)")
-        print("   2. High Education Level (Advanced computer/technology skills)")
-
-        while True:
-            try:
-                proficiency_choice = int(input("Enter your choice (1-2): "))
-                if proficiency_choice == 1:
-                    proficiency = "School"
-                    break
-                elif proficiency_choice == 2:
-                    proficiency = "High Education"
                     break
                 else:
                     print("Please enter 1 or 2!")
@@ -146,13 +136,34 @@ class AppPermissionsTester:
             except ValueError:
                 print("Please enter a valid number!")
 
+        # Collect Proficiency Level
+        print("\n4. Select Your IT/Technology Proficiency:")
+        print("   1. School Level (Basic computer/smartphone use)")
+        print("   2. High Education Level (Advanced computer/technology skills)")
+
+        while True:
+            try:
+                proficiency_choice = int(input("Enter your choice (1-2): "))
+                if proficiency_choice == 1:
+                    proficiency = "School"
+                    break
+                elif proficiency_choice == 2:
+                    proficiency = "High Education"
+                    break
+                else:
+                    print("Please enter 1 or 2!")
+            except ValueError:
+                print("Please enter a valid number!")
+
         self.user_profile = {
+            "name": name,
             "gender": gender,
-            "proficiency": proficiency,
-            "education": education
+            "education": education,
+            "proficiency": proficiency
         }
 
-        print(f"\n✅ Profile saved: {gender}, {proficiency}, {education}")
+        print(
+            f"\n✅ Profile saved: {name}, {gender}, {education}, {proficiency}")
         print("This information will be used to provide personalized explanations.\n")
 
         return self.user_profile
@@ -303,6 +314,51 @@ class AppPermissionsTester:
             "Consider limiting permissions or using feature-restricted alternatives."
         )
 
+    def save_to_assessment_database(self, user_data):
+        """Save assessment results to a structured database file"""
+        import datetime
+
+        database_file = 'app_permissions_assessment_database.json'
+
+        # Create assessment record (without detailed responses and scores)
+        assessment_record = {
+            "timestamp": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "name": user_data['profile']['name'],
+            "gender": user_data['profile']['gender'],
+            "education_level": user_data['profile']['education'],
+            "proficiency": user_data['profile']['proficiency'],
+            "total_score": user_data['total_score'],
+            "percentage": user_data['percentage'],
+            "overall_knowledge_level": user_data['overall_level'],
+            "category": "App Permissions"
+        }
+
+        # Load existing database or create new one
+        try:
+            with open(database_file, 'r', encoding='utf-8') as f:
+                database = json.load(f)
+        except FileNotFoundError:
+            database = {
+                "metadata": {
+                    "created": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    "category": "Mobile App Permissions Security Assessment",
+                    "description": "Assessment results database for app permissions security awareness"
+                },
+                "assessments": []
+            }
+
+        # Add new assessment
+        database["assessments"].append(assessment_record)
+
+        # Save updated database
+        with open(database_file, 'w', encoding='utf-8') as f:
+            json.dump(database, f, indent=2, ensure_ascii=False)
+
+        print(f"📊 Assessment saved to database: {database_file}")
+        print(f"Total assessments in database: {len(database['assessments'])}")
+
+        return database_file
+
     def provide_feedback(self, user_scores, overall_level, percentage):
         """Provide detailed feedback and recommendations"""
         print("\n" + "="*60)
@@ -317,8 +373,9 @@ class AppPermissionsTester:
 
         # Display user profile
         if self.user_profile:
+            print(f"Name: {self.user_profile['name']}")
             print(
-                f"Profile: {self.user_profile['gender']}, {self.user_profile['proficiency']}, {self.user_profile['education']}")
+                f"Profile: {self.user_profile['gender']}, {self.user_profile['education']}, {self.user_profile['proficiency']}")
 
         # Provide level-specific encouragement
         if percentage >= 75:
@@ -446,10 +503,15 @@ class AppPermissionsTester:
             'overall_level': overall_level
         }
 
+        # Save to individual results file
         with open('app_permissions_assessment_results.json', 'w', encoding='utf-8') as f:
             json.dump(user_data, f, indent=2, ensure_ascii=False)
 
-        print(f"\n📄 Results saved to 'app_permissions_assessment_results.json'")
+        # Save to structured database
+        database_file = self.save_to_assessment_database(user_data)
+
+        print(f"\n📄 Individual results saved to 'app_permissions_assessment_results.json'")
+        print(f"📊 Results added to assessment database: {database_file}")
 
         return {
             'score': percentage,
@@ -458,5 +520,7 @@ class AppPermissionsTester:
 
 
 if __name__ == "__main__":
+    tester = AppPermissionsTester()
+    tester.run_assessment()
     tester = AppPermissionsTester()
     tester.run_assessment()
