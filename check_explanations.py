@@ -49,6 +49,26 @@ def main():
 
     if not missing:
         print("OK: All non-Advanced options have at least one explanation entry in ExplanationBank.")
+
+        # Additional check: Show profile coverage
+        print("\nPROFILE COVERAGE ANALYSIS:")
+        profiles_covered = {}
+        for entry in expl:
+            qid = normalize_qid(entry.get("questionId", ""))
+            label = entry.get("option", "")
+            profile = entry.get("profile", {})
+            key = (qid, label)
+            if key not in profiles_covered:
+                profiles_covered[key] = []
+            profile_str = f"{profile.get('gender', '')}-{profile.get('proficiency', '')}-{profile.get('education', '')}"
+            profiles_covered[key].append(profile_str)
+
+        print(
+            f"Total (Question, Option) pairs with explanations: {len(profiles_covered)}")
+        for key, profiles in profiles_covered.items():
+            qid, label = key
+            print(f"  {qid} option {label}: {len(profiles)} profile variations")
+
         return 0
 
     print("MISSING EXPLANATIONS:")

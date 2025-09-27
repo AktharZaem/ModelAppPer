@@ -119,13 +119,14 @@ def main():
     while True:
         print("\nSelect an option:")
         print("1. Train ML Model")
-        print("2. Take Assessment Quiz")
+        print("2. Take Assessment Quiz (with Profile Setup)")
         print("3. Educational Resources & Learning")
         print("4. Check System Status")
         print("5. Check JSON Structure")
-        print("6. Exit")
+        print("6. Check Explanation Bank Coverage")
+        print("7. Exit")
 
-        choice = input("\nEnter your choice (1-6): ").strip()
+        choice = input("\nEnter your choice (1-7): ").strip()
 
         if choice == '1':
             print("\n--- Training ML Model for App Permissions ---")
@@ -163,6 +164,10 @@ def main():
 
         elif choice == '2':
             print("\n--- Mobile App Permissions Security Assessment ---")
+            print("ℹ️  This assessment includes:")
+            print("   • Profile setup (Gender, Proficiency, Education)")
+            print("   • 10 questions about app permissions")
+            print("   • Personalized feedback based on your profile")
 
             if not os.path.exists('app_permissions_model.pkl'):
                 print("❌ Trained model not found!")
@@ -170,7 +175,7 @@ def main():
                 continue
 
             try:
-                print("Initializing tester...")
+                print("\nInitializing assessment...")
                 tester = AppPermissionsTester()
                 result = tester.run_assessment()
 
@@ -234,13 +239,40 @@ def main():
             check_json_structure()
 
         elif choice == '6':
+            print("\n--- Explanation Bank Coverage Check ---")
+            try:
+                from check_explanations import main as check_main
+                check_main()
+            except Exception as e:
+                print(f"❌ Error checking explanations: {e}")
+                # Manual check as fallback
+                try:
+                    with open('ExplanationBankappper.json', 'r') as f:
+                        explanations = json.load(f)
+                    print(
+                        f"✅ ExplanationBank loaded: {len(explanations)} explanations")
+
+                    # Count by question
+                    q_count = {}
+                    for exp in explanations:
+                        qid = exp.get('questionId', 'Unknown')
+                        q_count[qid] = q_count.get(qid, 0) + 1
+
+                    print("Question coverage:")
+                    for qid, count in sorted(q_count.items()):
+                        print(f"  {qid}: {count} explanations")
+
+                except Exception as inner_e:
+                    print(f"❌ Could not load ExplanationBank: {inner_e}")
+
+        elif choice == '7':
             print(
                 "\nThank you for using the Mobile App Permissions Security Assessment System!")
             print("Keep learning and stay secure! 🔒📱")
             break
 
         else:
-            print("Invalid choice! Please enter 1, 2, 3, 4, 5, or 6.")
+            print("Invalid choice! Please enter 1, 2, 3, 4, 5, 6, or 7.")
 
 
 if __name__ == "__main__":
@@ -248,9 +280,6 @@ if __name__ == "__main__":
         main()
     except KeyboardInterrupt:
         print("\n\nProgram interrupted by user. Goodbye!")
-    except Exception as e:
-        print(f"\n❌ Unexpected error: {e}")
-        traceback.print_exc()
     except Exception as e:
         print(f"\n❌ Unexpected error: {e}")
         traceback.print_exc()

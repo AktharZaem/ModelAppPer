@@ -1,56 +1,61 @@
 {
+  "profile": {
+    "gender": "Male",
+    "proficiency": "School",
+    "education": "O/L"
+  },
   "responses": {
-    "What does an app permission allow?": "An app to access specific parts of your phone",
-    "When installing a new app, what should you do first?": "Use it immediately",
-    "Why should a flashlight app not need access to your contacts?": "It makes the light too bright",
-    "Which app should be allowed microphone access?": "Calculator",
-    "Why is it risky to allow camera and microphone permissions unnecessarily?": "Apps might take selfies",
-    "Which app genuinely needs location permission?": "Maps or delivery apps",
-    "You gave location access to a shopping app. What might happen?": "App stops working",
-    "What is \u201cpermission creep\u201d in mobile apps?": "Apps using small icons",
+    "What does an app permission allow?": "Change your wallpaper",
+    "When installing a new app, what should you do first?": "Check what permissions it asks for",
+    "Why should a flashlight app not need access to your contacts?": "It lowers phone speed",
+    "Which app should be allowed microphone access?": "Notes app",
+    "Why is it risky to allow camera and microphone permissions unnecessarily?": "Apps can record or watch without consent",
+    "Which app genuinely needs location permission?": "Clock",
+    "You gave location access to a shopping app. What might happen?": "You lose phone signal",
+    "What is “permission creep” in mobile apps?": "An app using too much battery",
     "Which permission is most sensitive for privacy and identity theft?": "Contacts and call logs",
     "What is the best habit for managing app permissions on your phone?": "Restart your phone weekly"
   },
   "scores": {
     "What does an app permission allow?": {
-      "answer": "An app to access specific parts of your phone",
-      "score": 10,
-      "level": "Advanced"
+      "answer": "Change your wallpaper",
+      "score": 3,
+      "level": "Beginner"
     },
     "When installing a new app, what should you do first?": {
-      "answer": "Use it immediately",
-      "score": 0,
-      "level": "Wrong"
-    },
-    "Why should a flashlight app not need access to your contacts?": {
-      "answer": "It makes the light too bright",
-      "score": 0,
-      "level": "Wrong"
-    },
-    "Which app should be allowed microphone access?": {
-      "answer": "Calculator",
-      "score": 3,
-      "level": "Beginner"
-    },
-    "Why is it risky to allow camera and microphone permissions unnecessarily?": {
-      "answer": "Apps might take selfies",
-      "score": 3,
-      "level": "Beginner"
-    },
-    "Which app genuinely needs location permission?": {
-      "answer": "Maps or delivery apps",
+      "answer": "Check what permissions it asks for",
       "score": 10,
       "level": "Advanced"
     },
-    "You gave location access to a shopping app. What might happen?": {
-      "answer": "App stops working",
+    "Why should a flashlight app not need access to your contacts?": {
+      "answer": "It lowers phone speed",
+      "score": 5,
+      "level": "Intermediate"
+    },
+    "Which app should be allowed microphone access?": {
+      "answer": "Notes app",
       "score": 0,
       "level": "Wrong"
     },
-    "What is \u201cpermission creep\u201d in mobile apps?": {
-      "answer": "Apps using small icons",
-      "score": 5,
-      "level": "Intermediate"
+    "Why is it risky to allow camera and microphone permissions unnecessarily?": {
+      "answer": "Apps can record or watch without consent",
+      "score": 10,
+      "level": "Advanced"
+    },
+    "Which app genuinely needs location permission?": {
+      "answer": "Clock",
+      "score": 3,
+      "level": "Beginner"
+    },
+    "You gave location access to a shopping app. What might happen?": {
+      "answer": "You lose phone signal",
+      "score": 3,
+      "level": "Beginner"
+    },
+    "What is “permission creep” in mobile apps?": {
+      "answer": "An app using too much battery",
+      "score": 3,
+      "level": "Beginner"
     },
     "Which permission is most sensitive for privacy and identity theft?": {
       "answer": "Contacts and call logs",
@@ -63,7 +68,7 @@
       "level": "Intermediate"
     }
   },
-  "total_score": 46,
-  "percentage": 46.0,
-  "overall_level": "Basic"
+  "total_score": 52,
+  "percentage": 52.0,
+  "overall_level": "Intermediate"
 }

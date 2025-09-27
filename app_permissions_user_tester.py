@@ -3,7 +3,8 @@ import joblib
 import pandas as pd
 import numpy as np
 import os
-import requests  # Now available since you installed it
+import requests
+import re
 from app_permissions_knowledge_enhancer import AppPermissionsKnowledgeEnhancer
 
 
@@ -14,16 +15,15 @@ class AppPermissionsTester:
         self.model = None
         self.feature_names = None
         self.enhancer = AppPermissionsKnowledgeEnhancer()
-        # Re-enable Gemini API with your key
-        self.gemini_api_key = os.getenv(
-            'GEMINI_API_KEY') or "AIzaSyDuDJ5uyh3DBAjEFTHaCz-g25fH7hp72Yc"
+        self.user_profile = None
+        self.explanation_bank = None
         self.load_components()
 
     def load_components(self):
-        """Load trained model and answer sheet"""
+        """Load trained model, answer sheet, and explanation bank"""
         try:
             # Load answer sheet and parse the nested structure
-            with open('answer_sheetappper.json', 'r') as f:
+            with open('answer_sheetappper.json', 'r', encoding='utf-8') as f:
                 data = json.load(f)
 
             self.answer_sheet = {}
@@ -31,22 +31,43 @@ class AppPermissionsTester:
 
             if 'questions' in data and isinstance(data['questions'], list):
                 for q_item in data['questions']:
-                    question_text = q_item['question']
+                    question_text = q_item.get('question')
                     options_dict = {}
 
-                    for option in q_item['options']:
-                        options_dict[option['text']] = {
-                            'weight': option['marks'],
-                            'level': option['level']
+                    for option in q_item.get('options', []):
+                        options_dict[option.get('text')] = {
+                            'weight': option.get('marks'),
+                            'level': option.get('level')
                         }
 
-                    self.answer_sheet[question_text] = options_dict
-                    self.questions_data.append(q_item)
+                    if question_text:
+                        self.answer_sheet[question_text] = options_dict
+                        self.questions_data.append(q_item)
 
-            # Load trained model
-            self.model = joblib.load('app_permissions_model.pkl')
-            self.feature_names = joblib.load(
-                'app_permissions_feature_names.pkl')
+            # Load explanation bank
+            try:
+                with open('ExplanationBankappper.json', 'r', encoding='utf-8') as f:
+                    self.explanation_bank = json.load(f)
+                print(
+                    f"✅ Loaded {len(self.explanation_bank)} explanations from ExplanationBank")
+            except FileNotFoundError:
+                print(
+                    "⚠️ ExplanationBankappper.json not found. Using fallback explanations.")
+                self.explanation_bank = []
+
+            # Load trained model and feature names if available
+            try:
+                self.model = joblib.load('app_permissions_model.pkl')
+                print("✅ Loaded trained model 'app_permissions_model.pkl'")
+            except Exception as e:
+                print(f"⚠️ Could not load model: {e}")
+                self.model = None
+
+            try:
+                self.feature_names = joblib.load(
+                    'app_permissions_feature_names.pkl')
+            except Exception:
+                self.feature_names = None
 
             print("App permissions components loaded successfully!")
             print(f"Loaded {len(self.questions_data)} questions for quiz")
@@ -55,24 +76,109 @@ class AppPermissionsTester:
             print(f"Error loading components: {e}")
             print("Please run app_permissions_model_trainer.py first to train the model")
 
+    def collect_user_profile(self):
+        """Collect user profile information before starting the quiz"""
+        print("\n=== User Profile Setup ===")
+        print("Please provide some basic information to get personalized feedback.\n")
+
+        # Collect Gender
+        print("1. Select Your Gender:")
+        print("   1. Male")
+        print("   2. Female")
+
+        while True:
+            try:
+                gender_choice = int(input("Enter your choice (1-2): "))
+                if gender_choice == 1:
+                    gender = "Male"
+                    break
+                elif gender_choice == 2:
+                    gender = "Female"
+                    break
+                else:
+                    print("Please enter 1 or 2!")
+            except ValueError:
+                print("Please enter a valid number!")
+
+        # Collect Proficiency Level
+        print("\n2. Select Your IT/Technology Proficiency:")
+        print("   1. School Level (Basic computer/smartphone use)")
+        print("   2. High Education Level (Advanced computer/technology skills)")
+
+        while True:
+            try:
+                proficiency_choice = int(input("Enter your choice (1-2): "))
+                if proficiency_choice == 1:
+                    proficiency = "School"
+                    break
+                elif proficiency_choice == 2:
+                    proficiency = "High Education"
+                    break
+                else:
+                    print("Please enter 1 or 2!")
+            except ValueError:
+                print("Please enter a valid number!")
+
+        # Collect Education Level
+        print("\n3. Select Your Education Level:")
+        print("   1. O/L (Ordinary Level)")
+        print("   2. A/L (Advanced Level)")
+        print("   3. HND (Higher National Diploma)")
+        print("   4. Degree (University Degree)")
+
+        while True:
+            try:
+                education_choice = int(input("Enter your choice (1-4): "))
+                if education_choice == 1:
+                    education = "O/L"
+                    break
+                elif education_choice == 2:
+                    education = "A/L"
+                    break
+                elif education_choice == 3:
+                    education = "HND"
+                    break
+                elif education_choice == 4:
+                    education = "Degree"
+                    break
+                else:
+                    print("Please enter 1, 2, 3, or 4!")
+            except ValueError:
+                print("Please enter a valid number!")
+
+        self.user_profile = {
+            "gender": gender,
+            "proficiency": proficiency,
+            "education": education
+        }
+
+        print(f"\n✅ Profile saved: {gender}, {proficiency}, {education}")
+        print("This information will be used to provide personalized explanations.\n")
+
+        return self.user_profile
+
     def conduct_quiz(self):
         """Conduct interactive quiz with user"""
+        if not self.questions_data:
+            print("No questions loaded. Exiting quiz.")
+            return {}, {}
+
         print("\n=== Mobile App Permissions Security Awareness Quiz ===")
-        print("Please answer the following 10 questions about mobile app permissions.\n")
+        print("Please answer the following questions about mobile app permissions.\n")
 
         user_responses = {}
         user_scores = {}
 
         for i, q_item in enumerate(self.questions_data, 1):
-            question = q_item['question']
-            options = q_item['options']
+            question = q_item.get('question', 'Unknown question')
+            options = q_item.get('options', [])
 
             print(f"Question {i}: {question}")
             print("\nOptions:")
 
             # Display options
             for j, option in enumerate(options, 1):
-                print(f"{j}. {option['text']}")
+                print(f"{j}. {option.get('text', '')}")
 
             # Get user input
             while True:
@@ -81,15 +187,15 @@ class AppPermissionsTester:
                         input(f"\nEnter your choice (1-{len(options)}): "))
                     if 1 <= choice <= len(options):
                         selected_option = options[choice - 1]
-                        selected_answer = selected_option['text']
+                        selected_answer = selected_option.get('text', '')
 
                         user_responses[question] = selected_answer
 
                         # Get score and level for this answer
                         user_scores[question] = {
                             'answer': selected_answer,
-                            'score': selected_option['marks'],
-                            'level': selected_option['level']
+                            'score': selected_option.get('marks', 0),
+                            'level': selected_option.get('level', 'basic')
                         }
                         break
                     else:
@@ -103,10 +209,14 @@ class AppPermissionsTester:
 
     def calculate_results(self, user_scores):
         """Calculate overall results and recommendations"""
-        total_score = sum(score_info['score']
+        if not user_scores:
+            return 0, 0.0, 'Beginner'
+
+        total_score = sum(score_info.get('score', 0)
                           for score_info in user_scores.values())
         max_possible_score = len(user_scores) * 10
-        percentage = (total_score / max_possible_score) * 100
+        percentage = (total_score / max_possible_score) * \
+            100 if max_possible_score > 0 else 0
 
         # Determine overall level
         if percentage >= 75:
@@ -120,253 +230,78 @@ class AppPermissionsTester:
 
         return total_score, percentage, overall_level
 
-    def get_gemini_explanation(self, question, current_level, overall_level):
-        """Get personalized explanation from Gemini API"""
-        if not self.gemini_api_key:
-            return self.get_detailed_explanation(question, current_level, overall_level)
+    def get_explanation_from_bank(self, question_id, option_label, user_profile):
+        """Get personalized explanation from ExplanationBank based on user profile"""
+        if not self.explanation_bank:
+            return self.get_detailed_explanation(question_id, "basic", "basic")
 
-        try:
-            # Prepare the prompt for Gemini
-            prompt = f"""
-You are an expert cybersecurity educator specializing in mobile app permissions. 
+        # Normalize question ID (Q01 -> Q1, Q1 stays Q1)
+        normalized_qid = question_id
+        if isinstance(question_id, str) and question_id.startswith('Q'):
+            match = re.match(r"Q0*(\d+)", question_id)
+            if match:
+                normalized_qid = f"Q{match.group(1)}"
 
-CONTEXT:
-- User's Question: "{question}"
-- User's Current Answer Level: {current_level}
-- User's Overall Knowledge Level: {overall_level}
+        # Find matching explanation
+        for explanation in self.explanation_bank:
+            exp_qid = explanation.get("questionId", "")
+            exp_option = explanation.get("option", "")
+            exp_profile = explanation.get("profile", {})
 
-TASK:
-Provide a personalized explanation to help this user understand this app permission concept and advance to the next level. 
+            # Normalize explanation question ID too
+            if isinstance(exp_qid, str) and exp_qid.startswith('Q'):
+                match = re.match(r"Q0*(\d+)", exp_qid)
+                if match:
+                    exp_qid = f"Q{match.group(1)}"
 
-GUIDELINES:
-- If user is at "wrong" level, explain the basics very simply (like explaining to a child)
-- If user is at "basic" level, provide more detailed explanations with examples
-- If user is at "intermediate" level, give advanced concepts and best practices
-- If user is at "advanced" level, provide expert-level insights and enterprise considerations
+            # Check if question ID and option match
+            if (exp_qid == normalized_qid and exp_option == option_label):
+                # Check if profile matches
+                profile_match = (
+                    exp_profile.get("gender", "") == user_profile.get("gender", "") and
+                    exp_profile.get("proficiency", "") == user_profile.get("proficiency", "") and
+                    exp_profile.get("education", "") == user_profile.get(
+                        "education", "")
+                )
 
-FORMAT:
-- Use emojis and clear structure
-- Include practical examples
-- Explain WHY this matters for their privacy and security
-- Give actionable next steps
-- Keep it engaging and educational
-- Maximum 300 words
+                if profile_match:
+                    return f"\nPERSONALIZED EXPLANATION:\n{explanation.get('explanation', '')}"
 
-Please provide a comprehensive explanation that will help them improve from their current level to the next level.
-"""
+        # If no exact match found, try to find closest match (same question, any profile)
+        for explanation in self.explanation_bank:
+            exp_qid = explanation.get("questionId", "")
+            exp_option = explanation.get("option", "")
 
-            # Try multiple model endpoints until one works
-            model_names = [
-                "gemini-1.5-flash",
-                "gemini-1.5-pro",
-                "gemini-1.0-pro",
-                "gemini-pro"
-            ]
+            # Normalize explanation question ID
+            if isinstance(exp_qid, str) and exp_qid.startswith('Q'):
+                match = re.match(r"Q0*(\d+)", exp_qid)
+                if match:
+                    exp_qid = f"Q{match.group(1)}"
 
-            for model_name in model_names:
-                try:
-                    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={self.gemini_api_key}"
+            if (exp_qid == normalized_qid and exp_option == option_label):
+                profile_desc = f"{explanation.get('profile', {}).get('gender', 'General')}, {explanation.get('profile', {}).get('proficiency', 'General')}, {explanation.get('profile', {}).get('education', 'General')}"
+                return f"\nRELATED EXPLANATION (for {profile_desc}):\n{explanation.get('explanation', '')}"
 
-                    headers = {
-                        "Content-Type": "application/json"
-                    }
+        # Fallback explanation
+        return f"\nFALLBACK EXPLANATION:\nFor this question about app permissions, it's important to understand the security implications of your choice. Consider reviewing app permission best practices and how they relate to your privacy and security."
 
-                    data = {
-                        "contents": [{
-                            "parts": [{
-                                "text": prompt
-                            }]
-                        }],
-                        "generationConfig": {
-                            "temperature": 0.7,
-                            "topK": 40,
-                            "topP": 0.95,
-                            "maxOutputTokens": 500,
-                        }
-                    }
+    def get_option_label_from_answer(self, question, user_answer):
+        """Get the option label (A, B, C, D) from the user's answer text"""
+        # Find the question in questions_data
+        for q_item in self.questions_data:
+            if q_item.get('question') == question:
+                for option in q_item.get('options', []):
+                    if option.get('text') == user_answer:
+                        return option.get('label')
+        return "A"  # Default fallback
 
-                    print(f"📚 Model thinking for better learning curve...")
-                    response = requests.post(
-                        url, headers=headers, json=data, timeout=30)
-
-                    if response.status_code == 200:
-                        result = response.json()
-                        if 'candidates' in result and len(result['candidates']) > 0:
-                            generated_text = result['candidates'][0]['content']['parts'][0]['text']
-                            return f"\nPERSONALIZED EXPLANATION:\n{generated_text}"
-                    else:
-                        print(
-                            f"⚠️ Model {model_name} failed with status {response.status_code}")
-                        continue  # Try next model
-
-                except Exception as model_error:
-                    print(f"⚠️ Error with model {model_name}: {model_error}")
-                    continue  # Try next model
-
-            # If all models fail, fall back to predefined explanations
-            print("⚠️ All models failed, using fallback explanation")
-            return self.get_detailed_explanation(question, current_level, overall_level)
-
-        except Exception as e:
-            print(f"⚠️ Error calling API: {e}")
-            return self.get_detailed_explanation(question, current_level, overall_level)
-
-    def get_detailed_explanation(self, question, current_level, overall_level):
-        """Get detailed explanation based on question and user's overall knowledge level"""
-        explanations = {
-            "When installing a new app, what should you do first?": {
-                "basic": """
-🔍 WHAT ARE APP PERMISSIONS?
-Think of app permissions like keys to your house. When you install an app, it's like giving someone keys to different rooms in your digital home.
-
-📱 WHAT TO DO FIRST:
-• Always read what permissions the app is asking for
-• Ask yourself: "Does this app REALLY need this access?"
-• For example: Why would a calculator app need your camera?
-• Only say "YES" if it makes sense for what the app does
-
-💡 SIMPLE RULE: If it doesn't make sense, don't allow it!
-""",
-                "intermediate": """
-🔒 UNDERSTANDING APP PERMISSIONS:
-App permissions control what data and features apps can access on your device. Think of it as a security checkpoint.
-
-🛡️ BEST PRACTICES WHEN INSTALLING:
-• Review the permission list during installation
-• Understand the difference between essential and optional permissions
-• Check if permissions align with the app's stated functionality
-• Research the app developer's reputation and privacy policy
-• Consider alternatives if too many unnecessary permissions are requested
-
-⚖️ RISK ASSESSMENT: Weigh the app's benefits against privacy risks
-""",
-                "advanced": """
-🎯 ADVANCED PERMISSION MANAGEMENT:
-Implementing a systematic approach to app permission evaluation requires understanding the security implications and data flow.
-
-🔬 COMPREHENSIVE EVALUATION PROCESS:
-• Conduct permission auditing before installation
-• Analyze the app's security model and data handling practices
-• Implement principle of least privilege - grant minimal necessary access
-• Consider runtime permissions vs install-time permissions
-• Evaluate the app's compliance with platform security guidelines
-• Monitor permission usage patterns post-installation
-
-🏢 ENTERPRISE CONSIDERATIONS: Apply organizational security policies and mobile device management standards
-"""
-            },
-            "Why should a flashlight app not need access to your contacts?": {
-                "basic": """
-🔦 FLASHLIGHT APP EXAMPLE:
-A flashlight app's job is simple - turn your phone's light on and off. That's it!
-
-📞 WHY NO CONTACTS ACCESS?
-• Your contacts have nothing to do with making light
-• The app doesn't need names or phone numbers to work
-• Giving contact access means the app can see and potentially share your friends' information
-• This could be used for spam or unwanted marketing
-
-🚨 RED FLAG RULE: If an app asks for something it doesn't need for its main job, be suspicious!
-""",
-                "intermediate": """
-🔍 UNDERSTANDING UNNECESSARY PERMISSIONS:
-This is a classic example of permission overreach - when apps request access beyond their core functionality.
-
-⚠️ SECURITY IMPLICATIONS:
-• Contact access allows apps to harvest personal data for commercial purposes
-• Data can be sold to third parties or used for targeted advertising
-• Potential for social engineering attacks using your contact information
-• Privacy violation extends to your contacts who didn't consent to data sharing
-
-🛡️ PROTECTION STRATEGY: Always question why any app needs access to sensitive data like contacts, location, or camera
-""",
-                "advanced": """
-🔒 ADVANCED PERMISSION ANALYSIS:
-This scenario demonstrates the importance of implementing strict permission models and understanding data minimization principles.
-
-🏗️ SECURITY ARCHITECTURE CONSIDERATIONS:
-• Implement application sandboxing to prevent unauthorized data access
-• Understand the difference between legitimate functionality and data harvesting
-• Analyze the app's data flow and third-party integrations
-• Consider implementing mobile application management (MAM) policies
-• Evaluate the risk of lateral movement through interconnected data access
-
-🎯 ENTERPRISE STRATEGY: Develop organization-wide policies for app vetting and permission management
-"""
-            },
-            "Which app should be allowed microphone access?": {
-                "basic": """
-🎤 MICROPHONE PERMISSION BASICS:
-Your microphone lets apps record sound. Only some apps really need this!
-
-✅ APPS THAT SHOULD GET MICROPHONE ACCESS:
-• Voice recording apps (to record your voice)
-• Video calling apps like WhatsApp, Zoom (to talk to people)
-• Music apps like Shazam (to identify songs)
-• Voice assistants like Siri, Google Assistant
-
-❌ APPS THAT DON'T NEED MICROPHONE:
-• Games (unless they have voice features)
-• Photo editing apps
-• Calculator apps
-• Flashlight apps
-
-🔒 SAFETY TIP: Your microphone can hear everything around you, so be careful who you give access to!
-""",
-                "intermediate": """
-🎯 MICROPHONE PERMISSION MANAGEMENT:
-Microphone access is one of the most sensitive permissions as it can capture private conversations and ambient audio.
-
-🔍 LEGITIMATE USE CASES:
-• Communication apps (calls, messaging, video conferencing)
-• Audio/video recording and editing applications
-• Voice assistants and dictation software
-• Music recognition and audio analysis tools
-• Accessibility applications with voice control features
-
-⚠️ SECURITY CONSIDERATIONS:
-• Always check for visual/audio indicators when microphone is active
-• Review which apps have background microphone access
-• Be aware that some apps may record continuously
-• Understand the difference between "while using app" vs "always" permissions
-
-🛡️ BEST PRACTICE: Regularly audit microphone permissions and revoke access for unused apps
-""",
-                "advanced": """
-🔒 ENTERPRISE MICROPHONE SECURITY:
-Microphone permissions represent a significant attack vector for corporate espionage and privacy breaches.
-
-🏢 ADVANCED SECURITY FRAMEWORK:
-• Implement mobile device management (MDM) policies for audio recording
-• Deploy mobile threat defense (MTD) solutions to monitor microphone usage
-• Establish data loss prevention (DLP) policies for audio content
-• Configure runtime permission monitoring and anomaly detection
-• Implement zero-trust models for audio-enabled applications
-
-🎯 COMPLIANCE CONSIDERATIONS:
-• GDPR implications for audio data collection
-• Industry-specific regulations (healthcare, finance, government)
-• Audit trails for microphone access in corporate environments
-• Incident response procedures for unauthorized audio access
-"""
-            }
-        }
-
-        question_key = question
-        if question_key in explanations and overall_level.lower() in explanations[question_key]:
-            return explanations[question_key][overall_level.lower()]
-        else:
-            # Fallback explanation
-            return f"""
-📚 LEARNING OPPORTUNITY:
-This question tests your understanding of app permissions. The key is to think about whether the permission makes sense for what the app does.
-
-🎯 NEXT STEPS:
-• Research this topic online
-• Check your device's permission settings
-• Practice reviewing app permissions before installing
-• Learn about privacy and security best practices
-"""
+    def get_detailed_explanation(self, question_id, current_level, desired_level):
+        """Basic fallback detailed explanation generator (used when ExplanationBank missing)"""
+        return (
+            f"Detailed guidance for {question_id}:\n"
+            "Review which permissions the app requests, why it needs them, and whether there are safer alternatives. "
+            "Consider limiting permissions or using feature-restricted alternatives."
+        )
 
     def provide_feedback(self, user_scores, overall_level, percentage):
         """Provide detailed feedback and recommendations"""
@@ -374,11 +309,16 @@ This question tests your understanding of app permissions. The key is to think a
         print("APP PERMISSIONS QUIZ RESULTS & PERSONALIZED FEEDBACK")
         print("="*60)
 
-        total_score = sum(score_info['score']
+        total_score = sum(score_info.get('score', 0)
                           for score_info in user_scores.values())
         print(f"Total Score: {total_score}/100")
         print(f"Percentage: {percentage:.1f}%")
         print(f"Overall App Permissions Security Level: {overall_level}")
+
+        # Display user profile
+        if self.user_profile:
+            print(
+                f"Profile: {self.user_profile['gender']}, {self.user_profile['proficiency']}, {self.user_profile['education']}")
 
         # Provide level-specific encouragement
         if percentage >= 75:
@@ -409,8 +349,9 @@ This question tests your understanding of app permissions. The key is to think a
         improvement_areas = []
 
         for i, (question, score_info) in enumerate(user_scores.items(), 1):
-            level = score_info['level']
-            score = score_info['score']
+            level = score_info.get('level', 'basic')
+            score = score_info.get('score', 0)
+            user_answer = score_info.get('answer', '')
 
             print(f"\nQuestion {i}: {question}")
             print(f"Your Answer Level: {level.upper()} ({score}/10 points)")
@@ -422,10 +363,24 @@ This question tests your understanding of app permissions. The key is to think a
                     'score': score
                 })
 
-                # Get AI-generated explanation based on overall level
-                ai_explanation = self.get_gemini_explanation(
-                    question, level, overall_level)
-                print(ai_explanation)
+                # Get question ID from the questions_data
+                question_id = None
+                option_label = None
+                for q_item in self.questions_data:
+                    if q_item.get('question') == question:
+                        question_id = q_item.get('questionId')
+                        option_label = self.get_option_label_from_answer(
+                            question, user_answer)
+                        break
+
+                if question_id and option_label and self.user_profile:
+                    # Get explanation from ExplanationBank
+                    explanation = self.get_explanation_from_bank(
+                        question_id, option_label, self.user_profile)
+                    print(explanation)
+                else:
+                    # Fallback to basic explanation
+                    print(f"\nBASIC EXPLANATION:\nThis question tests your understanding of app permissions. Consider researching this topic further to improve your knowledge.")
 
         # Overall recommendations with level-appropriate language
         if improvement_areas:
@@ -443,8 +398,7 @@ This question tests your understanding of app permissions. The key is to think a
 
                 # Get enhanced advice from knowledge enhancer
                 enhanced_advice = self.enhancer.get_detailed_guidance(
-                    area['question'], area['current_level']
-                )
+                    area['question'], area['current_level'])
                 print(f"   📚 Learning Path: {enhanced_advice}")
 
         # Add level-appropriate closing message
@@ -469,6 +423,9 @@ This question tests your understanding of app permissions. The key is to think a
                 "Error: Model or answer sheet not loaded. Please train the model first.")
             return
 
+        # Collect user profile first
+        self.collect_user_profile()
+
         # Conduct quiz
         user_responses, user_scores = self.conduct_quiz()
 
@@ -479,8 +436,9 @@ This question tests your understanding of app permissions. The key is to think a
         # Provide feedback
         self.provide_feedback(user_scores, overall_level, percentage)
 
-        # Save user results
+        # Save user results including profile
         user_data = {
+            'profile': self.user_profile,
             'responses': user_responses,
             'scores': user_scores,
             'total_score': total_score,
@@ -488,25 +446,17 @@ This question tests your understanding of app permissions. The key is to think a
             'overall_level': overall_level
         }
 
-        with open('app_permissions_assessment_results.json', 'w') as f:
-            json.dump(user_data, f, indent=2)
+        with open('app_permissions_assessment_results.json', 'w', encoding='utf-8') as f:
+            json.dump(user_data, f, indent=2, ensure_ascii=False)
 
         print(f"\n📄 Results saved to 'app_permissions_assessment_results.json'")
 
         return {
             'score': percentage,
-            'weak_areas': [question for question, score_info in user_scores.items() if score_info['score'] < 7]
+            'weak_areas': [question for question, score_info in user_scores.items() if score_info.get('score', 0) < 7]
         }
 
 
 if __name__ == "__main__":
-    tester = AppPermissionsTester()
-    tester.run_assessment()
-if __name__ == "__main__":
-    tester = AppPermissionsTester()
-    tester.run_assessment()
-    tester = AppPermissionsTester()
-    tester.run_assessment()
-    tester.run_assessment()
     tester = AppPermissionsTester()
     tester.run_assessment()
