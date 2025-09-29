@@ -1,8 +1,8 @@
 {
   "profile": {
-    "name": "Akthar",
+    "email": "Akthar.0777@gmail.com",
     "gender": "Male",
-    "education": "HND",
+    "education": "A/L",
     "proficiency": "High Education"
   },
   "responses": {
@@ -10,12 +10,12 @@
     "When installing a new app, what should you do first?": "Use it immediately",
     "Why should a flashlight app not need access to your contacts?": "It makes the light too bright",
     "Which app should be allowed microphone access?": "Calculator",
-    "Why is it risky to allow camera and microphone permissions unnecessarily?": "It slows down the app",
+    "Why is it risky to allow camera and microphone permissions unnecessarily?": "Apps can record or watch without consent",
     "Which app genuinely needs location permission?": "Clock",
-    "You gave location access to a shopping app. What might happen?": "It starts tracking your movement for targeted ads",
-    "What is “permission creep” in mobile apps?": "An app using too much battery",
-    "Which permission is most sensitive for privacy and identity theft?": "Contacts and call logs",
-    "What is the best habit for managing app permissions on your phone?": "Restart your phone weekly"
+    "You gave location access to a shopping app. What might happen?": "You lose phone signal",
+    "What is “permission creep” in mobile apps?": "Apps freezing frequently",
+    "Which permission is most sensitive for privacy and identity theft?": "Font size access",
+    "What is the best habit for managing app permissions on your phone?": "Review and revoke unused permissions regularly"
   },
   "scores": {
     "What does an app permission allow?": {
@@ -39,9 +39,9 @@
       "level": "Beginner"
     },
     "Why is it risky to allow camera and microphone permissions unnecessarily?": {
-      "answer": "It slows down the app",
-      "score": 5,
-      "level": "Intermediate"
+      "answer": "Apps can record or watch without consent",
+      "score": 10,
+      "level": "Advanced"
     },
     "Which app genuinely needs location permission?": {
       "answer": "Clock",
@@ -49,27 +49,27 @@
       "level": "Beginner"
     },
     "You gave location access to a shopping app. What might happen?": {
-      "answer": "It starts tracking your movement for targeted ads",
-      "score": 10,
-      "level": "Advanced"
-    },
-    "What is “permission creep” in mobile apps?": {
-      "answer": "An app using too much battery",
+      "answer": "You lose phone signal",
       "score": 3,
       "level": "Beginner"
     },
-    "Which permission is most sensitive for privacy and identity theft?": {
-      "answer": "Contacts and call logs",
-      "score": 10,
-      "level": "Advanced"
+    "What is “permission creep” in mobile apps?": {
+      "answer": "Apps freezing frequently",
+      "score": 0,
+      "level": "Wrong"
     },
-    "What is the best habit for managing app permissions on your phone?": {
-      "answer": "Restart your phone weekly",
+    "Which permission is most sensitive for privacy and identity theft?": {
+      "answer": "Font size access",
       "score": 5,
       "level": "Intermediate"
+    },
+    "What is the best habit for managing app permissions on your phone?": {
+      "answer": "Review and revoke unused permissions regularly",
+      "score": 10,
+      "level": "Advanced"
     }
   },
-  "total_score": 49,
-  "percentage": 49.0,
+  "total_score": 44,
+  "percentage": 44.0,
   "overall_level": "Basic"
 }

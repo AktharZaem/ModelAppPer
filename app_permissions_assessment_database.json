@@ -7,7 +7,7 @@
   "assessments": [
     {
       "timestamp": "2025-09-27 20:41:22",
-      "name": "Akthar",
+      "email": "akthar1@example.com",
       "gender": "Male",
       "education_level": "A/L",
       "proficiency": "High Education",
@@ -18,12 +18,56 @@
     },
     {
       "timestamp": "2025-09-27 20:45:40",
-      "name": "Akthar",
+      "email": "akthar2@example.com",
       "gender": "Male",
       "education_level": "HND",
       "proficiency": "High Education",
       "total_score": 49,
       "percentage": 49.0,
+      "overall_knowledge_level": "Basic",
+      "category": "App Permissions"
+    },
+    {
+      "timestamp": "2025-09-29 11:14:23",
+      "email": "ashfaq@example.com",
+      "gender": "Male",
+      "education_level": "A/L",
+      "proficiency": "School",
+      "total_score": 44,
+      "percentage": 44.0,
+      "overall_knowledge_level": "Basic",
+      "category": "App Permissions"
+    },
+    {
+      "timestamp": "2025-09-29 11:20:31",
+      "email": "shiyam@example.com",
+      "gender": "Female",
+      "education_level": "A/L",
+      "proficiency": "School",
+      "total_score": 44,
+      "percentage": 44.0,
+      "overall_knowledge_level": "Basic",
+      "category": "App Permissions"
+    },
+    {
+      "timestamp": "2025-09-29 11:32:18",
+      "email": "ashfaf@example.com",
+      "gender": "Male",
+      "education_level": "A/L",
+      "proficiency": "School",
+      "total_score": 65,
+      "percentage": 65.0,
+      "overall_knowledge_level": "Intermediate",
+      "category": "App Permissions"
+    },
+    {
+      "timestamp": "2025-09-29 13:09:13",
+      "email": "Akthar.0777@gmail.com",
+      "gender": "Male",
+      "education_level": "A/L",
+      "proficiency": "High Education",
+      "total_score": 44,
+      "percentage": 44.0,
       "overall_knowledge_level": "Basic",
       "category": "App Permissions"
     }

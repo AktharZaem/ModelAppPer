@@ -133,7 +133,9 @@ def view_assessment_database():
             assessments, key=lambda x: x['timestamp'], reverse=True)[:5]
 
         for i, assessment in enumerate(recent_assessments, 1):
-            print(f"{i}. {assessment['name']} ({assessment['timestamp']})")
+            email_or_name = assessment.get(
+                'email', assessment.get('name', 'Unknown'))
+            print(f"{i}. {email_or_name} ({assessment['timestamp']})")
             print(
                 f"   Score: {assessment['total_score']}/100 ({assessment['percentage']:.1f}%)")
             print(f"   Level: {assessment['overall_knowledge_level']}")
@@ -382,7 +384,7 @@ def export_database_to_csv():
 
         with open(csv_filename, 'w', newline='', encoding='utf-8') as csvfile:
             fieldnames = [
-                'Timestamp', 'Name', 'Gender', 'Education_Level', 'Proficiency',
+                'Timestamp', 'Email', 'Gender', 'Education_Level', 'Proficiency',
                 'Total_Score', 'Percentage', 'Overall_Knowledge_Level', 'Category'
             ]
 
@@ -390,9 +392,11 @@ def export_database_to_csv():
             writer.writeheader()
 
             for assessment in assessments:
+                email_or_name = assessment.get(
+                    'email', assessment.get('name', ''))
                 writer.writerow({
                     'Timestamp': assessment['timestamp'],
-                    'Name': assessment['name'],
+                    'Email': email_or_name,
                     'Gender': assessment['gender'],
                     'Education_Level': assessment['education_level'],
                     'Proficiency': assessment['proficiency'],

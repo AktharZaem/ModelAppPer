@@ -81,14 +81,30 @@ class AppPermissionsTester:
         print("\n=== User Profile Setup ===")
         print("Please provide some basic information to get personalized feedback.\n")
 
-        # Collect Name
-        print("1. Enter Your Name:")
+        # Collect Email (unique)
+        print("1. Enter Your Email:")
         while True:
-            name = input("Full Name: ").strip()
-            if name and len(name) >= 2:
-                break
-            else:
-                print("Please enter a valid name (at least 2 characters)!")
+            email = input("Email: ").strip()
+            if not email:
+                print("Please enter a valid email!")
+                continue
+            # Basic email validation
+            if '@' not in email or '.' not in email.split('@')[1]:
+                print("Please enter a valid email address!")
+                continue
+            # Check uniqueness in database
+            try:
+                with open('app_permissions_assessment_database.json', 'r', encoding='utf-8') as f:
+                    database = json.load(f)
+                existing_emails = [assessment.get('email', assessment.get(
+                    'name', '')).lower() for assessment in database.get('assessments', [])]
+                if email.lower() in existing_emails:
+                    print(
+                        "This email is already registered. Please use a different email!")
+                    continue
+            except FileNotFoundError:
+                pass  # No database yet, allow
+            break
 
         # Collect Gender
         print("\n2. Select Your Gender:")
@@ -156,14 +172,14 @@ class AppPermissionsTester:
                 print("Please enter a valid number!")
 
         self.user_profile = {
-            "name": name,
+            "email": email,
             "gender": gender,
             "education": education,
             "proficiency": proficiency
         }
 
         print(
-            f"\n✅ Profile saved: {name}, {gender}, {education}, {proficiency}")
+            f"\n✅ Profile saved: {email}, {gender}, {education}, {proficiency}")
         print("This information will be used to provide personalized explanations.\n")
 
         return self.user_profile
@@ -323,7 +339,7 @@ class AppPermissionsTester:
         # Create assessment record (without detailed responses and scores)
         assessment_record = {
             "timestamp": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "name": user_data['profile']['name'],
+            "email": user_data['profile']['email'],
             "gender": user_data['profile']['gender'],
             "education_level": user_data['profile']['education'],
             "proficiency": user_data['profile']['proficiency'],
@@ -373,7 +389,7 @@ class AppPermissionsTester:
 
         # Display user profile
         if self.user_profile:
-            print(f"Name: {self.user_profile['name']}")
+            print(f"Email: {self.user_profile['email']}")
             print(
                 f"Profile: {self.user_profile['gender']}, {self.user_profile['education']}, {self.user_profile['proficiency']}")
 
