@@ -70,6 +70,17 @@
       "percentage": 44.0,
       "overall_knowledge_level": "Basic",
       "category": "App Permissions"
+    },
+    {
+      "timestamp": "2025-09-29 14:31:47",
+      "email": "akthar.087@gmail.com",
+      "gender": "Male",
+      "education_level": "A/L",
+      "proficiency": "School",
+      "total_score": 34,
+      "percentage": 34.0,
+      "overall_knowledge_level": "Basic",
+      "category": "App Permissions"
     }
   ]
 }
