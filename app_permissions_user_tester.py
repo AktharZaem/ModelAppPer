@@ -376,58 +376,40 @@ class AppPermissionsTester:
         return database_file
 
     def provide_feedback(self, user_scores, overall_level, percentage):
-        """Provide detailed feedback and recommendations"""
-        print("\n" + "="*60)
-        print("APP PERMISSIONS QUIZ RESULTS & PERSONALIZED FEEDBACK")
-        print("="*60)
-
+        """Provide detailed feedback and recommendations - now returns data instead of printing"""
         total_score = sum(score_info.get('score', 0)
                           for score_info in user_scores.values())
-        print(f"Total Score: {total_score}/100")
-        print(f"Percentage: {percentage:.1f}%")
-        print(f"Overall App Permissions Security Level: {overall_level}")
 
-        # Display user profile
-        if self.user_profile:
-            print(f"Email: {self.user_profile['email']}")
-            print(
-                f"Profile: {self.user_profile['gender']}, {self.user_profile['education']}, {self.user_profile['proficiency']}")
+        # Score summary
+        score_summary = f"""
+============================================================
+APP PERMISSIONS QUIZ RESULTS & PERSONALIZED FEEDBACK
+============================================================
+Total Score: {total_score}/100
+Percentage: {percentage:.1f}%
+Overall App Permissions Security Level: {overall_level}
+Email: {self.user_profile['email']}
+Profile: {self.user_profile['gender']}, {self.user_profile['education']}, {self.user_profile['proficiency']}
+"""
 
-        # Provide level-specific encouragement
+        # Level-specific encouragement
         if percentage >= 75:
-            print("\n🎉 Congratulations! You're in the SAFE ZONE!")
-            print("Your mobile app permissions security awareness is excellent.")
-            print(
-                "You understand how to protect your privacy and data from apps that might misuse permissions.")
+            encouragement = "\n🎉 Congratulations! You're in the SAFE ZONE!\nYour mobile app permissions security awareness is excellent.\nYou understand how to protect your privacy and data from apps that might misuse permissions."
         elif percentage >= 50:
-            print("\n📈 Good Progress! You're at INTERMEDIATE level!")
-            print("You have a solid foundation but there's room for improvement.")
-            print(
-                "Focus on the areas below to reach expert level and better protect your privacy.")
+            encouragement = "\n📈 Good Progress! You're at INTERMEDIATE level!\nYou have a solid foundation but there's room for improvement.\nFocus on the areas below to reach expert level and better protect your privacy."
         elif percentage >= 25:
-            print("\n📚 You're at BASIC level - Learning Time!")
-            print(
-                "Don't worry! Everyone starts somewhere. App permissions can be tricky to understand.")
-            print("Think of it like this: Would you give a stranger the keys to your house? Same with apps and your phone!")
+            encouragement = "\n📚 You're at BASIC level - Learning Time!\nDon't worry! Everyone starts somewhere. App permissions can be tricky to understand.\nThink of it like this: Would you give a stranger the keys to your house? Same with apps and your phone!"
         else:
-            print("\n🌱 You're just getting started - BEGINNER level!")
-            print("No problem at all! Let's learn together step by step.")
-            print(
-                "Think of your phone like your house - you need to decide who gets keys to which rooms!")
+            encouragement = "\n🌱 You're just getting started - BEGINNER level!\nNo problem at all! Let's learn together step by step.\nThink of your phone like your house - you need to decide who gets keys to which rooms!"
 
-        print("\n" + "-"*60)
-        print("DETAILED ANALYSIS BY QUESTION:")
-        print("-"*60)
-
+        # Detailed analysis
+        detailed_analysis = "\n" + "-"*60 + "\nDETAILED ANALYSIS BY QUESTION:\n" + "-"*60
         improvement_areas = []
-
         for i, (question, score_info) in enumerate(user_scores.items(), 1):
             level = score_info.get('level', 'basic')
             score = score_info.get('score', 0)
             user_answer = score_info.get('answer', '')
-
-            print(f"\nQuestion {i}: {question}")
-            print(f"Your Answer Level: {level.upper()} ({score}/10 points)")
+            detailed_analysis += f"\n\nQuestion {i}: {question}\nYour Answer Level: {level.upper()} ({score}/10 points)"
 
             if score < 10:  # Not perfect answer
                 improvement_areas.append({
@@ -436,7 +418,7 @@ class AppPermissionsTester:
                     'score': score
                 })
 
-                # Get question ID from the questions_data
+                # Get question ID and explanation
                 question_id = None
                 option_label = None
                 for q_item in self.questions_data:
@@ -447,57 +429,80 @@ class AppPermissionsTester:
                         break
 
                 if question_id and option_label and self.user_profile:
-                    # Get explanation from ExplanationBank
                     explanation = self.get_explanation_from_bank(
                         question_id, option_label, self.user_profile)
-                    print(explanation)
+                    detailed_analysis += explanation
                 else:
-                    # Fallback to basic explanation
-                    print(f"\nBASIC EXPLANATION:\nThis question tests your understanding of app permissions. Consider researching this topic further to improve your knowledge.")
+                    detailed_analysis += "\n\nBASIC EXPLANATION:\nThis question tests your understanding of app permissions. Consider researching this topic further to improve your knowledge."
 
-        # Overall recommendations with level-appropriate language
+        # Priority improvement areas
+        priority_areas = ""
         if improvement_areas:
-            print("\n" + "="*60)
-            print("PRIORITY IMPROVEMENT AREAS:")
-            print("="*60)
-
-            # Sort by score (lowest first)
+            priority_areas = "\n" + "="*60 + "\nPRIORITY IMPROVEMENT AREAS:\n" + "="*60
             improvement_areas.sort(key=lambda x: x['score'])
-
-            for area in improvement_areas[:3]:  # Top 3 priority areas
-                print(f"\n🎯 Priority Question: {area['question']}")
-                print(
-                    f"   Your Current Level: {area['current_level'].upper()}")
-
-                # Get enhanced advice from knowledge enhancer
+            for area in improvement_areas[:3]:  # Top 3
+                priority_areas += f"\n\n🎯 Priority Question: {area['question']}\n   Your Current Level: {area['current_level'].upper()}"
                 enhanced_advice = self.enhancer.get_detailed_guidance(
                     area['question'], area['current_level'])
-                print(f"   📚 Learning Path: {enhanced_advice}")
+                priority_areas += f"\n   📚 Learning Path: {enhanced_advice}"
 
-        # Add level-appropriate closing message
-        print("\n" + "="*60)
+        # Closing message
         if overall_level.lower() == 'beginner':
-            print("🌟 REMEMBER: Every expert was once a beginner!")
-            print("Take your time to learn - your privacy and security are worth it!")
+            closing = "\n🌟 REMEMBER: Every expert was once a beginner!\nTake your time to learn - your privacy and security are worth it!"
         elif overall_level.lower() == 'basic':
-            print("🚀 YOU'RE MAKING PROGRESS!")
-            print("Keep learning and practicing - you're on the right track!")
+            closing = "\n🚀 YOU'RE MAKING PROGRESS!\nKeep learning and practicing - you're on the right track!"
         elif overall_level.lower() == 'intermediate':
-            print("🎯 ALMOST THERE!")
-            print("Focus on the priority areas above to reach expert level!")
+            closing = "\n🎯 ALMOST THERE!\nFocus on the priority areas above to reach expert level!"
         else:
-            print("🏆 EXCELLENT WORK!")
-            print("You're well-equipped to make smart permission decisions!")
+            closing = "\n🏆 EXCELLENT WORK!\nYou're well-equipped to make smart permission decisions!"
+
+        return {
+            'score_summary': score_summary,
+            'encouragement': encouragement,
+            'detailed_analysis': detailed_analysis,
+            'priority_areas': priority_areas,
+            'closing': closing,
+            'total_score': total_score,
+            'percentage': percentage,
+            'overall_level': overall_level
+        }
+
+    def compare_with_last_score(self):
+        """Compare current score with last score from database"""
+        try:
+            with open('app_permissions_assessment_database.json', 'r', encoding='utf-8') as f:
+                database = json.load(f)
+            assessments = database.get('assessments', [])
+            user_assessments = [a for a in assessments if a.get(
+                'email', '').lower() == self.user_profile['email'].lower()]
+            if user_assessments:
+                user_assessments.sort(
+                    key=lambda x: x['timestamp'], reverse=True)
+                last_assessment = user_assessments[0]  # Most recent
+                last_score = last_assessment['percentage']
+                current_score = self.current_percentage
+                diff = current_score - last_score
+                if diff > 0:
+                    return f"\n📈 SCORE IMPROVEMENT:\nLast Score: {last_score:.1f}%\nCurrent Score: {current_score:.1f}%\nYou improved by {diff:.1f} points! Keep it up! 🎉"
+                elif diff < 0:
+                    return f"\n📉 SCORE DECLINE:\nLast Score: {last_score:.1f}%\nCurrent Score: {current_score:.1f}%\nYour score decreased by {abs(diff):.1f} points. Review the priority areas to improve."
+                else:
+                    return f"\n📊 SCORE UNCHANGED:\nLast Score: {last_score:.1f}%\nCurrent Score: {current_score:.1f}%\nYour score stayed the same. Focus on weak areas for better results."
+            else:
+                return "\n📊 NO PREVIOUS SCORE:\nThis is your first assessment. Great start!"
+        except Exception as e:
+            return f"\n❌ Error comparing scores: {e}"
 
     def run_assessment(self):
-        """Run complete assessment process"""
+        """Run complete assessment process with post-quiz menu"""
         if not self.model or not self.answer_sheet:
             print(
                 "Error: Model or answer sheet not loaded. Please train the model first.")
             return
 
-        # Collect user profile first
-        self.collect_user_profile()
+        # Collect user profile first (skip if already set, e.g., from database)
+        if self.user_profile is None:
+            self.collect_user_profile()
 
         # Conduct quiz
         user_responses, user_scores = self.conduct_quiz()
@@ -505,9 +510,11 @@ class AppPermissionsTester:
         # Calculate results
         total_score, percentage, overall_level = self.calculate_results(
             user_scores)
+        self.current_percentage = percentage  # Store for comparison
 
-        # Provide feedback
-        self.provide_feedback(user_scores, overall_level, percentage)
+        # Get feedback data (don't print yet)
+        feedback_data = self.provide_feedback(
+            user_scores, overall_level, percentage)
 
         # Save user results including profile
         user_data = {
@@ -523,16 +530,59 @@ class AppPermissionsTester:
         with open('app_permissions_assessment_results.json', 'w', encoding='utf-8') as f:
             json.dump(user_data, f, indent=2, ensure_ascii=False)
 
-        # Save to structured database
-        database_file = self.save_to_assessment_database(user_data)
+        # Save to structured database (this will be called after menu, but for now prepare)
+        # We'll call it after the menu loop
 
-        print(f"\n📄 Individual results saved to 'app_permissions_assessment_results.json'")
-        print(f"📊 Results added to assessment database: {database_file}")
+        # Post-quiz menu
+        while True:
+            print("\n" + "="*60)
+            print("QUIZ COMPLETED! What would you like to do?")
+            print("="*60)
+            print("1. View Your Score")
+            print("2. Review the Quiz with Explanations")
+            print("3. View Priority Improvement Areas")
+            print("4. Compare Your Level (with last score)")
+            print("5. Back to Main Menu")
+            print("6. Save Results and Exit")
 
-        return {
-            'score': percentage,
-            'weak_areas': [question for question, score_info in user_scores.items() if score_info.get('score', 0) < 7]
-        }
+            choice = input("\nEnter your choice (1-6): ").strip()
+
+            if choice == '1':
+                print(feedback_data['score_summary'] +
+                      feedback_data['encouragement'])
+            elif choice == '2':
+                print(feedback_data['detailed_analysis'])
+            elif choice == '3':
+                print(feedback_data['priority_areas'] +
+                      feedback_data['closing'])
+            elif choice == '4':
+                comparison = self.compare_with_last_score()
+                print(comparison)
+            elif choice == '5':
+                # Save to database before returning
+                database_file = self.save_to_assessment_database(user_data)
+                print(
+                    f"\n📄 Individual results saved to 'app_permissions_assessment_results.json'")
+                print(
+                    f"📊 Results added to assessment database: {database_file}")
+                return {
+                    'score': percentage,
+                    'weak_areas': [question for question, score_info in user_scores.items() if score_info.get('score', 0) < 7]
+                }
+            elif choice == '6':
+                # Save and exit
+                database_file = self.save_to_assessment_database(user_data)
+                print(
+                    f"\n📄 Individual results saved to 'app_permissions_assessment_results.json'")
+                print(
+                    f"📊 Results added to assessment database: {database_file}")
+                print("Thank you for completing the assessment!")
+                return {
+                    'score': percentage,
+                    'weak_areas': [question for question, score_info in user_scores.items() if score_info.get('score', 0) < 7]
+                }
+            else:
+                print("Invalid choice! Please enter 1-6.")
 
 
 if __name__ == "__main__":

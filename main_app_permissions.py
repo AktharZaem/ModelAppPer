@@ -236,24 +236,76 @@ def main():
                 print("Please train the model first (option 1).")
                 continue
 
+            # Prompt for email and check existing assessments
+            email = input("Enter your email address: ").strip().lower()
+            if not email:
+                print("❌ Email is required. Returning to menu.")
+                continue
+
+            database_file = 'app_permissions_assessment_database.json'
+            existing_assessment = None
+            if os.path.exists(database_file):
+                try:
+                    with open(database_file, 'r', encoding='utf-8') as f:
+                        database = json.load(f)
+                    assessments = database.get('assessments', [])
+                    # Filter by email and sort by timestamp descending to get latest
+                    user_assessments = [a for a in assessments if a.get(
+                        'email', '').lower() == email]
+                    if user_assessments:
+                        user_assessments.sort(
+                            key=lambda x: x['timestamp'], reverse=True)
+                        existing_assessment = user_assessments[0]  # Latest one
+                except Exception as e:
+                    print(f"❌ Error checking database: {e}")
+
+            # Initialize tester
             try:
                 print("\nInitializing assessment...")
                 tester = AppPermissionsTester()
-                result = tester.run_assessment()
-
-                if isinstance(result, dict):
-                    last_quiz_score = result.get('score', 0)
-                    weak_areas = result.get('weak_areas', [])
-                    print(
-                        f"\n🎓 Ready to learn more? Check out option 3 for personalized resources!")
-                elif isinstance(result, (int, float)):
-                    last_quiz_score = result
-                    print(
-                        f"\n🎓 Ready to learn more? Check out option 3 for personalized resources!")
-
             except Exception as e:
-                print(f"❌ Error during assessment: {e}")
+                print(f"❌ Error initializing tester: {e}")
                 traceback.print_exc()
+                continue
+
+            if existing_assessment:
+                print(
+                    f"\n👋 Hi! You're already enrolled with our assessment using {email}.")
+                print("📊 Here's a summary of your last assessment:")
+                print(f"   • Timestamp: {existing_assessment['timestamp']}")
+                print(
+                    f"   • Score: {existing_assessment['total_score']}/100 ({existing_assessment['percentage']:.1f}%)")
+                print(
+                    f"   • Knowledge Level: {existing_assessment['overall_knowledge_level']}")
+                print(
+                    f"   • Profile: {existing_assessment['gender']}, {existing_assessment['education_level']}, {existing_assessment['proficiency']}")
+                print(f"   • Category: {existing_assessment['category']}")
+                print("\nAuto-filling your profile and proceeding to the quiz...")
+
+                # Auto-fill profile from database
+                tester.user_profile = {
+                    'email': email,
+                    'gender': existing_assessment['gender'],
+                    'education': existing_assessment['education_level'],
+                    'proficiency': existing_assessment['proficiency']
+                }
+            else:
+                print(
+                    f"\n👋 Welcome, new user with email {email}! Let's start your assessment.")
+
+            # Run assessment (will skip profile collection if already set)
+            result = tester.run_assessment()
+
+            # Handle result
+            if isinstance(result, dict):
+                last_quiz_score = result.get('score', 0)
+                weak_areas = result.get('weak_areas', [])
+                print(
+                    f"\n🎓 Ready to learn more? Check out option 3 for personalized resources!")
+            elif isinstance(result, (int, float)):
+                last_quiz_score = result
+                print(
+                    f"\n🎓 Ready to learn more? Check out option 3 for personalized resources!")
 
         elif choice == '3':
             print("\n--- Educational Resources & Learning ---")
@@ -410,6 +462,66 @@ def export_database_to_csv():
 
     except Exception as e:
         print(f"❌ Error exporting database: {e}")
+
+
+def save_assessment_result(result):
+    """Save the assessment result to the database and file"""
+    database_file = 'app_permissions_assessment_database.json'
+    results_file = 'app_permissions_assessment_results.json'
+
+    try:
+        # Load existing database
+        if os.path.exists(database_file):
+            with open(database_file, 'r', encoding='utf-8') as f:
+                database = json.load(f)
+        else:
+            database = {"assessments": [], "metadata": {}}
+
+        # Add new assessment result
+        database['assessments'].append(result)
+
+        # Save back to database file
+        with open(database_file, 'w', encoding='utf-8') as f:
+            json.dump(database, f, ensure_ascii=False, indent=4)
+
+        print(f"✅ Assessment result saved to database.")
+
+        # Also save to results file
+        if os.path.exists(results_file):
+            with open(results_file, 'r+', encoding='utf-8') as f:
+                # Lock file for writing
+                fcntl.flock(f, fcntl.LOCK_EX)
+
+                # Load existing results
+                try:
+                    results_data = json.load(f)
+                except json.JSONDecodeError:
+                    results_data = {"assessments": []}
+
+                # Append new result
+                results_data['assessments'].append(result)
+
+                # Move cursor to beginning of file
+                f.seek(0)
+
+                # Truncate file to current size
+                f.truncate()
+
+                # Write updated results
+                json.dump(results_data, f, ensure_ascii=False, indent=4)
+
+                # Unlock file
+                fcntl.flock(f, fcntl.LOCK_UN)
+
+            print(f"✅ Assessment result saved to results file.")
+        else:
+            with open(results_file, 'w', encoding='utf-8') as f:
+                json.dump({"assessments": [result]},
+                          f, ensure_ascii=False, indent=4)
+            print(f"✅ Assessment result saved to new results file.")
+
+    except Exception as e:
+        print(f"❌ Error saving assessment result: {e}")
 
 
 if __name__ == "__main__":

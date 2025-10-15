@@ -10,9 +10,10 @@ warnings.filterwarnings('ignore')
 
 
 class AppPermissionsModelTrainer:
-    def __init__(self, dataset_path, answer_sheet_path):
+    def __init__(self, dataset_path, answer_sheet_path, assessment_results_path='app_permissions_assessment_results.json'):
         self.dataset_path = dataset_path
         self.answer_sheet_path = answer_sheet_path
+        self.assessment_results_path = assessment_results_path
         self.model = None
         self.answer_weights = None
         self.questions = None
@@ -91,6 +92,72 @@ class AppPermissionsModelTrainer:
 
         print(
             f"\nMatched {matched_count} out of {len(self.questions)} questions")
+        return self.df
+
+    def load_assessment_results(self):
+        """Load and convert assessment results from JSON to DataFrame format"""
+        try:
+            with open(self.assessment_results_path, 'r') as f:
+                data = json.load(f)
+
+            results = data.get('results', [])
+            if not results:
+                print("No assessment results found in JSON file.")
+                return pd.DataFrame()
+
+            print(f"Loading {len(results)} assessment results from JSON...")
+
+            # Convert JSON results to DataFrame rows
+            rows = []
+            for result in results:
+                row = {}
+                # Add profile data
+                profile = result.get('profile', {})
+                row['gender'] = profile.get('gender', '')
+                row['education_level'] = profile.get('education_level', '')
+                row['proficiency'] = profile.get('proficiency', '')
+
+                # Add responses
+                responses = result.get('responses', {})
+                for question, answer in responses.items():
+                    row[question] = answer
+
+                # Add calculated fields
+                row['total_score'] = result.get('total_score', 0)
+                row['percentage'] = result.get('percentage', 0)
+                row['awareness_level'] = result.get('overall_level', 'Unknown')
+
+                rows.append(row)
+
+            assessment_df = pd.DataFrame(rows)
+            print(f"Assessment results DataFrame shape: {assessment_df.shape}")
+            return assessment_df
+
+        except FileNotFoundError:
+            print(
+                f"Assessment results file '{self.assessment_results_path}' not found.")
+            return pd.DataFrame()
+        except Exception as e:
+            print(f"Error loading assessment results: {e}")
+            return pd.DataFrame()
+
+    def combine_datasets(self):
+        """Combine CSV dataset with assessment results"""
+        csv_df = self.load_dataset()
+        assessment_df = self.load_assessment_results()
+
+        if assessment_df.empty:
+            print("No assessment data to combine. Using only CSV data.")
+            self.df = csv_df
+        else:
+            # Ensure consistent column names
+            common_columns = set(csv_df.columns) & set(assessment_df.columns)
+            print(f"Common columns between datasets: {len(common_columns)}")
+
+            # Combine datasets
+            self.df = pd.concat([csv_df, assessment_df], ignore_index=True)
+            print(f"Combined dataset shape: {self.df.shape}")
+
         return self.df
 
     def calculate_user_scores(self):
@@ -216,8 +283,8 @@ class AppPermissionsModelTrainer:
         print("Loading answer sheet...")
         self.load_answer_sheet()
 
-        print("Loading dataset...")
-        self.load_dataset()
+        print("Loading and combining datasets...")
+        self.combine_datasets()
 
         print("Calculating user scores...")
         self.calculate_user_scores()

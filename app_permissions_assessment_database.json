@@ -81,6 +81,72 @@
       "percentage": 34.0,
       "overall_knowledge_level": "Basic",
       "category": "App Permissions"
+    },
+    {
+      "timestamp": "2025-10-15 22:27:26",
+      "email": "sudar.123@gmail.com",
+      "gender": "Male",
+      "education_level": "A/L",
+      "proficiency": "High Education",
+      "total_score": 51,
+      "percentage": 51.0,
+      "overall_knowledge_level": "Intermediate",
+      "category": "App Permissions"
+    },
+    {
+      "timestamp": "2025-10-15 22:48:37",
+      "email": "akthar.0777@gmail.com",
+      "gender": "Male",
+      "education_level": "A/L",
+      "proficiency": "High Education",
+      "total_score": 44,
+      "percentage": 44.0,
+      "overall_knowledge_level": "Basic",
+      "category": "App Permissions"
+    },
+    {
+      "timestamp": "2025-10-15 22:49:25",
+      "email": "akthar.0777@gmail.com",
+      "gender": "Male",
+      "education_level": "A/L",
+      "proficiency": "High Education",
+      "total_score": 59,
+      "percentage": 59.0,
+      "overall_knowledge_level": "Intermediate",
+      "category": "App Permissions"
+    },
+    {
+      "timestamp": "2025-10-15 22:57:49",
+      "email": "kadam12@gmail.com",
+      "gender": "Male",
+      "education_level": "A/L",
+      "proficiency": "High Education",
+      "total_score": 78,
+      "percentage": 78.0,
+      "overall_knowledge_level": "Expert",
+      "category": "App Permissions"
+    },
+    {
+      "timestamp": "2025-10-15 22:59:19",
+      "email": "akthar.0777@gmail.com",
+      "gender": "Male",
+      "education_level": "A/L",
+      "proficiency": "High Education",
+      "total_score": 90,
+      "percentage": 90.0,
+      "overall_knowledge_level": "Expert",
+      "category": "App Permissions"
+    },
+    {
+      "timestamp": "2025-10-15 23:04:10",
+      "email": "durga@gmail.com",
+      "gender": "Female",
+      "education_level": "Degree",
+      "proficiency": "High Education",
+      "total_score": 80,
+      "percentage": 80.0,
+      "overall_knowledge_level": "Expert",
+      "category": "App Permissions"
     }
   ]
 }
