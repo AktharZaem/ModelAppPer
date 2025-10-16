@@ -279,8 +279,15 @@ def main():
                     f"   • Knowledge Level: {existing_assessment['overall_knowledge_level']}")
                 print(
                     f"   • Profile: {existing_assessment['gender']}, {existing_assessment['education_level']}, {existing_assessment['proficiency']}")
+                # Print name and organization if available
+                if existing_assessment.get('name'):
+                    print(f"   • Name: {existing_assessment.get('name')}")
+                if existing_assessment.get('organization'):
+                    print(
+                        f"   • Organization: {existing_assessment.get('organization')}")
                 print(f"   • Category: {existing_assessment['category']}")
-                print("\nAuto-filling your profile and proceeding to the quiz...")
+                print(
+                    "\nAuto-filling your profile and proceeding to the pre-quiz options...")
 
                 # Auto-fill profile from database
                 tester.user_profile = {
@@ -289,14 +296,67 @@ def main():
                     'education': existing_assessment['education_level'],
                     'proficiency': existing_assessment['proficiency']
                 }
+                # Add optional fields if present
+                if existing_assessment.get('name'):
+                    tester.user_profile['name'] = existing_assessment.get(
+                        'name')
+                if existing_assessment.get('organization'):
+                    tester.user_profile['organization'] = existing_assessment.get(
+                        'organization')
             else:
                 print(
-                    f"\n👋 Welcome, new user with email {email}! Let's start your assessment.")
+                    f"\n👋 Welcome, new user with email {email}! You can fill your profile now for a personalized experience.")
+                # Offer to fill profile before showing pre-quiz options
+                fill_choice = input(
+                    "Would you like to fill your profile now? (y/n): ").strip().lower()
+                if fill_choice == 'y':
+                    try:
+                        tester.collect_user_profile()
+                    except Exception as e:
+                        print(f"❌ Error collecting profile: {e}")
 
-            # Run assessment (will skip profile collection if already set)
-            result = tester.run_assessment()
+            # Pre-quiz menu (both new and existing users)
+            result = None
+            while True:
+                print("\nPre-Quiz Options:")
+                print("A. View Leaderboard")
+                print("B. Enroll & Take Quiz")
+                print("C. Return to main menu")
 
-            # Handle result
+                pre_choice = input(
+                    "\nEnter your choice (A/B/C): ").strip().upper()
+                if pre_choice == 'A':
+                    try:
+                        # show_leaderboard implemented in tester (safe fallback if missing)
+                        if hasattr(tester, 'show_leaderboard'):
+                            # Automatically use logged-in user's organization if available
+                            org_filter = None
+                            if getattr(tester, 'user_profile', None):
+                                org = tester.user_profile.get('organization')
+                                if org:
+                                    org_filter = org  # show only this organization's leaderboard
+
+                            tester.show_leaderboard(
+                                top_n=10, organization=org_filter)
+                        else:
+                            print("ℹ️ Leaderboard not available.")
+                    except Exception as e:
+                        print(f"❌ Error showing leaderboard: {e}")
+                elif pre_choice == 'B':
+                    # Proceed to the quiz (tester.run_assessment will prompt for profile if missing)
+                    result = tester.run_assessment()
+                    break
+                elif pre_choice == 'C':
+                    print("Returning to main menu.")
+                    result = None
+                    break
+                else:
+                    print("Invalid choice! Please enter A, B, or C.")
+
+            # Handle result (same as before)
+            if result is None:
+                continue
+
             if isinstance(result, dict):
                 last_quiz_score = result.get('score', 0)
                 weak_areas = result.get('weak_areas', [])
@@ -520,6 +580,18 @@ def save_assessment_result(result):
                           f, ensure_ascii=False, indent=4)
             print(f"✅ Assessment result saved to new results file.")
 
+    except Exception as e:
+        print(f"❌ Error saving assessment result: {e}")
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        print("\n\nProgram interrupted by user. Goodbye!")
+    except Exception as e:
+        print(f"\n❌ Unexpected error: {e}")
+        traceback.print_exc()
     except Exception as e:
         print(f"❌ Error saving assessment result: {e}")
 

@@ -106,8 +106,31 @@ class AppPermissionsTester:
                 pass  # No database yet, allow
             break
 
+        # Collect Full Name
+        print("\n2. Enter Your Full Name (optional, press Enter to skip):")
+        name = input("Full name: ").strip()
+
+        # Collect Organization choice
+        print("\n3. Organization:")
+        print("   1. Enter your organization name")
+        print("   2. Individual")
+        while True:
+            org_choice = input("Enter your choice (1-2): ").strip()
+            if org_choice == '1':
+                organization = input("Enter organization name: ").strip()
+                if not organization:
+                    print(
+                        "Please enter an organization name or choose option 2 for Individual.")
+                    continue
+                break
+            elif org_choice == '2':
+                organization = "Individual"
+                break
+            else:
+                print("Please enter 1 or 2!")
+
         # Collect Gender
-        print("\n2. Select Your Gender:")
+        print("\n4. Select Your Gender:")
         print("   1. Male")
         print("   2. Female")
 
@@ -126,7 +149,7 @@ class AppPermissionsTester:
                 print("Please enter a valid number!")
 
         # Collect Education Level
-        print("\n3. Select Your Education Level:")
+        print("\n5. Select Your Education Level:")
         print("   1. O/L (Ordinary Level)")
         print("   2. A/L (Advanced Level)")
         print("   3. HND (Higher National Diploma)")
@@ -153,7 +176,7 @@ class AppPermissionsTester:
                 print("Please enter a valid number!")
 
         # Collect Proficiency Level
-        print("\n4. Select Your IT/Technology Proficiency:")
+        print("\n6. Select Your IT/Technology Proficiency:")
         print("   1. School Level (Basic computer/smartphone use)")
         print("   2. High Education Level (Advanced computer/technology skills)")
 
@@ -173,13 +196,15 @@ class AppPermissionsTester:
 
         self.user_profile = {
             "email": email,
+            "name": name,
+            "organization": organization,
             "gender": gender,
             "education": education,
             "proficiency": proficiency
         }
 
         print(
-            f"\n✅ Profile saved: {email}, {gender}, {education}, {proficiency}")
+            f"\n✅ Profile saved: {email}, {name or 'N/A'}, {organization}, {gender}, {education}, {proficiency}")
         print("This information will be used to provide personalized explanations.\n")
 
         return self.user_profile
@@ -340,6 +365,8 @@ class AppPermissionsTester:
         assessment_record = {
             "timestamp": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             "email": user_data['profile']['email'],
+            "name": user_data['profile'].get('name', ''),
+            "organization": user_data['profile'].get('organization', ''),
             "gender": user_data['profile']['gender'],
             "education_level": user_data['profile']['education'],
             "proficiency": user_data['profile']['proficiency'],
@@ -391,6 +418,11 @@ Overall App Permissions Security Level: {overall_level}
 Email: {self.user_profile['email']}
 Profile: {self.user_profile['gender']}, {self.user_profile['education']}, {self.user_profile['proficiency']}
 """
+        # Include name and organization if available
+        if self.user_profile.get('name'):
+            score_summary += f"Name: {self.user_profile.get('name')}\n"
+        if self.user_profile.get('organization'):
+            score_summary += f"Organization: {self.user_profile.get('organization')}\n"
 
         # Level-specific encouragement
         if percentage >= 75:
@@ -493,6 +525,73 @@ Profile: {self.user_profile['gender']}, {self.user_profile['education']}, {self.
         except Exception as e:
             return f"\n❌ Error comparing scores: {e}"
 
+    def show_leaderboard(self, top_n: int = 10, organization: str = None):
+        """Print a simple leaderboard of top assessments from the database.
+        If organization is provided, only show assessments for that organization.
+        Deduplicate by user (name preferred, fallback to email) and keep only the latest entry.
+        """
+        try:
+            database_file = 'app_permissions_assessment_database.json'
+            if not os.path.exists(database_file):
+                print("📊 No assessment database found to build leaderboard.")
+                return
+
+            with open(database_file, 'r', encoding='utf-8') as f:
+                database = json.load(f)
+
+            assessments = database.get('assessments', [])
+            if not assessments:
+                print("📊 No assessments available in database.")
+                return
+
+            # Apply organization filter if provided
+            if organization:
+                org_norm = organization.strip().lower()
+                filtered = [a for a in assessments if (
+                    a.get('organization') or '').strip().lower() == org_norm]
+                source = f"Organization '{organization}'"
+            else:
+                filtered = assessments
+                source = "All organizations"
+
+            if not filtered:
+                print(f"📊 No assessments found for {source}.")
+                return
+
+            # Deduplicate by user (prefer name, else email) and keep latest by timestamp
+            latest_by_user = {}
+            for a in filtered:
+                name = (a.get('name') or '').strip()
+                email = (a.get('email') or '').strip()
+                key = (name or email).lower()
+                if not key:
+                    continue
+                # if no timestamp, treat as empty string (won't overwrite a real timestamp)
+                ts = a.get('timestamp', '')
+                existing = latest_by_user.get(key)
+                if existing is None or ts > (existing.get('timestamp', '')):
+                    latest_by_user[key] = a
+
+            unique_entries = list(latest_by_user.values())
+            if not unique_entries:
+                print(f"📊 No valid user entries found for {source}.")
+                return
+
+            # Sort by percentage descending
+            sorted_assessments = sorted(
+                unique_entries, key=lambda a: a.get('percentage', 0), reverse=True)
+
+            print(f"\n🏆 LEADERBOARD - Top {top_n} ({source})")
+            print("=" * 60)
+            for i, a in enumerate(sorted_assessments[:top_n], start=1):
+                display_name = a.get('name') or a.get('email') or "Unknown"
+                perc = a.get('percentage', 0.0)
+                # Only show name and score (no timestamp)
+                print(f"{i}. {display_name} — {perc:.1f}%")
+            print("=" * 60)
+        except Exception as e:
+            print(f"❌ Error building leaderboard: {e}")
+
     def run_assessment(self):
         """Run complete assessment process with post-quiz menu"""
         if not self.model or not self.answer_sheet:
@@ -542,8 +641,7 @@ Profile: {self.user_profile['gender']}, {self.user_profile['education']}, {self.
             print("2. Review the Quiz with Explanations")
             print("3. View Priority Improvement Areas")
             print("4. Compare Your Level (with last score)")
-            print("5. Back to Main Menu")
-            print("6. Save Results and Exit")
+            print("5. Save Results and Exit")
 
             choice = input("\nEnter your choice (1-6): ").strip()
 
@@ -559,17 +657,6 @@ Profile: {self.user_profile['gender']}, {self.user_profile['education']}, {self.
                 comparison = self.compare_with_last_score()
                 print(comparison)
             elif choice == '5':
-                # Save to database before returning
-                database_file = self.save_to_assessment_database(user_data)
-                print(
-                    f"\n📄 Individual results saved to 'app_permissions_assessment_results.json'")
-                print(
-                    f"📊 Results added to assessment database: {database_file}")
-                return {
-                    'score': percentage,
-                    'weak_areas': [question for question, score_info in user_scores.items() if score_info.get('score', 0) < 7]
-                }
-            elif choice == '6':
                 # Save and exit
                 database_file = self.save_to_assessment_database(user_data)
                 print(
