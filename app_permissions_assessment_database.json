@@ -147,6 +147,45 @@
       "percentage": 53.0,
       "overall_knowledge_level": "Intermediate",
       "category": "App Permissions"
+    },
+    {
+      "timestamp": "2025-10-16 13:12:11",
+      "email": "zaid.098@gmail.com",
+      "name": "Zaidh",
+      "organization": "UOR",
+      "gender": "Male",
+      "education_level": "A/L",
+      "proficiency": "High Education",
+      "total_score": 100,
+      "percentage": 100.0,
+      "overall_knowledge_level": "Expert",
+      "category": "App Permissions"
+    },
+    {
+      "timestamp": "2025-10-16 13:14:00",
+      "email": "ak@gmil.com",
+      "name": "ak",
+      "organization": "Individual",
+      "gender": "Male",
+      "education_level": "O/L",
+      "proficiency": "School",
+      "total_score": 100,
+      "percentage": 100.0,
+      "overall_knowledge_level": "Expert",
+      "category": "App Permissions"
+    },
+    {
+      "timestamp": "2025-10-16 13:18:57",
+      "email": "basam@gmail.com",
+      "name": "Basam",
+      "organization": "UOR",
+      "gender": "Male",
+      "education_level": "Degree",
+      "proficiency": "School",
+      "total_score": 44,
+      "percentage": 44.0,
+      "overall_knowledge_level": "Basic",
+      "category": "App Permissions"
     }
   ]
 }

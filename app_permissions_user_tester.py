@@ -592,6 +592,53 @@ Profile: {self.user_profile['gender']}, {self.user_profile['education']}, {self.
         except Exception as e:
             print(f"❌ Error building leaderboard: {e}")
 
+    def append_to_results_file(self, user_data, results_path='app_permissions_assessment_results.json'):
+        """Append a single user's full result to a shared JSON file under key 'results'.
+        Handles existing file shapes:
+          - missing file -> create {'results': [user_data]}
+          - dict with 'results' list -> append
+          - dict representing a single previous result -> convert to {'results': [old, new]}
+          - list -> treat as list of results and append
+        """
+        try:
+            # Read existing content if present
+            if os.path.exists(results_path):
+                with open(results_path, 'r', encoding='utf-8') as f:
+                    try:
+                        data = json.load(f)
+                    except json.JSONDecodeError:
+                        data = None
+            else:
+                data = None
+
+            if data is None:
+                new_data = {'results': [user_data]}
+            elif isinstance(data, dict):
+                # If already has results list, append
+                if 'results' in data and isinstance(data['results'], list):
+                    data['results'].append(user_data)
+                    new_data = data
+                else:
+                    # Convert existing dict (single object) into results list
+                    new_data = {'results': [data, user_data]}
+            elif isinstance(data, list):
+                # Old format: plain list of results
+                new_data = {'results': data + [user_data]}
+            else:
+                # Fallback
+                new_data = {'results': [user_data]}
+
+            # Write back atomically (simple overwrite)
+            with open(results_path, 'w', encoding='utf-8') as f:
+                json.dump(new_data, f, indent=2, ensure_ascii=False)
+
+            print(
+                f"✅ Individual result appended to '{results_path}' (total: {len(new_data.get('results', []))})")
+            return True
+        except Exception as e:
+            print(f"❌ Error appending individual result: {e}")
+            return False
+
     def run_assessment(self):
         """Run complete assessment process with post-quiz menu"""
         if not self.model or not self.answer_sheet:
@@ -622,12 +669,16 @@ Profile: {self.user_profile['gender']}, {self.user_profile['education']}, {self.
             'scores': user_scores,
             'total_score': total_score,
             'percentage': percentage,
-            'overall_level': overall_level
+            'overall_level': overall_level,
+            'timestamp': __import__('datetime').datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         }
 
-        # Save to individual results file
-        with open('app_permissions_assessment_results.json', 'w', encoding='utf-8') as f:
-            json.dump(user_data, f, indent=2, ensure_ascii=False)
+        # Append to shared individual results file (preserves previous submissions)
+        try:
+            self.append_to_results_file(
+                user_data, results_path='app_permissions_assessment_results.json')
+        except Exception as e:
+            print(f"⚠️ Could not append to individual results file: {e}")
 
         # Save to structured database (this will be called after menu, but for now prepare)
         # We'll call it after the menu loop

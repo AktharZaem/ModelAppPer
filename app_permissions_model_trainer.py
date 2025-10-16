@@ -8,6 +8,12 @@ import joblib
 import warnings
 warnings.filterwarnings('ignore')
 
+# Add optional import to reuse parsing from tester if available
+try:
+    from app_permissions_user_tester import AppPermissionsTester
+except Exception:
+    AppPermissionsTester = None
+
 
 class AppPermissionsModelTrainer:
     def __init__(self, dataset_path, answer_sheet_path, assessment_results_path='app_permissions_assessment_results.json'):
@@ -19,21 +25,55 @@ class AppPermissionsModelTrainer:
         self.questions = None
 
     def load_answer_sheet(self):
-        """Load weighted answers from JSON file"""
-        with open(self.answer_sheet_path, 'r') as f:
-            data = json.load(f)
+        """Load weighted answers from JSON file.
+        Prefer to reuse AppPermissionsTester parsing if available so both trainer/tester share the same structure.
+        """
+        # If tester is available, try to reuse its parsed answer sheet
+        if AppPermissionsTester is not None:
+            try:
+                tester = AppPermissionsTester()
+                if getattr(tester, 'answer_sheet', None):
+                    self.answer_weights = tester.answer_sheet
+                    # questions_data may be available on tester; fall back to keys
+                    if getattr(tester, 'questions_data', None):
+                        self.questions = [
+                            q.get('question') for q in tester.questions_data if q.get('question')]
+                    else:
+                        self.questions = list(self.answer_weights.keys())
+                    print(
+                        "✅ Reused answer sheet parsing from app_permissions_user_tester.py")
+                    print(
+                        f"Loaded {len(self.questions)} app permissions questions (via tester)")
+                    return
+            except Exception as e:
+                print(f"⚠️ Could not reuse tester parsing: {e}")
+
+        # Fallback: parse answer sheet JSON directly
+        try:
+            with open(self.answer_sheet_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+        except Exception as e:
+            raise FileNotFoundError(
+                f"Could not open answer sheet '{self.answer_sheet_path}': {e}")
 
         self.answer_weights = {}
 
         if 'questions' in data and isinstance(data['questions'], list):
             for q_item in data['questions']:
-                question_text = q_item['question']
+                question_text = q_item.get(
+                    'question') or q_item.get('questionText') or None
+                if not question_text:
+                    continue
                 options_dict = {}
 
-                for option in q_item['options']:
-                    options_dict[option['text']] = {
-                        'weight': option['marks'],
-                        'level': option['level']
+                for option in q_item.get('options', []):
+                    # tolerate different key names
+                    text = option.get('text') or option.get('label') or ''
+                    marks = option.get('marks', option.get('score', 0))
+                    level = option.get('level', 'basic')
+                    options_dict[text] = {
+                        'weight': marks,
+                        'level': level
                     }
 
                 self.answer_weights[question_text] = options_dict
@@ -95,51 +135,80 @@ class AppPermissionsModelTrainer:
         return self.df
 
     def load_assessment_results(self):
-        """Load and convert assessment results from JSON to DataFrame format"""
+        """Load and convert assessment results from JSON to DataFrame format.
+        Accept multiple common formats:
+         - file contains a single user result (as written by the tester)
+         - file contains {'results': [...]} list
+         - file contains {'assessments': [...]} or other similar shapes
+        """
         try:
-            with open(self.assessment_results_path, 'r') as f:
+            with open(self.assessment_results_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-
-            results = data.get('results', [])
-            if not results:
-                print("No assessment results found in JSON file.")
-                return pd.DataFrame()
-
-            print(f"Loading {len(results)} assessment results from JSON...")
-
-            # Convert JSON results to DataFrame rows
-            rows = []
-            for result in results:
-                row = {}
-                # Add profile data
-                profile = result.get('profile', {})
-                row['gender'] = profile.get('gender', '')
-                row['education_level'] = profile.get('education_level', '')
-                row['proficiency'] = profile.get('proficiency', '')
-
-                # Add responses
-                responses = result.get('responses', {})
-                for question, answer in responses.items():
-                    row[question] = answer
-
-                # Add calculated fields
-                row['total_score'] = result.get('total_score', 0)
-                row['percentage'] = result.get('percentage', 0)
-                row['awareness_level'] = result.get('overall_level', 'Unknown')
-
-                rows.append(row)
-
-            assessment_df = pd.DataFrame(rows)
-            print(f"Assessment results DataFrame shape: {assessment_df.shape}")
-            return assessment_df
-
         except FileNotFoundError:
             print(
                 f"Assessment results file '{self.assessment_results_path}' not found.")
             return pd.DataFrame()
         except Exception as e:
-            print(f"Error loading assessment results: {e}")
+            print(f"Error reading assessment results: {e}")
             return pd.DataFrame()
+
+        # Normalize to a list of result dicts
+        results = []
+        if isinstance(data, dict):
+            # common keys
+            if 'results' in data and isinstance(data['results'], list):
+                results = data['results']
+            elif 'assessments' in data and isinstance(data['assessments'], list):
+                results = data['assessments']
+            else:
+                # It may be a single user result dict (as saved by tester)
+                # Heuristic: presence of 'profile' and 'responses' keys
+                if 'profile' in data and 'responses' in data:
+                    results = [data]
+                else:
+                    # try to detect list-like containers inside dict
+                    for v in data.values():
+                        if isinstance(v, list) and v and isinstance(v[0], dict):
+                            results = v
+                            break
+        elif isinstance(data, list):
+            results = data
+
+        if not results:
+            print("No assessment results found in JSON file.")
+            return pd.DataFrame()
+
+        print(f"Loading {len(results)} assessment results from JSON...")
+
+        # Convert JSON results to DataFrame rows
+        rows = []
+        for result in results:
+            row = {}
+            # Add profile data
+            profile = result.get('profile', result.get('user_profile', {}))
+            row['gender'] = profile.get('gender', '')
+            row['education_level'] = profile.get(
+                'education') or profile.get('education_level', '')
+            row['proficiency'] = profile.get('proficiency', '')
+
+            # Add responses
+            responses = result.get('responses') or result.get('answers') or {}
+            for question, answer in responses.items():
+                row[question] = answer
+
+            # Add calculated fields (try multiple key variants)
+            row['total_score'] = result.get(
+                'total_score', result.get('score', 0))
+            row['percentage'] = result.get(
+                'percentage', result.get('percent', 0))
+            row['awareness_level'] = result.get(
+                'overall_level', result.get('awareness_level', 'Unknown'))
+
+            rows.append(row)
+
+        assessment_df = pd.DataFrame(rows)
+        print(f"Assessment results DataFrame shape: {assessment_df.shape}")
+        return assessment_df
 
     def combine_datasets(self):
         """Combine CSV dataset with assessment results"""
