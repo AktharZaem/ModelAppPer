@@ -210,10 +210,15 @@ def main():
 
             try:
                 print("Initializing trainer...")
+                # Explicitly pass the assessment results JSON so trainer combines CSV + JSON
                 trainer = AppPermissionsModelTrainer(
                     dataset_path='mobile_app_permission.csv',
-                    answer_sheet_path='answer_sheetappper.json'
+                    answer_sheet_path='answer_sheetappper.json',
+                    assessment_results_path='app_permissions_assessment_results.json'
                 )
+
+                print(
+                    "🗂️ Trainer will use: mobile_app_permission.csv + app_permissions_assessment_results.json (if available)")
 
                 print("Starting model training...")
                 model, accuracy = trainer.train_model()

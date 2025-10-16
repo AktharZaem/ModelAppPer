@@ -1,3 +1,4 @@
+import glob
 import pandas as pd
 import json
 import numpy as np
@@ -141,15 +142,41 @@ class AppPermissionsModelTrainer:
          - file contains {'results': [...]} list
          - file contains {'assessments': [...]} or other similar shapes
         """
+        # Try the explicitly provided path first
+        data = None
+        tried_paths = []
+        try_paths = [self.assessment_results_path]
+
+        # if the provided path is None or missing, search for common filenames
         try:
-            with open(self.assessment_results_path, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-        except FileNotFoundError:
-            print(
-                f"Assessment results file '{self.assessment_results_path}' not found.")
-            return pd.DataFrame()
+            if not self.assessment_results_path or not os.path.exists(self.assessment_results_path):
+                candidates = glob.glob("app_permissions_assessment*.json") + \
+                    glob.glob("app_permissions_assessment_database*.json")
+                # ensure uniqueness and sensible order
+                for c in candidates:
+                    if c not in try_paths:
+                        try_paths.append(c)
+
+            for p in try_paths:
+                if not p:
+                    continue
+                tried_paths.append(p)
+                try:
+                    with open(p, 'r', encoding='utf-8') as f:
+                        data = json.load(f)
+                    print(f"✅ Loaded assessment results from: {p}")
+                    break
+                except FileNotFoundError:
+                    continue
+                except Exception as e:
+                    print(f"⚠️ Error reading '{p}': {e}")
+                    continue
+
+            if data is None:
+                print(f"Assessment results not found. Tried: {tried_paths}")
+                return pd.DataFrame()
         except Exception as e:
-            print(f"Error reading assessment results: {e}")
+            print(f"Error searching for assessment results: {e}")
             return pd.DataFrame()
 
         # Normalize to a list of result dicts

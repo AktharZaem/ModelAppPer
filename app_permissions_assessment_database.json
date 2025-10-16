@@ -186,6 +186,19 @@
       "percentage": 44.0,
       "overall_knowledge_level": "Basic",
       "category": "App Permissions"
+    },
+    {
+      "timestamp": "2025-10-16 14:13:37",
+      "email": "ak@gmail.com",
+      "name": "akthar",
+      "organization": "UOR",
+      "gender": "Male",
+      "education_level": "Degree",
+      "proficiency": "High Education",
+      "total_score": 80,
+      "percentage": 80.0,
+      "overall_knowledge_level": "Expert",
+      "category": "App Permissions"
     }
   ]
 }
