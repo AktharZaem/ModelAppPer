@@ -199,6 +199,19 @@
       "percentage": 80.0,
       "overall_knowledge_level": "Expert",
       "category": "App Permissions"
+    },
+    {
+      "timestamp": "2025-10-18 21:51:15",
+      "email": "a@gmail.com",
+      "name": "a",
+      "organization": "UOR",
+      "gender": "Male",
+      "education_level": "A/L",
+      "proficiency": "High Education",
+      "total_score": 90,
+      "percentage": 90.0,
+      "overall_knowledge_level": "Expert",
+      "category": "App Permissions"
     }
   ]
 }

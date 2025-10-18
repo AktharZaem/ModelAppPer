@@ -2,7 +2,8 @@ import glob
 import pandas as pd
 import json
 import numpy as np
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, accuracy_score
 import joblib
@@ -394,32 +395,42 @@ class AppPermissionsModelTrainer:
         if X.empty or len(X) == 0:
             raise ValueError("Feature matrix is empty!")
 
-        if len(y.unique()) < 2:
-            print(f"Warning: Only {len(y.unique())} unique classes found")
-            if len(y.unique()) == 1:
+        unique_classes = y.unique()
+        if len(unique_classes) < 2:
+            print(f"Warning: Only {len(unique_classes)} unique classes found")
+            if len(unique_classes) == 1:
                 raise ValueError("Cannot train model with only one class!")
 
-        print("Training app permissions model...")
+        # Split data
+        print("Preparing training / test splits...")
         X_train, X_test, y_train, y_test = train_test_split(
             X, y, test_size=0.2, random_state=42, stratify=y)
 
-        self.model = DecisionTreeClassifier(
-            random_state=42, max_depth=10, min_samples_split=5)
-        self.model.fit(X_train, y_train)
+        # Scale features (helps Logistic Regression)
+        scaler = StandardScaler()
+        X_train_scaled = scaler.fit_transform(X_train)
+        X_test_scaled = scaler.transform(X_test)
+
+        print("Training Logistic Regression model...")
+        # multi_class='multinomial' for multi-class problems, increase max_iter for convergence
+        self.model = LogisticRegression(
+            solver='lbfgs', multi_class='multinomial', max_iter=1000, C=1.0, random_state=42)
+        self.model.fit(X_train_scaled, y_train)
 
         # Evaluate model
-        y_pred = self.model.predict(X_test)
+        y_pred = self.model.predict(X_test_scaled)
         accuracy = accuracy_score(y_test, y_pred)
 
-        print(f"App Permissions Model Accuracy: {accuracy:.2f}")
+        print(f"App Permissions Logistic Regression Accuracy: {accuracy:.2f}")
         print("\nClassification Report:")
         print(classification_report(y_test, y_pred))
 
-        # Save model and feature names
+        # Save model, scaler and feature names
         joblib.dump(self.model, 'app_permissions_model.pkl')
+        joblib.dump(scaler, 'app_permissions_scaler.pkl')
         joblib.dump(X.columns.tolist(), 'app_permissions_feature_names.pkl')
 
-        print("Model saved as 'app_permissions_model.pkl'")
+        print("Model and scaler saved as 'app_permissions_model.pkl' and 'app_permissions_scaler.pkl'")
         return self.model, accuracy
 
 
