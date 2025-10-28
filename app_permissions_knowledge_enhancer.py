@@ -100,8 +100,8 @@ class AppPermissionsKnowledgeEnhancer:
     def get_next_level(self, current_level):
         """Determine the next level to aim for"""
         level_progression = {
-            'wrong': 'basic',
-            'basic': 'intermediate',
+            'wrong': 'beginner',
+            'beginner': 'intermediate',
             'intermediate': 'advanced',
             'advanced': 'expert'
         }

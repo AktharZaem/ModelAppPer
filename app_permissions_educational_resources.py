@@ -64,9 +64,9 @@ class AppPermissionsEducationalManager:
 
     def assess_knowledge_level(self, quiz_score: float) -> str:
         """Determine knowledge level based on quiz performance"""
-        if quiz_score >= 80:
+        if quiz_score >= 75:
             return 'advanced'
-        elif quiz_score >= 60:
+        elif quiz_score >= 50:
             return 'intermediate'
         else:
             return 'beginner'

@@ -275,8 +275,6 @@ class AppPermissionsTester:
             overall_level = 'Expert'
         elif percentage >= 50:
             overall_level = 'Intermediate'
-        elif percentage >= 25:
-            overall_level = 'Basic'
         else:
             overall_level = 'Beginner'
 

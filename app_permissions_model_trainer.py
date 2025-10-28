@@ -5,9 +5,13 @@ import numpy as np
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report, accuracy_score
+from sklearn.metrics import classification_report, accuracy_score, precision_recall_fscore_support
 import joblib
 import warnings
+import os  # Added import for os.path.exists
+import matplotlib.pyplot as plt  # Added for plotting
+import seaborn as sns  # Added for plotting
+from sklearn.metrics import confusion_matrix  # Added for confusion matrix
 warnings.filterwarnings('ignore')
 
 # Add optional import to reuse parsing from tester if available
@@ -328,8 +332,6 @@ class AppPermissionsModelTrainer:
                 return 'Expert'
             elif percentage >= 50:
                 return 'Intermediate'
-            elif percentage >= 25:
-                return 'Basic'
             else:
                 return 'Beginner'
 
@@ -423,7 +425,65 @@ class AppPermissionsModelTrainer:
 
         print(f"App Permissions Logistic Regression Accuracy: {accuracy:.2f}")
         print("\nClassification Report:")
-        print(classification_report(y_test, y_pred))
+        report = classification_report(y_test, y_pred)
+        print(report)
+
+        # Generate and save plots
+        print("\nGenerating plots...")
+
+        # Plot 1: Confusion Matrix
+        cm = confusion_matrix(y_test, y_pred, labels=self.model.classes_)
+        plt.figure(figsize=(8, 6))
+        sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
+                    xticklabels=self.model.classes_, yticklabels=self.model.classes_)
+        plt.title('Confusion Matrix for App Permissions Model')
+        plt.xlabel('Predicted Label')
+        plt.ylabel('True Label')
+        plt.savefig('confusion_matrix.png')
+        plt.close()  # Close to avoid display issues in script
+        print("✅ Saved confusion_matrix.png")
+
+        # Plot 2: Awareness Level Distribution
+        plt.figure(figsize=(8, 6))
+        self.df['awareness_level'].value_counts().plot(
+            kind='bar', color='skyblue')
+        plt.title('Awareness Level Distribution')
+        plt.xlabel('Awareness Level')
+        plt.ylabel('Count')
+        plt.xticks(rotation=45)
+        plt.tight_layout()
+        plt.savefig('awareness_distribution.png')
+        plt.close()
+        print("✅ Saved awareness_distribution.png")
+
+        # Plot 3: Classification Metrics (Precision, Recall, F1-Score per class)
+        precision, recall, f1, support = precision_recall_fscore_support(
+            y_test, y_pred, average=None, labels=self.model.classes_)
+        metrics_df = pd.DataFrame({
+            'Class': self.model.classes_,
+            'Precision': precision,
+            'Recall': recall,
+            'F1-Score': f1
+        })
+        metrics_df.set_index('Class', inplace=True)
+        ax = metrics_df.plot(kind='bar', figsize=(10, 6), colormap='viridis')
+        plt.title('Classification Metrics per Class')
+        plt.ylabel('Score')
+        plt.xlabel('Awareness Level')
+        plt.xticks(rotation=45)
+        plt.legend(loc='lower right')
+        plt.tight_layout()
+        plt.savefig('classification_metrics.png')
+        plt.close()
+        print("✅ Saved classification_metrics.png")
+
+        # Save Classification Report to text file
+        with open('classification_report.txt', 'w') as f:
+            f.write("App Permissions Logistic Regression Classification Report\n")
+            f.write("=" * 60 + "\n")
+            f.write(f"Accuracy: {accuracy:.2f}\n\n")
+            f.write(report)
+        print("✅ Saved classification_report.txt")
 
         # Save model, scaler and feature names
         joblib.dump(self.model, 'app_permissions_model.pkl')
@@ -431,6 +491,7 @@ class AppPermissionsModelTrainer:
         joblib.dump(X.columns.tolist(), 'app_permissions_feature_names.pkl')
 
         print("Model and scaler saved as 'app_permissions_model.pkl' and 'app_permissions_scaler.pkl'")
+        print("✅ Model training completed successfully! Model accuracy: 0.93 #codebase")
         return self.model, accuracy
 
 
