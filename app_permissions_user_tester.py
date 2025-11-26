@@ -292,48 +292,67 @@ class AppPermissionsTester:
             if match:
                 normalized_qid = f"Q{match.group(1)}"
 
-        # Find matching explanation
-        for explanation in self.explanation_bank:
-            exp_qid = explanation.get("questionId", "")
-            exp_option = explanation.get("option", "")
-            exp_profile = explanation.get("profile", {})
-
-            # Normalize explanation question ID too
-            if isinstance(exp_qid, str) and exp_qid.startswith('Q'):
-                match = re.match(r"Q0*(\d+)", exp_qid)
-                if match:
-                    exp_qid = f"Q{match.group(1)}"
-
-            # Check if question ID and option match
-            if (exp_qid == normalized_qid and exp_option == option_label):
-                # Check if profile matches
-                profile_match = (
-                    exp_profile.get("gender", "") == user_profile.get("gender", "") and
-                    exp_profile.get("proficiency", "") == user_profile.get("proficiency", "") and
-                    exp_profile.get("education", "") == user_profile.get(
-                        "education", "")
-                )
-
-                if profile_match:
-                    return f"\nPERSONALIZED EXPLANATION:\n{explanation.get('explanation', '')}"
-
-        # If no exact match found, try to find closest match (same question, any profile)
+        # Collect all matching explanations for this question + option
+        matching_explanations = []
         for explanation in self.explanation_bank:
             exp_qid = explanation.get("questionId", "")
             exp_option = explanation.get("option", "")
 
             # Normalize explanation question ID
             if isinstance(exp_qid, str) and exp_qid.startswith('Q'):
-                match = re.match(r"Q0*(\d+)", exp_qid)
-                if match:
-                    exp_qid = f"Q{match.group(1)}"
+                m = re.match(r"Q0*(\d+)", exp_qid)
+                if m:
+                    exp_qid = f"Q{m.group(1)}"
 
-            if (exp_qid == normalized_qid and exp_option == option_label):
-                profile_desc = f"{explanation.get('profile', {}).get('gender', 'General')}, {explanation.get('profile', {}).get('proficiency', 'General')}, {explanation.get('profile', {}).get('education', 'General')}"
-                return f"\nRELATED EXPLANATION (for {profile_desc}):\n{explanation.get('explanation', '')}"
+            if exp_qid == normalized_qid and exp_option == option_label:
+                matching_explanations.append(explanation)
 
-        # Fallback explanation
-        return f"\nFALLBACK EXPLANATION:\nFor this question about app permissions, it's important to understand the security implications of your choice. Consider reviewing app permission best practices and how they relate to your privacy and security."
+        # No explanations found for this pair
+        if not matching_explanations:
+            return f"\nFALLBACK EXPLANATION:\nFor this question about app permissions, it's important to understand the security implications of your choice. Consider reviewing app permission best practices and how they relate to your privacy and security."
+
+        # Helper to compute how well an explanation's profile matches the user_profile
+        def profile_match_score(exp_profile, user_profile):
+            score = 0
+            if not user_profile:
+                return 0
+            for key in ("gender", "proficiency", "education"):
+                ev = (exp_profile.get(key, "") or "").strip().lower()
+                uv = (user_profile.get(key, "") or "").strip().lower()
+                if ev and uv and ev == uv:
+                    score += 1
+            return score
+
+        # First try exact profile match (all three match)
+        for exp in matching_explanations:
+            exp_profile = exp.get("profile", {}) or {}
+            if user_profile:
+                if (exp_profile.get("gender", "").strip().lower() == (user_profile.get("gender", "") or "").strip().lower() and
+                    exp_profile.get("proficiency", "").strip().lower() == (user_profile.get("proficiency", "") or "").strip().lower() and
+                        exp_profile.get("education", "").strip().lower() == (user_profile.get("education", "") or "").strip().lower()):
+                    return f"\nPERSONALIZED EXPLANATION:\n{exp.get('explanation', '')}"
+
+        # If no exact match, select the explanation with best partial match
+        best = None
+        best_score = -1
+        for exp in matching_explanations:
+            score = profile_match_score(
+                exp.get("profile", {}) or {}, user_profile or {})
+            if score > best_score:
+                best_score = score
+                best = exp
+
+        # Format profile description using the user's actual profile (so it reflects the user)
+        up = user_profile or {}
+        profile_desc = f"{up.get('gender', 'General')}, {up.get('proficiency', 'General')}, {up.get('education', 'General')}"
+
+        if best:
+            # Return related explanation but indicate it's being shown for the user's profile
+            return f"\nRELATED EXPLANATION (for {profile_desc}):\n{best.get('explanation', '')}"
+        else:
+            # Fallback to first available explanation but still label with user's profile
+            exp = matching_explanations[0]
+            return f"\nRELATED EXPLANATION (for {profile_desc}):\n{exp.get('explanation', '')}"
 
     def get_option_label_from_answer(self, question, user_answer):
         """Get the option label (A, B, C, D) from the user's answer text"""

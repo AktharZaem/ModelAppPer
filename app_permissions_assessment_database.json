@@ -212,6 +212,45 @@
       "percentage": 90.0,
       "overall_knowledge_level": "Expert",
       "category": "App Permissions"
+    },
+    {
+      "timestamp": "2025-11-26 10:37:05",
+      "email": "alfa@gmail.com",
+      "name": "alfa",
+      "organization": "UOJ",
+      "gender": "Female",
+      "education_level": "Degree",
+      "proficiency": "High Education",
+      "total_score": 56,
+      "percentage": 56.00000000000001,
+      "overall_knowledge_level": "Intermediate",
+      "category": "App Permissions"
+    },
+    {
+      "timestamp": "2025-11-26 10:39:13",
+      "email": "aiman@gmail.com",
+      "name": "aiman",
+      "organization": "UOJ",
+      "gender": "Female",
+      "education_level": "O/L",
+      "proficiency": "School",
+      "total_score": 53,
+      "percentage": 53.0,
+      "overall_knowledge_level": "Intermediate",
+      "category": "App Permissions"
+    },
+    {
+      "timestamp": "2025-11-26 10:40:09",
+      "email": "aiman@gmail.com",
+      "name": "aiman",
+      "organization": "UOJ",
+      "gender": "Female",
+      "education_level": "O/L",
+      "proficiency": "School",
+      "total_score": 51,
+      "percentage": 51.0,
+      "overall_knowledge_level": "Intermediate",
+      "category": "App Permissions"
     }
   ]
 }
