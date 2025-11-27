@@ -1012,6 +1012,84 @@
       "percentage": 51.0,
       "overall_level": "Intermediate",
       "timestamp": "2025-11-26 10:40:31"
+    },
+    {
+      "profile": {
+        "email": "a@gmail.com",
+        "gender": "Male",
+        "education": "A/L",
+        "proficiency": "High Education",
+        "name": "a",
+        "organization": "UOR"
+      },
+      "responses": {
+        "What does an app permission allow?": "An app to access specific parts of your phone",
+        "When installing a new app, what should you do first?": "Use it immediately",
+        "Why should a flashlight app not need access to your contacts?": "It makes the light too bright",
+        "Which app should be allowed microphone access?": "Calculator",
+        "Why is it risky to allow camera and microphone permissions unnecessarily?": "It slows down the app",
+        "Which app genuinely needs location permission?": "Clock",
+        "You gave location access to a shopping app. What might happen?": "It starts tracking your movement for targeted ads",
+        "What is “permission creep” in mobile apps?": "An app using too much battery",
+        "Which permission is most sensitive for privacy and identity theft?": "Contacts and call logs",
+        "What is the best habit for managing app permissions on your phone?": "Restart your phone weekly"
+      },
+      "scores": {
+        "What does an app permission allow?": {
+          "answer": "An app to access specific parts of your phone",
+          "score": 10,
+          "level": "Advanced"
+        },
+        "When installing a new app, what should you do first?": {
+          "answer": "Use it immediately",
+          "score": 0,
+          "level": "Wrong"
+        },
+        "Why should a flashlight app not need access to your contacts?": {
+          "answer": "It makes the light too bright",
+          "score": 0,
+          "level": "Wrong"
+        },
+        "Which app should be allowed microphone access?": {
+          "answer": "Calculator",
+          "score": 3,
+          "level": "Beginner"
+        },
+        "Why is it risky to allow camera and microphone permissions unnecessarily?": {
+          "answer": "It slows down the app",
+          "score": 5,
+          "level": "Intermediate"
+        },
+        "Which app genuinely needs location permission?": {
+          "answer": "Clock",
+          "score": 3,
+          "level": "Beginner"
+        },
+        "You gave location access to a shopping app. What might happen?": {
+          "answer": "It starts tracking your movement for targeted ads",
+          "score": 10,
+          "level": "Advanced"
+        },
+        "What is “permission creep” in mobile apps?": {
+          "answer": "An app using too much battery",
+          "score": 3,
+          "level": "Beginner"
+        },
+        "Which permission is most sensitive for privacy and identity theft?": {
+          "answer": "Contacts and call logs",
+          "score": 10,
+          "level": "Advanced"
+        },
+        "What is the best habit for managing app permissions on your phone?": {
+          "answer": "Restart your phone weekly",
+          "score": 5,
+          "level": "Intermediate"
+        }
+      },
+      "total_score": 49,
+      "percentage": 49.0,
+      "overall_level": "Beginner",
+      "timestamp": "2025-11-27 17:35:21"
     }
   ]
 }
